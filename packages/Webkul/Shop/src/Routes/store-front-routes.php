@@ -41,6 +41,30 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     Route::get('/', [HomeController::class, 'index'])->defaults('_config', [
         'view' => 'shop::home.index',
     ])->name('shop.home.index');
+    //about
+    Route::get('/about', [HomeController::class, 'about'])->name('shop.about');
+    //my-account
+    Route::get('/my-account', [HomeController::class, 'myAccount'])->name('shop.my-account');
+    //categories
+    Route::get('/product-categories', [HomeController::class, 'categories'])->name('shop.categories');
+    //contact
+    Route::get('/contact', [HomeController::class, 'contact'])->name('shop.contact');
+    //dfw
+    Route::get('/dfw', [HomeController::class, 'dfw'])->name('shop.dfw');
+    //product_detail
+    Route::get('/product_detail', [HomeController::class, 'productDetail'])->name('shop.product_detail');
+    //profile
+    Route::get('/profile', [HomeController::class, 'profile'])->name('shop.profile');
+    //reviews
+    Route::get('/reviews', [HomeController::class, 'reviews'])->name('shop.reviews');
+    //step1
+    Route::get('/step1', [HomeController::class, 'step1'])->name('shop.step1');
+    //step2
+    Route::get('/step2', [HomeController::class, 'step2'])->name('shop.step2');
+    //step3
+    Route::get('/step3', [HomeController::class, 'step3'])->name('shop.step3');
+    //shop
+    Route::get('/shop', [HomeController::class, 'shop'])->name('shop.shop');
 
     /**
      * Store front search.
