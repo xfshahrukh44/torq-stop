@@ -44,6 +44,24 @@ class CategoryRepository extends Repository
             }
         }
 
+        //prep data for custom fields
+        if(isset($data['custom_fields_titles'])) {
+            $custom_fields = [];
+            foreach ($data['custom_fields_titles'] as $key => $custom_fields_title) {
+                $custom_fields []= [
+                    'title' => $custom_fields_title,
+                    'name' => $data['custom_fields_names'][$key],
+                    'type' => $data['custom_fields_types'][$key],
+                    'selection_options' => $data['custom_fields_selection_options'][$key],
+                ];
+            }
+            unset($data['custom_fields_titles']);
+            unset($data['custom_fields_names']);
+            unset($data['custom_fields_types']);
+            unset($data['custom_fields_selection_options']);
+            $data['custom_fields'] = json_encode($custom_fields);
+        }
+
         $category = $this->model->create($data);
 
         $this->uploadImages($data, $category);
@@ -72,6 +90,26 @@ class CategoryRepository extends Repository
         Event::dispatch('catalog.category.update.before', $id);
 
         $data = $this->setSameAttributeValueToAllLocale($data, 'slug');
+
+        //prep data for custom fields
+        if(isset($data['custom_fields_titles'])) {
+            $custom_fields = [];
+            foreach ($data['custom_fields_titles'] as $key => $custom_fields_title) {
+                $custom_fields []= [
+                    'title' => $custom_fields_title,
+                    'name' => $data['custom_fields_names'][$key],
+                    'type' => $data['custom_fields_types'][$key],
+                    'selection_options' => $data['custom_fields_selection_options'][$key],
+                ];
+            }
+            unset($data['custom_fields_titles']);
+            unset($data['custom_fields_names']);
+            unset($data['custom_fields_types']);
+            unset($data['custom_fields_selection_options']);
+            $data['custom_fields'] = json_encode($custom_fields);
+        } else {
+            $data['custom_fields'] = json_encode([]);
+        }
 
         $category->update($data);
 

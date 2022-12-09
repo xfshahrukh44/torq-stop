@@ -2,6 +2,7 @@
 
 namespace Webkul\Product\Repositories;
 
+use App\ProductCategoryField;
 use Exception;
 use Illuminate\Container\Container as App;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -86,6 +87,23 @@ class ProductRepository extends Repository
         Event::dispatch('catalog.product.update.before', $id);
 
         $product = $this->find($id);
+
+//        dd($data);
+        if(isset($data['custom_fields'])) {
+            $custom_fields = [];
+            foreach ($data['custom_fields'] as $category_id => $fields) {
+                foreach ($fields as $field_key => $field_value) {
+                    $custom_fields[]= [
+                        'category_id' => $category_id,
+                        'field_name' => $field_key,
+                        'field_value' => $field_value,
+                    ];
+                }
+            }
+            unset($data['custom_fields']);
+            $product->productCategoryFields()->delete();
+            $product->productCategoryFields()->createMany($custom_fields);
+        }
 
         $product = $product->getTypeInstance()->update($data, $id, $attribute);
 
