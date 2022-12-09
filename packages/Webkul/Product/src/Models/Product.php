@@ -2,6 +2,7 @@
 
 namespace Webkul\Product\Models;
 
+use App\ProductCategoryField;
 use Exception;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -35,6 +36,7 @@ class Product extends Model implements ProductContract
         'attribute_family_id',
         'sku',
         'parent_id',
+        'custom_fields',
     ];
 
     /**
@@ -600,5 +602,10 @@ class Product extends Model implements ProductContract
     protected static function newFactory(): Factory
     {
         return ProductFactory::new ();
+    }
+
+    public function productCategoryFields()
+    {
+        return $this->hasMany(ProductCategoryField::class);
     }
 }

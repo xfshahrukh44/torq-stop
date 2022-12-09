@@ -119,6 +119,13 @@ class AdminServiceProvider extends ServiceProvider
 
             $tree->items = core()->sortItems($tree->items);
 
+            //remove all menu items except catalog (for now)
+            foreach ($tree->items as $key => $item) {
+                if($key != 'catalog') {
+                    unset($tree->items[$key]);
+                }
+            }
+
             $view->with('menu', $tree);
         });
 
