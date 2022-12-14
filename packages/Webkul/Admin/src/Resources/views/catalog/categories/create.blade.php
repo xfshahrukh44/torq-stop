@@ -308,8 +308,21 @@
 
                     //custom_fields_titles
                     $('body').on('change keyup', '.custom_fields_titles', function () {
-                        let sibling_name_field = $(this).parent().parent().children('div').eq(1).find('.custom_fields_names');
                         let value = $(this).val();
+                        let sibling_name_field = $(this).parent().parent().children('div').eq(1).find('.custom_fields_names');
+
+                        //check for unique
+                        let title = $(this).val();
+                        let title_occurence = 0;
+                        $('.custom_fields_titles').each(function () {
+                            title_occurence += ($(this).val().toLowerCase() == title.toLowerCase()) ? 1 : 0;
+                        });
+                        if(title_occurence > 1) {
+                            $(this).val('');
+                            sibling_name_field.val('');
+                            return alert('Two fields cannot have the same title.');
+                        }
+
 
                         populateNameField(sibling_name_field, value);
                     });
@@ -318,25 +331,25 @@
                         let slug = value.trim().replaceAll(' ', '_').toLowerCase();
 
 
-                        let suffix = 0;
-                        let check = false;
-
-                        // while (!check) {
-                            $('.custom_fields_names').not(field).each(function(index, item) {
-                                // check = !($(this).val() == slug && field.get(0) != $(this).get(0));
-                                check = !($(this).val() == slug);
-
-                                if(!check) {
-                                    return false;
-                                }
-                            });
-
-                            if (!check) {
-                                suffix += 1;
-                            }
-                        // }
-
-                        slug += (suffix == 0) ? '' : ('_' + suffix.toString());
+                        // let suffix = 0;
+                        // let check = false;
+                        //
+                        // // while (!check) {
+                        //     $('.custom_fields_names').not(field).each(function(index, item) {
+                        //         // check = !($(this).val() == slug && field.get(0) != $(this).get(0));
+                        //         check = !($(this).val() == slug);
+                        //
+                        //         if(!check) {
+                        //             return false;
+                        //         }
+                        //     });
+                        //
+                        //     if (!check) {
+                        //         suffix += 1;
+                        //     }
+                        // // }
+                        //
+                        // slug += (suffix == 0) ? '' : ('_' + suffix.toString());
 
                         field.val(slug);
                     }

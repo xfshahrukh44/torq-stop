@@ -64,7 +64,8 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     //step3
     Route::get('/step3', [HomeController::class, 'step3'])->name('shop.step3');
     //shop
-    Route::get('/shop', [HomeController::class, 'shop'])->name('shop.shop');
+//    Route::get('/shop', [HomeController::class, 'shop'])->name('shop.shop');
+    Route::match(['get', 'post'], '/shop', [HomeController::class, 'shop'])->name('shop.shop');
 
     /**
      * Store front search.

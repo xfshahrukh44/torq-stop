@@ -608,4 +608,9 @@ class Product extends Model implements ProductContract
     {
         return $this->hasMany(ProductCategoryField::class);
     }
+
+    public function product_categories()
+    {
+        return $this->hasMany(ProductCategory::class);
+    }
 }
