@@ -31,44 +31,46 @@
 
     <section class="dfwSec">
         <div class="container-fluid">
+            {{--categories--}}
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">FRICTION</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">HYDRAULItCS</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">MEDIUM DUTY</button>
-                </li>
+                @if($categories)
+                    @foreach($categories as $category)
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link btn_category {!! $data['category_id'] && $category->id == $data['category_id'] ? 'active' : '' !!}" data-id="{{$category->id}}" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                {{$category->name ?? ''}}
+                            </button>
+                        </li>
+                    @endforeach
+                @endif
             </ul>
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    {{--filters--}}
                     <div class="row getForm">
                         <div class="col-md-7">
                             <div class="d-flex align-items-center w-100">
                                 <div class="frictionForm">
-                                    <select class="year">
-                                        <option value="YEAR	">YEAR</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
+                                    <select class="year" id="select_year">
+                                        <option value="">YEAR</option>
+                                        @foreach($year_options as $year_option)
+                                            <option value="{{$year_option->field_value}}" {!! $data['year'] && $data['year'] == $year_option->field_value ? 'selected' : '' !!}>{{$year_option->field_value}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="frictionForm">
-                                    <select class="year">
-                                        <option value="YEAR	">Make</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
+                                    <select class="year" id="select_make">
+                                        <option value="">Make</option>
+                                        @foreach($make_options as $make_option)
+                                            <option value="{{$make_option->field_value}}" {!! $data['make'] && $data['make'] == $make_option->field_value ? 'selected' : '' !!}>{{$make_option->field_value}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="frictionForm">
-                                    <select class="year">
-                                        <option value="Model">Model</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
+                                    <select class="year" id="select_model">
+                                        <option value="">Model</option>
+                                        @foreach($model_options as $model_option)
+                                            <option value="{{$model_option->field_value}}" {!! $data['model'] && $data['model'] == $model_option->field_value ? 'selected' : '' !!}>{{$model_option->field_value}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -76,247 +78,43 @@
                         <div class="col-md-5">
                             <div class="d-flex align-items-center">
                                 <div class="frictionForm">
-                                    <input type="text" placeholder="Enter Part Number">
+                                    <input type="text" id="input_name" placeholder="Enter Part Number" value="{{$data['name'] ?? ''}}">
                                 </div>
-                                <button class="btnform">Search</button>
+                                <button class="btnform" id="btn_submit">Search</button>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="radioBox">
-                                <input type="radio" name="one" id="1st">
-                                <label for="1st">Exactt match</label>
-                                <input type="radio" name="one" id="2nd">
-                                <label for="2nd">Base ntumber match</label>
-                            </div>
-                        </div>
+
+                        {{--hidden form--}}
+                        <form id="main_form" action="{{route('shop.shop')}}" method="POST" hidden>
+                            @csrf
+                            <input type="hidden" id="form_name" name="name" value="{{$data['name'] ?? ''}}">
+                            <input type="hidden" id="form_category_id" name="category_id" value="{{$data['category_id'] ?? ''}}">
+                            <input type="hidden" id="form_year" name="year" value="{{$data['year'] ?? ''}}">
+                            <input type="hidden" id="form_make" name="make" value="{{$data['make'] ?? ''}}">
+                            <input type="hidden" id="form_model" name="model" value="{{$data['model'] ?? ''}}">
+                        </form>
+{{--                        <div class="col-12">--}}
+{{--                            <div class="radioBox">--}}
+{{--                                <input type="radio" name="one" id="1st">--}}
+{{--                                <label for="1st">Exactt match</label>--}}
+{{--                                <input type="radio" name="one" id="2nd">--}}
+{{--                                <label for="2nd">Base ntumber match</label>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
+                    {{--products--}}
                     <div class="row">
                         <div class="col-12 text-center">
                             <h2>Please Select - Year Make & Model First</h2>
                             <h4>Product Group</h4>
                         </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Brake Pads</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1115- OFC Active Performance</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1214- OFC Heavy Duty</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1310- DFC 3000 Ceramic</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1311- DFC 3000 Semi-Metallic</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1551-1554- DFC 5000 Advanced</a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Premium Rotors (OE Design!</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">600- OE Blank</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">610- OE Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">620- OE Drilled Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">630- OE Drilled / Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">640- OE Dimpled Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">650- OE Dimpled Design</a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Carbon Alloy Brake Rotors (OE Design)</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">900- OE Blank</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">910- OE Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">920- OE Drilled Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">930- OE Drilled / Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">940- OE Dimpled Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">950- OE Dimpled Design</a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Brake Shoes and Brake Drums</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">365- DFC True Balanced Brake Drums</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">370- DFC True-Arc Parking Brake Hardware Kit</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1901- DFC True-Arc Service Brake Shoes</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1902- DFC True-Arc Parking Brake Shoes</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1903- DFC True-Arc Riveted Brake Shoes</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Hardwares. Sensors and Adjusters</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">340- DFC Disc Hardware Kit</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">341- DFC Hi-Temp Brake Pad</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">372- DFC Hi-Temp Brake Pad</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <div class="row getForm">
-                        <div class="col-md-7">
-                            <div class="d-flex align-items-center w-100">
-                                <div class="frictionForm">
-                                    <select class="year">
-                                        <option value="YEAR	">YEAR</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                    </select>
-                                </div>
-                                <div class="frictionForm">
-                                    <select class="year">
-                                        <option value="YEAR	">Make</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                    </select>
-                                </div>
-                                <div class="frictionForm">
-                                    <select class="year">
-                                        <option value="Model">Model</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                    </select>
-                                </div>
+                        @foreach($products as $chunk)
+                            <div class="col-md-3">
+                                @foreach($chunk as $product)
+                                    <a href="{{route('shop.product_detail')}}" class="Btngroup">{{$product['name']}}</a>
+                                @endforeach
                             </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="d-flex align-items-center">
-                                <div class="frictionForm">
-                                    <input type="text" placeholder="Enter Part Number">
-                                </div>
-                                <button class="btnform">Search</button>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="radioBox">
-                                <input type="radio" name="one" id="1st">
-                                <label for="1st">Exactt match</label>
-                                <input type="radio" name="one" id="2nd">
-                                <label for="2nd">Base ntumber match</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <h2>Please Select - Year Make & Model First</h2>
-                            <h4>Product Group</h4>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Brake Pads</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1115- OFC Active Performance</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1214- OFC Heavy Duty</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1310- DFC 3000 Ceramic</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1311- DFC 3000 Semi-Metallic</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1551-1554- DFC 5000 Advanced</a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Premium Rotors (OE Design!</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">600- OE Blank</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">610- OE Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">620- OE Drilled Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">630- OE Drilled / Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">640- OE Dimpled Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">650- OE Dimpled Design</a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Carbon Alloy Brake Rotors (OE Design)</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">900- OE Blank</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">910- OE Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">920- OE Drilled Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">930- OE Drilled / Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">940- OE Dimpled Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">950- OE Dimpled Design</a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Brake Shoes and Brake Drums</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">365- DFC True Balanced Brake Drums</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">370- DFC True-Arc Parking Brake Hardware Kit</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1901- DFC True-Arc Service Brake Shoes</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1902- DFC True-Arc Parking Brake Shoes</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1903- DFC True-Arc Riveted Brake Shoes</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Hardwares. Sensors and Adjusters</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">340- DFC Disc Hardware Kit</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">341- DFC Hi-Temp Brake Pad</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">372- DFC Hi-Temp Brake Pad</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                    <div class="row getForm">
-                        <div class="col-md-7">
-                            <div class="d-flex align-items-center w-100">
-                                <div class="frictionForm">
-                                    <select class="year">
-                                        <option value="YEAR	">YEAR</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                    </select>
-                                </div>
-                                <div class="frictionForm">
-                                    <select class="year">
-                                        <option value="YEAR	">Make</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                    </select>
-                                </div>
-                                <div class="frictionForm">
-                                    <select class="year">
-                                        <option value="Model">Model</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                        <option value="lorem">lorem</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="d-flex align-items-center">
-                                <div class="frictionForm">
-                                    <input type="text" placeholder="Enter Part Number">
-                                </div>
-                                <button class="btnform">Search</button>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="radioBox">
-                                <input type="radio" name="one" id="1st">
-                                <label for="1st">Exactt match</label>
-                                <input type="radio" name="one" id="2nd">
-                                <label for="2nd">Base ntumber match</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <h2>Please Select - Year Make & Model First</h2>
-                            <h4>Product Group</h4>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Brake Pads</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1115- OFC Active Performance</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1214- OFC Heavy Duty</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1310- DFC 3000 Ceramic</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1311- DFC 3000 Semi-Metallic</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1551-1554- DFC 5000 Advanced</a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Premium Rotors (OE Design!</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">600- OE Blank</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">610- OE Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">620- OE Drilled Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">630- OE Drilled / Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">640- OE Dimpled Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">650- OE Dimpled Design</a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Carbon Alloy Brake Rotors (OE Design)</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">900- OE Blank</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">910- OE Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">920- OE Drilled Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">930- OE Drilled / Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">940- OE Dimpled Slotted Design</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">950- OE Dimpled Design</a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Brake Shoes and Brake Drums</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">365- DFC True Balanced Brake Drums</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">370- DFC True-Arc Parking Brake Hardware Kit</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1901- DFC True-Arc Service Brake Shoes</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1902- DFC True-Arc Parking Brake Shoes</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">1903- DFC True-Arc Riveted Brake Shoes</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">DFC Hardwares. Sensors and Adjusters</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">340- DFC Disc Hardware Kit</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">341- DFC Hi-Temp Brake Pad</a>
-                            <a href="{{route('shop.product_detail')}}" class="Btngroup">372- DFC Hi-Temp Brake Pad</a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -324,6 +122,7 @@
     </section>
 
 
+    {{--shop section--}}
     <section class="shopSec">
         <div class="container">
             <div class="row">
@@ -370,7 +169,7 @@
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('temes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
                         </figure>
                     </div>
                     <div class="shopContent">
@@ -382,7 +181,7 @@
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('temes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
                         </figure>
                     </div>
                     <div class="shopContent">
@@ -394,7 +193,7 @@
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('temes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
                         </figure>
                     </div>
                     <div class="shopContent">
@@ -406,7 +205,7 @@
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('temes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
                         </figure>
                     </div>
                     <div class="shopContent">
@@ -508,4 +307,55 @@
         </div>
     </section>
 
+@endsection
+
+@section('script')
+    <script>
+        $(document).ready(function () {
+            function submitForm() {
+                $('#main_form').submit();
+            }
+
+            $('#select_year').trigger('change');
+            $('#select_make').trigger('change');
+            $('#select_model').trigger('change');
+
+            //btn_submit
+            $('#btn_submit').on('click', function() {
+                submitForm();
+            });
+
+            //input_name
+            $('#input_name').on('change', function() {
+                $('#form_name').val($(this).val());
+            });
+
+            //btn_category
+            $('.btn_category').on('click', function () {
+                //assign value to hidden form
+                $('#form_category_id').val($(this).data('id'));
+
+                //active button
+                $('.btn_category').each(function () {
+                    $(this).removeClass('active')
+                });
+                $(this).addClass('active')
+
+                submitForm();
+            });
+
+            //select_year
+            $('#select_year').on('change', function() {
+                $('#form_year').val($(this).val());
+            });
+            //select_make
+            $('#select_make').on('change', function() {
+                $('#form_make').val($(this).val());
+            });
+            //select_model
+            $('#select_model').on('change', function() {
+                $('#form_model').val($(this).val());
+            });
+        });
+    </script>
 @endsection

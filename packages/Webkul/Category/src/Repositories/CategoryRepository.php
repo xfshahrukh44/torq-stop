@@ -348,4 +348,9 @@ class CategoryRepository extends Repository
 
         return $data;
     }
+
+    public function index()
+    {
+        return $this->model->all();
+    }
 }

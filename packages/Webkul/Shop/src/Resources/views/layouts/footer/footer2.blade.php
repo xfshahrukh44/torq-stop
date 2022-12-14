@@ -60,6 +60,7 @@
 <script src="{{asset('themes/default/assets/js/slick.min.js')}}"></script>
 <script src="{{asset('themes/default/assets/js/jquery.fancybox.min.js')}}"></script>
 <script src="{{asset('themes/default/assets/js/custom.min.js')}}"></script>
+@yield('script')
 
 
 </body>
