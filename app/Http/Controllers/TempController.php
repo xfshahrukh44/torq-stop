@@ -19,6 +19,7 @@ class TempController extends Controller
 
     public function index (Request $request)
     {
+        ini_set('max_execution_time', '0');
         //rotors category
         $rotors_custom_fields_titles = [
             'Year',
