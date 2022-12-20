@@ -189,30 +189,38 @@
                             <label class="btn btn-lg btn-danger mb-40 btn_remove_custom_field" style="display: inline-block; width: auto;" hidden="true">Remove Custom Field</label>
 
                             <div class="custom_fields_wrapper">
-                                {{--                                <div class="row">--}}
-                                {{--                                    <div class="control-group">--}}
-                                {{--                                        <label for="slug" class="required">Title</label>--}}
-                                {{--                                        <input type="text" v-validate="'required'" class="control custom_fields_titles" value="" name="custom_fields_titles[]"/>--}}
-                                {{--                                    </div>--}}
+{{--                                                                <div class="row">--}}
+{{--                                                                    <div class="control-group">--}}
+{{--                                                                        <label for="slug" class="required">Title</label>--}}
+{{--                                                                        <input type="text" v-validate="'required'" class="control custom_fields_titles" value="" name="custom_fields_titles[]"/>--}}
+{{--                                                                    </div>--}}
 
-                                {{--                                    <div class="control-group">--}}
-                                {{--                                        <label for="slug" class="required">Name</label>--}}
-                                {{--                                        <input type="text" v-validate="'required'" class="control custom_fields_names" value="" readonly name="custom_fields_names[]"/>--}}
-                                {{--                                    </div>--}}
+{{--                                                                    <div class="control-group">--}}
+{{--                                                                        <label for="slug" class="required">Name</label>--}}
+{{--                                                                        <input type="text" v-validate="'required'" class="control custom_fields_names" value="" readonly name="custom_fields_names[]"/>--}}
+{{--                                                                    </div>--}}
 
-                                {{--                                    <div class="control-group">--}}
-                                {{--                                        <label for="slug" class="required">Type</label>--}}
-                                {{--                                        <select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields_types[]">--}}
-                                {{--                                            <option value="Text">Text</option>--}}
-                                {{--                                            <option value="Selection">Selection</option>--}}
-                                {{--                                        </select>--}}
-                                {{--                                    </div>--}}
+{{--                                                                    <div class="control-group">--}}
+{{--                                                                        <label for="slug" class="required">Type</label>--}}
+{{--                                                                        <select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields_types[]">--}}
+{{--                                                                            <option value="Text">Text</option>--}}
+{{--                                                                            <option value="Selection">Selection</option>--}}
+{{--                                                                        </select>--}}
+{{--                                                                    </div>--}}
 
-                                {{--                                    <div class="control-group" style="display: none;">--}}
-                                {{--                                        <label for="slug" class="required">Selection Options (comma seperated)</label>--}}
-                                {{--                                        <input type="text" v-validate="" class="control custom_fields_selection_options" value="" name="custom_fields_selection_options[]"/>--}}
-                                {{--                                    </div>--}}
-                                {{--                                </div>--}}
+{{--                                                                    <div class="control-group">--}}
+{{--                                                                        <label for="slug" class="required">Is Required?</label>--}}
+{{--                                                                        <select id="" v-validate="'required'" class="control custom_fields_is_required" name="custom_fields_is_required[]">--}}
+{{--                                                                            <option value="Yes">Yes</option>--}}
+{{--                                                                            <option value="No">No</option>--}}
+{{--                                                                        </select>--}}
+{{--                                                                    </div>--}}
+
+{{--                                                                    <div class="control-group" style="display: none;">--}}
+{{--                                                                        <label for="slug" class="required">Selection Options (comma seperated)</label>--}}
+{{--                                                                        <input type="text" v-validate="" class="control custom_fields_selection_options" value="" name="custom_fields_selection_options[]"/>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </div>--}}
                             </div>
 
                         </div>
@@ -287,6 +295,16 @@
                                                                     <select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields_types[]">
                                                                         <option value="Text">Text</option>
                                                                         <option value="Selection">Selection</option>
+                                                                        <option value="Number">Number</option>
+                                                                        <option value="Textarea">Textarea</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <label for="slug" class="required">Is Required?</label>
+                                                                    <select id="" v-validate="'required'" class="control custom_fields_is_required" name="custom_fields_is_required[]">
+                                                                        <option value="Yes">Yes</option>
+                                                                        <option value="No">No</option>
                                                                     </select>
                                                                 </div>
 

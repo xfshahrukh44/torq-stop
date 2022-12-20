@@ -53,12 +53,14 @@ class CategoryRepository extends Repository
                     'name' => $data['custom_fields_names'][$key],
                     'type' => $data['custom_fields_types'][$key],
                     'selection_options' => $data['custom_fields_selection_options'][$key],
+                    'is_required' => $data['custom_fields_is_required'][$key],
                 ];
             }
             unset($data['custom_fields_titles']);
             unset($data['custom_fields_names']);
             unset($data['custom_fields_types']);
             unset($data['custom_fields_selection_options']);
+            unset($data['custom_fields_is_required']);
             $data['custom_fields'] = json_encode($custom_fields);
         }
 
@@ -100,12 +102,14 @@ class CategoryRepository extends Repository
                     'name' => $data['custom_fields_names'][$key],
                     'type' => $data['custom_fields_types'][$key],
                     'selection_options' => $data['custom_fields_selection_options'][$key],
+                    'is_required' => $data['custom_fields_is_required'][$key],
                 ];
             }
             unset($data['custom_fields_titles']);
             unset($data['custom_fields_names']);
             unset($data['custom_fields_types']);
             unset($data['custom_fields_selection_options']);
+            unset($data['custom_fields_is_required']);
             $data['custom_fields'] = json_encode($custom_fields);
         } else {
             $data['custom_fields'] = json_encode([]);

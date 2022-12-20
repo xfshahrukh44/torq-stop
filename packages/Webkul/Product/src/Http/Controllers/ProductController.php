@@ -249,6 +249,7 @@ class ProductController extends Controller
             }
         }
 
+        dd($data);
         $this->productRepository->update($data, $id);
 
         session()->flash('success', trans('admin::app.response.update-success', ['name' => 'Product']));

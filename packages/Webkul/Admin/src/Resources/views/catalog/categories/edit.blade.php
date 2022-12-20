@@ -246,6 +246,16 @@
                                                 <select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields_types[]">
                                                     <option value="Text" {!! $custom_field->type == 'Text' ? 'selected' : '' !!}>Text</option>
                                                     <option value="Selection" {!! $custom_field->type == 'Selection' ? 'selected' : '' !!}>Selection</option>
+                                                    <option value="Number" {!! $custom_field->type == 'Number' ? 'selected' : '' !!}>Number</option>
+                                                    <option value="Textarea" {!! $custom_field->type == 'Textarea' ? 'selected' : '' !!}>Textarea</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <label for="slug" class="required">Is Required?</label>
+                                                <select id="" v-validate="'required'" class="control custom_fields_is_required" name="custom_fields_is_required[]">
+                                                    <option value="Yes" {!! $custom_field->is_required == 'Yes' ? 'selected' : '' !!}>Yes</option>
+                                                    <option value="No" {!! $custom_field->is_required == 'No' ? 'selected' : '' !!}>No</option>
                                                 </select>
                                             </div>
 
@@ -335,6 +345,16 @@
                                                                     <select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields_types[]">
                                                                         <option value="Text">Text</option>
                                                                         <option value="Selection">Selection</option>
+                                                                        <option value="Number">Number</option>
+                                                                        <option value="Textarea">Textarea</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <label for="slug" class="required">Is Required?</label>
+                                                                    <select id="" v-validate="'required'" class="control custom_fields_is_required" name="custom_fields_is_required[]">
+                                                                        <option value="Yes">Yes</option>
+                                                                        <option value="No">No</option>
                                                                     </select>
                                                                 </div>
 
