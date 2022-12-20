@@ -85,6 +85,7 @@ class CategoryController extends Controller
      */
     public function store(CategoryRequest $categoryRequest)
     {
+//        dd($categoryRequest->all());
         $this->categoryRepository->create($categoryRequest->all());
 
         session()->flash('success', trans('admin::app.response.create-success', ['name' => 'Category']));

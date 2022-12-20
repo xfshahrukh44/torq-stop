@@ -59,28 +59,35 @@
                         let custom_fields_string = ``;
                         custom_fields.forEach(function (item) {
                             //prep label
-                            let label = `<label for="slug" class="required">`+item.title+`</label>`;
+                            let is_required = item.is_required === "Yes" ? 'required' : '';
+                            let label = '<label for="slug" class="'+ (is_required ? 'required' : '') +'">'+item.title+'</label>';
                             let bare_field = ``;
 
                             //prep field
                             if (item.type == "Text") {
-                                bare_field = `<input type="text" v-validate="'required'" class="control" value="" name="custom_fields[${category_id}][${item.name}]" required/>`;
+                                bare_field = `<input type="text" v-validate="'required'" class="control" value="" name="custom_fields[${category_id}][${item.name}]" `+is_required+`/>`;
                             } else if (item.type == "Selection") {
                                 let raw_options = item.selection_options.split(',');
                                 let final_options = ``;
                                 raw_options.forEach(function (item) {
                                     final_options += `<option value="`+item+`">`+item+`</option>`;
                                 });
-                                bare_field = `<select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields[${category_id}][${item.name}]" required>
+                                bare_field = `<select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields[${category_id}][${item.name}]" `+is_required+`>
                                                         `+final_options+`
                                                     </select>`;
+                            } else if (item.type == "Number") {
+                                bare_field = `<input type="number" step="0.01" v-validate="'required'" class="control" value="" name="custom_fields[${category_id}][${item.name}]" `+is_required+`/>`;
+                            } else if (item.type == "Textarea") {
+                                bare_field = `<textarea v-validate="'required'" class="control" name="custom_fields[${category_id}][${item.name}]" cols="30" rows="10" `+is_required+`></textarea>`;
                             }
 
-                            custom_fields_string += `<div class="col-md-6">
-                                                            <div class="control-group">
-                                                                `+label + bare_field+`
-                                                            </div>
-                                                        </div>`;
+                            if (bare_field !== ``) {
+                                custom_fields_string += `<div class="col-md-6">
+                                                                <div class="control-group">
+                                                                    `+label + bare_field+`
+                                                                </div>
+                                                            </div>`;
+                            }
                         });
 
                         $('.custom_fields_wrapper').append(start + custom_fields_string + end);
