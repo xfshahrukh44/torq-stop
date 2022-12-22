@@ -15,6 +15,7 @@ use Webkul\Attribute\Models\AttributeFamilyProxy;
 use Webkul\Attribute\Models\AttributeProxy;
 use Webkul\Attribute\Repositories\AttributeRepository;
 use Webkul\BookingProduct\Models\BookingProductProxy;
+use Webkul\Category\Models\Category;
 use Webkul\Category\Models\CategoryProxy;
 use Webkul\Inventory\Models\InventorySourceProxy;
 use Webkul\Product\Contracts\Product as ProductContract;
@@ -27,4 +28,9 @@ class ProductCategory extends Model
     use HasFactory;
 
     protected $tableName = 'product_categories';
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

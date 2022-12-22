@@ -35,42 +35,27 @@
                     <div class="productImgMain">
                         <div class="product-detail-slider">
                             <div>
-                                <img src="{{asset('themes/default/assets/images/pro111.png')}}" alt="">
-                            </div>
-                            <div>
-                                <img src="{{asset('themes/default/assets/images/pro111.png')}}" alt="">
-                            </div>
-                            <div>
-                                <img src="{{asset('temes/default/assets/images/pro111.png')}}" alt="">
-                            </div>
-                            <div>
-                                <img src="{{asset('temes/default/assets/images/pro111.png')}}" alt="">
+                                <img src="{{ $product['feature_image']['url'] ?? asset('themes/default/assets/images/default.png')}}" alt="">
                             </div>
                         </div>
-                        <div class="product-detail-nav">
-                            <div>
-                                <img class="ml-10" src="{{asset('temes/default/assets/images/pro22.png')}}" class="" alt="">
+                        @if(count($product['images']) > 0)
+                            <div class="product-detail-nav">
+                                @foreach($product['images'] as $image)
+                                    <div>
+                                        <img class="ml-10" src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}" class="" alt="">
+                                    </div>
+                                @endforeach
                             </div>
-                            <div>
-                                <img class="ml-10" src="{{asset('temes/default/assets/images/pro22.png')}}" class="" alt="">">
-                            </div>
-                            <div>
-                                <img class="ml-10" src="{{asset('themes/default/assets/images/pro22.png')}}" class="" alt="">
-                            </div>
-                            <div>
-                                <img class="ml-10" src="{{asset('themes/default/assets/images/pro22.png')}}" class="" alt="">
-                            </div>
-                        </div>
+                        @endif
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="prodctdetailContent">
-                        <h2>torqstop
+                        <h2>{{$product['name']}}
                         </h2>
-                        <span>$37.95 – $167.95
+                        <span>${{round($product['price'], 2)}} – ${{round($product['price'], 3)}}
                         </span>
-                        <p><span>Lorem Ipsum </span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
+                        <p>{!! $product['description'] !!}</p>
                     </div>
                     <div class="proCounter count mr-4">
                         <span class="minus"><i class="fa fa-angle-down"></i></span>
@@ -88,7 +73,7 @@
                     </div>
                 </div>
                 <div class="sku">
-                    <p>SKU: HP5PK Category: <a href="#">Patches</a>
+                    <p>SKU: {{$product['sku'] ?? ''}} Category: <a href="#">{{$product['categories'][0]['category']['translations'][0]['name'] ?? ''}}</a>
                     </p>
                 </div>
 

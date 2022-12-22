@@ -111,7 +111,7 @@
                         @foreach($products as $chunk)
                             <div class="col-md-3">
                                 @foreach($chunk as $product)
-                                    <a href="{{route('shop.product_detail')}}" class="Btngroup">{{$product['name']}}</a>
+                                    <a href="{{route('shop.product_detail', $product['id'])}}" class="Btngroup">{{$product['name']}}</a>
                                 @endforeach
                             </div>
                         @endforeach
