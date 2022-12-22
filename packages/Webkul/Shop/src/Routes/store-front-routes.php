@@ -52,7 +52,7 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     //dfw
     Route::get('/dfw', [HomeController::class, 'dfw'])->name('shop.dfw');
     //product_detail
-    Route::get('/product_detail', [HomeController::class, 'productDetail'])->name('shop.product_detail');
+    Route::get('/product_detail/{id}', [HomeController::class, 'productDetail'])->name('shop.product_detail');
     //profile
     Route::get('/profile', [HomeController::class, 'profile'])->name('shop.profile');
     //reviews

@@ -355,6 +355,11 @@ class CategoryRepository extends Repository
 
     public function index()
     {
-        return $this->model->all();
+        $all_categories = $this->model->all();
+
+        //return categories_without_root
+        return $all_categories->diff($this->model->where('id', 1)->get());
+
+        //return $this->model->all();
     }
 }

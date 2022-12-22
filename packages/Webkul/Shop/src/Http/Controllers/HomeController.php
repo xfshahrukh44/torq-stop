@@ -94,9 +94,24 @@ class HomeController extends Controller
         return view('shop::dfw');
     }
 
-    public function productDetail()
+    public function productDetail(Request $request, $id)
     {
-        return view('shop::product_detail');
+        $product = $this->productRepository->findById($id);
+
+        $categories = $product->product_categories->toArray() ?? [];
+        $images = $product->images->toArray() ?? [];
+        $feature_image = $images[0] ?? null;
+        array_shift($images);
+
+        $product = $product->toArray();
+
+        $product['categories'] = $categories;
+        $product['feature_image'] = $feature_image;
+        $product['images'] = $images;
+
+//        dd($product);
+
+        return view('shop::product_detail', compact('product'));
     }
 
     public function profile()
@@ -139,9 +154,12 @@ class HomeController extends Controller
         $categories = $this->categoryRepository->index();
 
         //fetch products
-        $products = $this->productRepository->getProductsForShop($data)->toArray();
+//        $products = $this->productRepository->getProductsForShop($data)->toArray();
+        $products = $this->productRepository->getProductsForShop($data);
         //convert products into chunks of 6 (for frontend)
-        $products = array_chunk($products, 6);
+//        $products = array_chunk($products, 6);
+        $products = $products->chunk(6, function($prods) {});
+//        dd($products);
 
         //prep filters' options
         $year_options = $this->getFilterOptions('year', $data['category_id']);

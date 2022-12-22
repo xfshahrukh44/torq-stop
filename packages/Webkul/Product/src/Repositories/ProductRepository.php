@@ -964,4 +964,8 @@ class ProductRepository extends Repository
 
         return $products->get();
     }
+
+    public function findById ($id) {
+        return $this->model->findOrFail($id);
+    }
 }
