@@ -59,8 +59,10 @@
                         let custom_fields_string = ``;
                         custom_fields.forEach(function (item) {
                             //prep label
-                            let is_required = item.is_required === "Yes" ? 'required' : '';
-                            let label = '<label for="slug" class="'+ (is_required ? 'required' : '') +'">'+item.title+'</label>';
+                            // let is_required = item.is_required === "Yes" ? 'required' : '';
+                            let is_required = item.is_required === "Yes" ? '' : '';
+                            // let label = '<label for="slug" class="'+ (is_required ? 'required' : '') +'">'+item.title+'</label>';
+                            let label = '<label for="slug" class="'+ (is_required ? '' : '') +'">'+item.title+'</label>';
                             let bare_field = ``;
 
                             //prep field

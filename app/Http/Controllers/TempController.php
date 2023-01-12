@@ -898,7 +898,7 @@ class TempController extends Controller
         $pades_custom_fields_titles = [
             'Year',
             'MAKE',
-            'CALIPER MODEL',
+            'MODEL',
             'FMSI Steel',
             'FULL FMSI Number',
             'WVA #',
@@ -930,7 +930,7 @@ class TempController extends Controller
         $pades_custom_fields_names = [
             'year',
             'make',
-            'caliper_model',
+            'model',
             'fmsi_steel',
             'full_fmsi_number',
             'wva_number',
