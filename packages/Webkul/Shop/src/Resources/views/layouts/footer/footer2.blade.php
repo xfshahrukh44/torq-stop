@@ -1,15 +1,15 @@
 <footer>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-around">
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
-                <a href="tel:(123) 45678901" class="cntctInfo"><i class="fas fa-phone-alt"></i>(123) 45678901</a>
+                <a href="tel:8889966896" class="cntctInfo"><i class="fas fa-phone-alt"></i>888-996-6896</a>
             </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="300">
-                <a href="javascript:void(0)" class="cntctInfo"><i class="fas fa-map-marker-alt"></i>The TorqStop Shop city, <br>
-                    blog, street 12345</a>
-            </div>
+{{--            <div class="col-md-4" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="300">--}}
+{{--                <a href="javascript:void(0)" class="cntctInfo"><i class="fas fa-map-marker-alt"></i>The TorqStop Shop city, <br>--}}
+{{--                    blog, street 12345</a>--}}
+{{--            </div>--}}
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="300">
-                <a href="mailto:TorqStop@gmail.com" class="cntctInfo"><i class="fas fa-envelope"></i>TorqStop@gmail.com</a>
+                <a href="mailto:info@torqstop.com" class="cntctInfo"><i class="fas fa-envelope"></i>info@torqstop.com</a>
             </div>
         </div>
         <div class="row justify-content-between border-top">

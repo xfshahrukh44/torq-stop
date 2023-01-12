@@ -8,42 +8,34 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}" alt="First slide">
+                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                         alt="First slide">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-6">
                                     <h2>TorqStop
                                         Products</h2>
-                                    <p>PROTECT YOUR INVESTMANT AND KEEP <br>
-                                        YOUR FLEET RUNNING.</p>
+                                    <p>PROTECT YOUR INVESTMENT AND KEEP <br>
+                                        YOUR FLEET RUNNING STRONG.</p>
                                     <a href="" class="themeBtn"><span>Shop Now</span></a>
-                                </div>
-                                <div class="col-md-6">
-                                    <figure class="blast">
-                                        <img src="{{asset('themes/default/assets/images/img1.png')}}" class="img-fluid" alt="">
-                                    </figure>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}" alt="First slide">
+                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                         alt="First slide">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-6">
                                     <h2>TorqStop
                                         Products</h2>
-                                    <p>PROTECT YOUR INVESTMANT AND KEEP <br>
-                                        YOUR FLEET RUNNING.</p>
+                                    <p>PROTECT YOUR INVESTMENT AND KEEP <br>
+                                        YOUR FLEET RUNNING STRONG.</p>
                                     <a href="" class="themeBtn"><span>Shop Now</span></a>
-                                </div>
-                                <div class="col-md-6">
-                                    <figure class="blast">
-                                        <img src="{{asset('themes/default/assets/images/img1.png')}}" class="img-fluid" alt="">
-                                    </figure>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +198,8 @@
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry has been the industry's standard dummy text ever since the 1500s, when an unknown
                             printer took a galley of type and remaining essentially unchanged. </p>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page
                             when looking at point of using Ipsum is that it has a of more-or-less normal distribution of
                             letters.</p>
                         <a href="" class="themeBtns"><span>Read More</span></a>
@@ -214,7 +207,8 @@
                 </div>
                 <div class="col-md-6">
                     <figure class="reveal">
-                        <img src="{{asset('themes/default/assets/images/aboutImg.jpg')}}" class="img-fluid w-100" alt="">
+                        <img src="{{asset('themes/default/assets/images/aboutImg.jpg')}}" class="img-fluid w-100"
+                             alt="">
                     </figure>
                 </div>
             </div>
@@ -228,28 +222,36 @@
                     <h2 class="secHeading">OUR SHOP</h2>
                     <h3>Sort by Categories</h3>
                     <ul>
-                        <li><a href="javascript:;" id="all-tab" data-toggle="pill" data-target="#pills-all" type="button"
+                        <li><a href="javascript:;" id="all-tab" data-toggle="pill" data-target="#pills-all"
+                               type="button"
                                role="tab" aria-controls="pills-home" aria-selected="true">All</a></li>
 
-                        <li><a href="javascript:;" id="pads-tab" data-toggle="pill" data-target="#pills-pads" type="button"
+                        <li><a href="javascript:;" id="pads-tab" data-toggle="pill" data-target="#pills-pads"
+                               type="button"
                                role="tab" aria-controls="pills-home" aria-selected="true">Pads</a></li>
 
-                        <li><a href="javascript:;" id="rotors-tab" data-toggle="pill" data-target="#pills-rotors" type="button"
+                        <li><a href="javascript:;" id="rotors-tab" data-toggle="pill" data-target="#pills-rotors"
+                               type="button"
                                role="tab" aria-controls="pills-home" aria-selected="true">Rotors</a></li>
 
-                        <li><a href="javascript:;" id="caliper-tab" data-toggle="pill" data-target="#pills-caliper" type="button"
+                        <li><a href="javascript:;" id="caliper-tab" data-toggle="pill" data-target="#pills-caliper"
+                               type="button"
                                role="tab" aria-controls="pills-home" aria-selected="true">Caliper</a></li>
 
-                        <li><a href="javascript:;" id="hydraulics-tab" data-toggle="pill" data-target="#pills-hydraulics" type="button"
+                        <li><a href="javascript:;" id="hydraulics-tab" data-toggle="pill"
+                               data-target="#pills-hydraulics" type="button"
                                role="tab" aria-controls="pills-home" aria-selected="true">Hydraulics</a></li>
 
-                        <li><a href="javascript:;" id="parts-tab" data-toggle="pill" data-target="#pills-parts" type="button"
+                        <li><a href="javascript:;" id="parts-tab" data-toggle="pill" data-target="#pills-parts"
+                               type="button"
                                role="tab" aria-controls="pills-home" aria-selected="true">Other Parts</a></li>
 
-                        <li><a href="javascript:;" id="awards-tab" data-toggle="pill" data-target="#pills-awards" type="button"
+                        <li><a href="javascript:;" id="awards-tab" data-toggle="pill" data-target="#pills-awards"
+                               type="button"
                                role="tab" aria-controls="pills-home" aria-selected="true">Awards</a></li>
 
-                        <li><a href="javascript:;" id="video-tab" data-toggle="pill" data-target="#pills-video" type="button"
+                        <li><a href="javascript:;" id="video-tab" data-toggle="pill" data-target="#pills-video"
+                               type="button"
                                role="tab" aria-controls="pills-home" aria-selected="true">Video</a></li>
                     </ul>
                 </div>
@@ -260,7 +262,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -272,7 +275,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -284,7 +288,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -296,7 +301,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -308,7 +314,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -320,7 +327,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -332,7 +340,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -344,7 +353,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -356,7 +366,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -368,7 +379,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -380,7 +392,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -392,7 +405,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -411,7 +425,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -423,7 +438,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -435,7 +451,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -447,7 +464,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -459,7 +477,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -471,7 +490,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -483,7 +503,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -495,7 +516,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -507,7 +529,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -519,7 +542,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -531,7 +555,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -543,7 +568,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -562,7 +588,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -574,7 +601,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -586,7 +614,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -598,7 +627,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -610,7 +640,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -622,7 +653,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -634,7 +666,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -646,7 +679,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -658,7 +692,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -670,7 +705,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -682,7 +718,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -694,7 +731,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -713,7 +751,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -725,7 +764,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -737,7 +777,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -749,7 +790,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -761,7 +803,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -773,7 +816,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -785,7 +829,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -797,7 +842,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -809,7 +855,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -821,7 +868,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -833,7 +881,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -845,7 +894,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -864,7 +914,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -876,7 +927,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -888,7 +940,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -900,7 +953,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -912,7 +966,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -924,7 +979,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -936,7 +992,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -948,7 +1005,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -960,7 +1018,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -972,7 +1031,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -984,7 +1044,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -996,7 +1057,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1015,7 +1077,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1027,7 +1090,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1039,7 +1103,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1051,7 +1116,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1063,7 +1129,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1075,7 +1142,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1087,7 +1155,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1099,7 +1168,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1111,7 +1181,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1123,7 +1194,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1135,7 +1207,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1147,7 +1220,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1166,7 +1240,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1178,7 +1253,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1190,7 +1266,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1202,7 +1279,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1214,7 +1292,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1226,7 +1305,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1238,7 +1318,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1250,7 +1331,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1262,7 +1344,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1274,7 +1357,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1286,7 +1370,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1298,7 +1383,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1317,7 +1403,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1329,7 +1416,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1341,7 +1429,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1353,7 +1442,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1365,7 +1455,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1377,7 +1468,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1389,7 +1481,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1401,7 +1494,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1413,7 +1507,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1425,7 +1520,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1437,7 +1533,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1449,7 +1546,8 @@
                         <div class="col-md-3">
                             <a href="javascript:;" class="productBox">
                                 <figure class="reveal">
-                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid"
+                                         alt="">
                                 </figure>
                             </a>
                             <div class="shopContent">
@@ -1478,38 +1576,47 @@
                                 <img src="{{asset('themes/default/assets/images/user1.png')}}" class="img-fluid" alt="">
                             </figure>
                             <h4>David kennedy<span>Truck driver</span></h4>
-                            <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur
-                                adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
+                            <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor
+                                consectetur
+                                adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat
+                                psum.</p>
                         </div>
                         <div class="testimonialBox">
                             <figure>
                                 <img src="{{asset('themes/default/assets/images/user2.png')}}" class="img-fluid" alt="">
                             </figure>
                             <h4>David kennedy<span>Truck driver</span></h4>
-                            <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur
-                                adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
+                            <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor
+                                consectetur
+                                adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat
+                                psum.</p>
                         </div>
                         <div class="testimonialBox">
                             <figure>
                                 <img src="{{asset('themes/default/assets/images/user3.png')}}" class="img-fluid" alt="">
                             </figure>
                             <h4>David kennedy<span>Truck driver</span></h4>
-                            <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur
-                                adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
+                            <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor
+                                consectetur
+                                adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat
+                                psum.</p>
                         </div>
                         <div class="testimonialBox">
                             <figure>
                                 <img src="{{asset('themes/default/assets/images/user1.png')}}" class="img-fluid" alt="">
                             </figure>
                             <h4>David kennedy<span>Truck driver</span></h4>
-                            <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur
-                                adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
+                            <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor
+                                consectetur
+                                adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat
+                                psum.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <img src="{{asset('themes/default/assets/images/testimonialBg.png')}}" class="img-fluid testimonialBottom" alt="">
+        <img src="{{asset('themes/default/assets/images/testimonialBg.png')}}" class="img-fluid testimonialBottom"
+             alt="">
     </section>
 
     <section class="signupSec">
