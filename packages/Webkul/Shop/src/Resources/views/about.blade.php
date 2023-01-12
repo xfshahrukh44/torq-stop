@@ -8,7 +8,8 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/innerBg.jpg')}}" alt="First slide">
+                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/innerBg.jpg')}}"
+                         alt="First slide">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
@@ -17,7 +18,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <figure class="blast">
-                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">
+                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid"
+                                             alt="">
                                     </figure>
                                 </div>
                             </div>
@@ -51,36 +53,42 @@
                 </div>
                 <div class="col-md-6">
                     <h2 class="secHeading">About</h2>
-                    <p>Our mission is to provide superior customer service matched by excellence in our products. From
-                        semi-truck brush to grille guards, our team at TorqStop is ready to face any challenge. At the
-                        end of the day, we want to offer you products that will take you safely on your journey,
-                        wherever it may be.</p>
+                    <p>Headquartered in Charlotte, NC metro area and with over 80 years combined experience in the
+                        automotive and heavy-duty aftermarket, the founders of OPC Parts had a vision to bring the next
+                        level of quality, value and service to the industry. </p>
                 </div>
-                <div class="col-md-6">
-                    <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum has been the
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                        1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                        with desktop publishing software like PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-                <div class="col-md-6">
-                    <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum has been the
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                        1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                        with desktop publishing software like PageMaker including versions of Lorem Ipsum.</p>
+                <div class="col-md-12">
+                    <p>TorqStop™ offers a wide range of premium brake products, manufactured in ISO 9001:2015 and
+                        IATF16949: 2016 certified factories. All of our light, medium and heavy-duty brake products
+                        conform to applicable FMVSS 105, FMVSS 135, FMVSS 121 and ECE R90requirements. Our broad
+                        coverage, outstanding value and user-friendly lookup tools make TorqStop™ an easy choice for all
+                        of your commercial vehicle brake parts needs. All products are 100% NEW and CORE-FREE – saving
+                        you time, money and unnecessary handling of dirty, expensive cores.</p>
                 </div>
                 <div class="col-12">
                     <h2 class="secHeading">WHY CHOOSE US
                     </h2>
-                    <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum has been the
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                        1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                        with desktop publishing software like PageMaker including versions of Lorem Ipsum.</p>
+                    <p>First three reasons: Quality, Quality and Quality. We do not compromise on this subject.</p>
+                    <ul class="chooselist1">
+                        <li> IATF 16949:2016 Certified Factories</li>
+                        <li> ISO 9001:2015 Certified</li>
+                        <li> FMVSS 121 Compliant</li>
+                        <li> ECE R90 Compliant</li>
+                    </ul>
+                    <ul class="chooselist2">
+                        <li>Focused on long-term relationships, not short-term profits</li>
+                        <li>Strong belief in integrity and transparency</li>
+                        <li>Low Overhead allows for competitive programs</li>
+                        <li>Speed to market on New Product Introduction</li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <h2 class="secHeading">Our Vision
+                    </h2>
+                    <p>To be a leading aftermarket supplier, widely recognized for providing high-quality brake
+                        components and world-class customer service at competitive prices; delivering maximum value to
+                        our customers</p>
+
                 </div>
                 <div class="col-md-6">
                     <figure class="reveal">
@@ -90,16 +98,10 @@
                 <div class="col-md-6">
                     <h2 class="secHeading">Our
                         Mission</h2>
-                    <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum has been the
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                        1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-                    <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum has been the
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                        1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                    <p>To exceed our customer’s expectations in quality, delivery, and cost, through close customer
+                        interaction and continuous improvement. We will offer best-in-class cataloging, website, and
+                        product data in order to ensure our customers get the right part, on time, at the right
+                        price</p>
                 </div>
                 <div class="col-12">
                     <h2 class="secHeading">WHO WE ARE?</h2>
@@ -131,34 +133,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row text-center">
-                <h2 class="secHeading">MEET OUR TEAM</h2>
-                <div class="col-md-4">
-                    <div class="teamBox">
-                        <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/team1.jpg')}}" class="img-fluid" alt="">
-                        </figure>
-                        <p>- David Joe</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="teamBox">
-                        <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/team2.jpg')}}" class="img-fluid" alt="">
-                        </figure>
-                        <p>- Peeter</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="teamBox">
-                        <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/team3.jpg')}}" class="img-fluid" alt="">
-                        </figure>
-                        <p>- Jhon Doe</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
