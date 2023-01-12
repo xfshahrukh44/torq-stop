@@ -28,101 +28,6 @@
         </div>
     </div>
 
-
-    <section class="dfwSec">
-        <div class="container-fluid">
-            {{--categories--}}
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                @if($categories)
-                    @foreach($categories as $category)
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link btn_category {!! $data['category_id'] && $category->id == $data['category_id'] ? 'active' : '' !!}" data-id="{{$category->id}}" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                                {{$category->name ?? ''}}
-                            </button>
-                        </li>
-                    @endforeach
-                @endif
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    {{--filters--}}
-                    <div class="row getForm">
-                        <div class="col-md-7">
-                            <div class="d-flex align-items-center w-100">
-                                <div class="frictionForm">
-                                    <select class="year" id="select_year">
-                                        <option value="">YEAR</option>
-                                        @foreach($year_options as $year_option)
-                                            <option value="{{$year_option->field_value}}" {!! $data['year'] && $data['year'] == $year_option->field_value ? 'selected' : '' !!}>{{$year_option->field_value}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="frictionForm">
-                                    <select class="year" id="select_make">
-                                        <option value="">Make</option>
-                                        @foreach($make_options as $make_option)
-                                            <option value="{{$make_option->field_value}}" {!! $data['make'] && $data['make'] == $make_option->field_value ? 'selected' : '' !!}>{{$make_option->field_value}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="frictionForm">
-                                    <select class="year" id="select_model">
-                                        <option value="">Model</option>
-                                        @foreach($model_options as $model_option)
-                                            <option value="{{$model_option->field_value}}" {!! $data['model'] && $data['model'] == $model_option->field_value ? 'selected' : '' !!}>{{$model_option->field_value}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="d-flex align-items-center">
-                                <div class="frictionForm">
-                                    <input type="text" id="input_name" placeholder="Enter Part Number" value="{{$data['name'] ?? ''}}">
-                                </div>
-                                <button class="btnform" id="btn_submit">Search</button>
-                            </div>
-                        </div>
-
-                        {{--hidden form--}}
-                        <form id="main_form" action="{{route('shop.shop')}}" method="POST" hidden>
-                            @csrf
-                            <input type="hidden" id="form_name" name="name" value="{{$data['name'] ?? ''}}">
-                            <input type="hidden" id="form_category_id" name="category_id" value="{{$data['category_id'] ?? ''}}">
-                            <input type="hidden" id="form_year" name="year" value="{{$data['year'] ?? ''}}">
-                            <input type="hidden" id="form_make" name="make" value="{{$data['make'] ?? ''}}">
-                            <input type="hidden" id="form_model" name="model" value="{{$data['model'] ?? ''}}">
-                        </form>
-{{--                        <div class="col-12">--}}
-{{--                            <div class="radioBox">--}}
-{{--                                <input type="radio" name="one" id="1st">--}}
-{{--                                <label for="1st">Exactt match</label>--}}
-{{--                                <input type="radio" name="one" id="2nd">--}}
-{{--                                <label for="2nd">Base ntumber match</label>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-                    </div>
-                    {{--products--}}
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <h2>Please Select - Year Make & Model First</h2>
-                            <h4>Product Group</h4>
-                        </div>
-                        @foreach($products as $chunk)
-                            <div class="col-md-3">
-                                @foreach($chunk as $product)
-                                    <a href="{{route('shop.product_detail', $product['id'])}}" class="Btngroup">{{$product['name']}}</a>
-                                @endforeach
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    {{--shop section--}}
     <section class="shopSec">
         <div class="container">
             <div class="row">
@@ -293,6 +198,100 @@
             <img src="{{asset('themes/default/assets/images/productBg.png')}}" alt="">
         </figure>
     </section>
+
+    <section class="dfwSec">
+        <div class="container-fluid">
+            {{--categories--}}
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                @if($categories)
+                    @foreach($categories as $category)
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link btn_category {!! $data['category_id'] && $category->id == $data['category_id'] ? 'active' : '' !!}" data-id="{{$category->id}}" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                {{$category->name ?? ''}}
+                            </button>
+                        </li>
+                    @endforeach
+                @endif
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    {{--filters--}}
+                    <div class="row getForm">
+                        <div class="col-md-7">
+                            <div class="d-flex align-items-center w-100">
+                                <div class="frictionForm">
+                                    <select class="year" id="select_year">
+                                        <option value="">YEAR</option>
+                                        @foreach($year_options as $year_option)
+                                            <option value="{{$year_option->field_value}}" {!! $data['year'] && $data['year'] == $year_option->field_value ? 'selected' : '' !!}>{{$year_option->field_value}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="frictionForm">
+                                    <select class="year" id="select_make">
+                                        <option value="">Make</option>
+                                        @foreach($make_options as $make_option)
+                                            <option value="{{$make_option->field_value}}" {!! $data['make'] && $data['make'] == $make_option->field_value ? 'selected' : '' !!}>{{$make_option->field_value}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="frictionForm">
+                                    <select class="year" id="select_model">
+                                        <option value="">Model</option>
+                                        @foreach($model_options as $model_option)
+                                            <option value="{{$model_option->field_value}}" {!! $data['model'] && $data['model'] == $model_option->field_value ? 'selected' : '' !!}>{{$model_option->field_value}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="d-flex align-items-center">
+                                <div class="frictionForm">
+                                    <input type="text" id="input_name" placeholder="Enter Part Number" value="{{$data['name'] ?? ''}}">
+                                </div>
+                                <button class="btnform" id="btn_submit">Search</button>
+                            </div>
+                        </div>
+
+                        {{--hidden form--}}
+                        <form id="main_form" action="{{route('shop.shop')}}" method="POST" hidden>
+                            @csrf
+                            <input type="hidden" id="form_name" name="name" value="{{$data['name'] ?? ''}}">
+                            <input type="hidden" id="form_category_id" name="category_id" value="{{$data['category_id'] ?? ''}}">
+                            <input type="hidden" id="form_year" name="year" value="{{$data['year'] ?? ''}}">
+                            <input type="hidden" id="form_make" name="make" value="{{$data['make'] ?? ''}}">
+                            <input type="hidden" id="form_model" name="model" value="{{$data['model'] ?? ''}}">
+                        </form>
+{{--                        <div class="col-12">--}}
+{{--                            <div class="radioBox">--}}
+{{--                                <input type="radio" name="one" id="1st">--}}
+{{--                                <label for="1st">Exactt match</label>--}}
+{{--                                <input type="radio" name="one" id="2nd">--}}
+{{--                                <label for="2nd">Base ntumber match</label>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+                    </div>
+                    {{--products--}}
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2>Please Select - Year Make & Model First</h2>
+                            <h4>Product Group</h4>
+                        </div>
+                        @foreach($products as $chunk)
+                            <div class="col-md-3">
+                                @foreach($chunk as $product)
+                                    <a href="{{route('shop.product_detail', $product['id'])}}" class="Btngroup">{{$product['name']}}</a>
+                                @endforeach
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{--shop section--}}
 
     <section class="signupSec">
         <img src="{{asset('themes/default/assets/images/truck.png')}}" class="img-fluid truck" alt="">
