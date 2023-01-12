@@ -71,6 +71,22 @@
                             <a href="{{route('shop.step1')}}" class="themeBtn">Add to Cart</a>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-sm table-bordered text-white">
+                                <tr class="text-center">
+                                    <th colspan="2">Details</th>
+                                </tr>
+                                @foreach($product['product_category_fields'] as $product_category_field)
+                                    <tr>
+                                        <th>{{$product_category_field['field_name']}}</th>
+                                        <td>{{$product_category_field['field_value']}}</td>
+                                    </tr>
+                                @endforeach
+                            </table>
+                        </div>
+                    </div>
                 </div>
                 <div class="sku">
                     <p>SKU: {{$product['sku'] ?? ''}} Category: <a href="#">{{$product['categories'][0]['category']['translations'][0]['name'] ?? ''}}</a>
