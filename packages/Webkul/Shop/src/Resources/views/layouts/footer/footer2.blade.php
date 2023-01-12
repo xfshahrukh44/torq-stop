@@ -14,7 +14,7 @@
         </div>
         <div class="row justify-content-between border-top">
             <div class="col-md-4">
-                <a href="#" class="d-block text-center"><img src="images/footLogo.png" alt=""></a>
+                <a href="#" class="d-block text-center"><img src="{{asset("themes/default/assets/images/logo11.png")}}" alt=""></a>
             </div>
             <div class="col-md-2">
                 <h3>Quick Links</h3>

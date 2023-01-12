@@ -1930,3 +1930,7 @@ ul.chooselist2 li {
     color: #fff;
     line-height: 2;
 }
+
+.navbar-brand img {
+    width: 190px;
+}
