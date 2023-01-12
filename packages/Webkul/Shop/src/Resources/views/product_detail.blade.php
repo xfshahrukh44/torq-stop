@@ -15,11 +15,11 @@
                                 <div class="col-md-7">
                                     <h2>Product detail</h2>
                                 </div>
-                                <div class="col-md-5">
-                                    <figure class="blast">
-                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">
-                                    </figure>
-                                </div>
+{{--                                <div class="col-md-5">--}}
+{{--                                    <figure class="blast">--}}
+{{--                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">--}}
+{{--                                    </figure>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
