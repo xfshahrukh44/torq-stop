@@ -966,6 +966,6 @@ class ProductRepository extends Repository
     }
 
     public function findById ($id) {
-        return $this->model->findOrFail($id);
+        return $this->model->with('productCategoryFields')->findOrFail($id);
     }
 }
