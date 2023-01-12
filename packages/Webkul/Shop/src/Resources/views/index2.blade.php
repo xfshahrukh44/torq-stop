@@ -4,6 +4,10 @@
 
 @section('content')
 
+    <div class="preLoader black">
+        <img src="{{asset("themes/default/assets/images/pre12.png")}}" alt="">
+    </div>
+    <div class="preLoader white"></div>
     <div class="main-slider">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
