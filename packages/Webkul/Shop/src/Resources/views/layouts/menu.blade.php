@@ -14,22 +14,19 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('shop.home.index')}}"><span>Home</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ request()->is('about') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('shop.about')}}"><span>About Us</span></a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="categories.php"><span>categories</span></a>
-                    </li> -->
-                    <li class="nav-item">
+                    <li class="nav-item {{ request()->is('shop') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('shop.shop')}}"><span>Shop</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ request()->is('reviews') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('shop.reviews')}}"><span>REVIEWS</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('shop.contact')}}"><span>Contact us</span></a>
                     </li>
                 </ul>
