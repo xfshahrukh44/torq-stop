@@ -23,6 +23,11 @@
     src: url(../fonts/fontspring-demo-balgin-blackexpanded.otf);
 }
 
+@font-face {
+    font-family: "Frank";
+    src: url("../fonts/Franklin Gothic Demi Regular.ttf");
+}
+
 :root {
     --primary: #ed7d20;
     --secondary: #bdbdbd;
@@ -193,6 +198,7 @@ header {
 .main-slider h2 {
     font-size: 3.75rem;
     text-transform: uppercase;
+    font-family: "Frank";
 }
 
 .main-slider p {
@@ -1933,4 +1939,79 @@ ul.chooselist2 li {
 
 .navbar-brand img {
     width: 190px;
+}
+
+.taglineSec {
+    background: #3a3a3a;
+}
+
+.taglineSec p {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.taglineSec p + p {
+    margin: 1rem 0 0;
+}
+
+.infoCard figure {
+    position: relative;
+    margin: 0;
+}
+
+.infoCard figure .iconOverlay {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoCard figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.infoCard .content h4 {
+    color: #fff;
+    font-family: 'Frank';
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.infoCard {
+    height: 100%;
+}
+
+.infoCard .content {
+    padding: 4rem 0 0;
+}
+
+.cardsSec .row {
+    gap: 2rem 0;
+}
+
+.infoCard figure .iconOverlay i {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.carousel-item video, .carousel-item img {
+    height: 760px;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+}
+
+.taglineSec p span {
+    font-weight: 700;
 }
