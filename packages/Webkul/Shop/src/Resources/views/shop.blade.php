@@ -14,7 +14,7 @@
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-7">
-                                    <h2>Shop</h2>
+                                    <h2>Products</h2>
                                 </div>
 {{--                                <div class="col-md-5">--}}
 {{--                                    <figure class="blast">--}}
@@ -33,165 +33,173 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="secHeading">OUR SHOP</h2>
-                    <h3>Sort by Categories</h3>
-                    <ul>
-                        <li><a href="">All</a></li>
-                        <li><a href="">Pads</a></li>
-                        <li><a href="">Rotors</a></li>
-                        <li><a href="">Caliper</a></li>
-                        <li><a href="">Hydraulics</a></li>
-                        <li><a href="">Other Parts</a></li>
-                        <li><a href="">Awards</a></li>
-                        <li><a href="">Video</a></li>
-                    </ul>
+                    <h2 class="secHeading">Our Products</h2>
+{{--                    <h3>Sort by Categories</h3>--}}
+{{--                    <ul>--}}
+{{--                        <li><a href="">All</a></li>--}}
+{{--                        <li><a href="">Pads</a></li>--}}
+{{--                        <li><a href="">Rotors</a></li>--}}
+{{--                        <li><a href="">Caliper</a></li>--}}
+{{--                        <li><a href="">Hydraulics</a></li>--}}
+{{--                        <li><a href="">Other Parts</a></li>--}}
+{{--                        <li><a href="">Awards</a></li>--}}
+{{--                        <li><a href="">Video</a></li>--}}
+{{--                    </ul>--}}
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
+                            <a href="{{route('shop.shopByCategory')}}"><img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt=""></a>
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
+                        <h3><a href="{{route('shop.shopByCategory')}}">brake pads</a></h3>
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
+                            <a href="{{route('shop.shopByCategory')}}"><img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt=""></a>
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
+                        <h3><a href="{{route('shop.shopByCategory')}}">brake rotors</a></h3>
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
+                            <a href="{{route('shop.shopByCategory')}}"><img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt=""></a>
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
+                        <h3><a href="{{route('shop.shopByCategory')}}">air disc brake calipers</a></h3>
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
+                            <a href="{{route('shop.shopByCategory')}}"><img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt=""></a>
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
+                        <h3><a href="{{route('shop.shopByCategory')}}">air disc brake calipers</a></h3>
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt="">
+                            <a href="{{route('shop.shopByCategory')}}"><img src="{{asset('themes/default/assets/images/shop5.png')}}" class="img-fluid" alt=""></a>
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
+                        <h3><a href="{{route('shop.shopByCategory')}}">brake shoe kits</a></h3>
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt="">
+                            <a href="{{route('shop.shopByCategory')}}"><img src="{{asset('themes/default/assets/images/shop6.png')}}" class="img-fluid" alt=""></a>
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
+                        <h3><a href="{{route('shop.shopByCategory')}}">misc. hardware</a></h3>
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt="">
+                            <a href="{{route('shop.shopByCategory')}}"><img src="{{asset('themes/default/assets/images/shop7.png')}}" class="img-fluid" alt=""></a>
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
+                        <h3><a href="{{route('shop.shopByCategory')}}">medium duty</a></h3>
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="productBox">
                         <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt="">
+                            <a href="{{route('shop.shopByCategory')}}"><img src="{{asset('themes/default/assets/images/shop8.png')}}" class="img-fluid" alt=""></a>
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
+                        <h3><a href="{{route('shop.shopByCategory')}}">torqstop swag</a></h3>
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="productBox">
-                        <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">
-                        </figure>
-                    </div>
-                    <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="productBox">
-                        <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">
-                        </figure>
-                    </div>
-                    <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="productBox">
-                        <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">
-                        </figure>
-                    </div>
-                    <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="productBox">
-                        <figure class="reveal">
-                            <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">
-                        </figure>
-                    </div>
-                    <div class="shopContent">
-                        <p>Lorem Ipsum is simply dummy text of
-                            the printing and typesetting...<span>$200</span></p>
-                        <a href="">aDD TO CART</a>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="productBox">--}}
+{{--                        <figure class="reveal">--}}
+{{--                            <img src="{{asset('themes/default/assets/images/shop1.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                    </div>--}}
+{{--                    <div class="shopContent">--}}
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="productBox">--}}
+{{--                        <figure class="reveal">--}}
+{{--                            <img src="{{asset('themes/default/assets/images/shop2.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                    </div>--}}
+{{--                    <div class="shopContent">--}}
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="productBox">--}}
+{{--                        <figure class="reveal">--}}
+{{--                            <img src="{{asset('themes/default/assets/images/shop3.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                    </div>--}}
+{{--                    <div class="shopContent">--}}
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="productBox">--}}
+{{--                        <figure class="reveal">--}}
+{{--                            <img src="{{asset('themes/default/assets/images/shop4.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                    </div>--}}
+{{--                    <div class="shopContent">--}}
+{{--                        <p>Lorem Ipsum is simply dummy text of--}}
+{{--                            the printing and typesetting...<span>$200</span></p>--}}
+{{--                        <a href="">aDD TO CART</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
             </div>
         </div>
@@ -301,7 +309,7 @@
                 <div class="col-md-12 text-center">
                     <h2>Sign Up For <br>
                         Our Newsletter</h2>
-                    <a href="" class="themeBtns"><span>Shop Now</span></a>
+{{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
                 </div>
             </div>
         </div>
