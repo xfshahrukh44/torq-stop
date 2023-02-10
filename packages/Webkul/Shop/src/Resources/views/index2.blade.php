@@ -11,9 +11,27 @@
     <div class="main-slider">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
+{{--                <div data-interval="5000" class="carousel-item active">--}}
+{{--                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"--}}
+{{--                         alt="First slide">--}}
+{{--                    <div class="carousel-caption">--}}
+{{--                        <div class="container">--}}
+{{--                            <div class="row align-items-center justify-content-between">--}}
+{{--                                <div class="col-md-6">--}}
+{{--                                    <h2>TorqStop--}}
+{{--                                        Products</h2>--}}
+{{--                                    <p>PROTECT YOUR INVESTMENT AND KEEP <br>--}}
+{{--                                        YOUR FLEET RUNNING STRONG.</p>--}}
+{{--                                    --}}{{--                                    <a href="" class="themeBtn"><span>Shop Now</span></a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <div data-interval="5000" class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
-                         alt="First slide">
+                    <video autoplay loop muted>
+                        <source src="{{asset('themes/default/assets/images/slide1.mp4')}}">
+                    </video>
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
@@ -22,29 +40,10 @@
                                         Products</h2>
                                     <p>PROTECT YOUR INVESTMENT AND KEEP <br>
                                         YOUR FLEET RUNNING STRONG.</p>
-                                    {{--                                    <a href="" class="themeBtn"><span>Shop Now</span></a>--}}
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div data-interval="5000" class="carousel-item">
-                    <video autoplay loop muted>
-                        <source src="{{asset('themes/default/assets/images/slide1.mp4')}}">
-                    </video>
-                    {{--                    <div class="carousel-caption">--}}
-                    {{--                        <div class="container">--}}
-                    {{--                            <div class="row align-items-center justify-content-between">--}}
-                    {{--                                <div class="col-md-6">--}}
-                    {{--                                    <h2>TorqStop--}}
-                    {{--                                        Products</h2>--}}
-                    {{--                                    <p>PROTECT YOUR INVESTMENT AND KEEP <br>--}}
-                    {{--                                        YOUR FLEET RUNNING STRONG.</p>--}}
-                    {{--                                    --}}{{--                                    <a href="" class="themeBtn"><span>Shop Now</span></a>--}}
-                    {{--                                </div>--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
                 </div>
                 <div data-interval="5000" class="carousel-item">
                     <video autoplay loop muted>
@@ -1742,7 +1741,7 @@
                 <div class="col-md-12 text-center">
                     <h2>Sign Up For <br>
                         Our Newsletter</h2>
-                    <a href="" class="themeBtns"><span>Shop Now</span></a>
+{{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
                 </div>
             </div>
         </div>

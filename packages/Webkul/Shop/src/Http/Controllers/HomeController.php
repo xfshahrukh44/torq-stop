@@ -169,6 +169,51 @@ class HomeController extends Controller
         return view('shop::shop', compact('categories', 'products', 'year_options', 'make_options', 'model_options', 'data'));
     }
 
+    public function shopByCategory (Request $request)
+    {
+//        dd($request->all());
+        //init data
+        $name = null;
+        $category_id = null;
+        $year = null;
+        $make = null;
+        $model = null;
+
+        //prep data
+        if ($request->method() == 'POST') {
+            $name = $request->name;
+            $category_id = $request->category_id;
+            $year = $request->year;
+            $make = $request->make;
+            $model = $request->model;
+        }
+        $data = [
+            'name' => $name,
+            'category_id' => $category_id,
+            'year' => $year,
+            'make' => $make,
+            'model' => $model,
+        ];
+
+        //fetch categories
+        $categories = $this->categoryRepository->index();
+
+        //fetch products
+//        $products = $this->productRepository->getProductsForShop($data)->toArray();
+        $products = $this->productRepository->getProductsForShop($data);
+        //convert products into chunks of 6 (for frontend)
+//        $products = array_chunk($products, 6);
+        $products = $products->chunk(6, function($prods) {});
+//        dd($products);
+
+        //prep filters' options
+        $year_options = $this->getFilterOptions('year', $data['category_id']);
+        $make_options = $this->getFilterOptions('make', $data['category_id']);
+        $model_options = $this->getFilterOptions('model', $data['category_id']);
+
+        return view('shop::shop-by-category', compact('categories', 'products', 'year_options', 'make_options', 'model_options', 'data'));
+    }
+
     public function step1()
     {
         return view('shop::step1');

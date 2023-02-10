@@ -66,7 +66,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "spring", sans-serif;
+    font-family: "Frank", sans-serif;
 }
 
 p {
@@ -193,6 +193,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: left;
+    background-color: rgb(0 0 0 / 40%);
 }
 
 .main-slider h2 {
@@ -398,7 +399,7 @@ header {
     font-size: 1.125rem;
 }
 
-.shopContent a {
+.shopContent > a {
     font-size: 0.875rem;
     color: var(--primary);
     text-transform: uppercase;
@@ -408,7 +409,13 @@ header {
 .shopContent {
     margin: 0.75rem 0 3rem 0;
 }
-
+.shopContent h3{
+    font-size: 1.25rem;
+    text-transform: capitalize;
+}
+.shopContent h3 > a{
+    color: var(--primary);
+}
 /* Shop Sec End */
 
 /* Testimonial Sec Start */
@@ -801,7 +808,7 @@ footer .form-group button:hover {
 .contactInner button {
     background: var(--primary);
     font-size: 1.5rem;
-    font-family: "spring", sans-serif;
+    font-family: "Frank", sans-serif;
     padding: 1rem 1.5rem;
 }
 
@@ -2010,6 +2017,9 @@ ul.chooselist2 li {
     width: 100%;
     object-fit: cover;
     display: flex;
+}
+.carousel-item img{
+    height: 200px;
 }
 
 .taglineSec p span {

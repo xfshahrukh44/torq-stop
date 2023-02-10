@@ -179,7 +179,7 @@
                 <div class="col-md-12 text-center">
                     <h2>Sign Up For <br>
                         Our Newsletter</h2>
-                    <a href="" class="themeBtns"><span>Shop Now</span></a>
+{{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
                 </div>
             </div>
         </div>
