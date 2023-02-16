@@ -14,7 +14,7 @@
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-7">
-                                    <h2>Products</h2>
+                                    <h2>Our Products</h2>
                                 </div>
 {{--                                <div class="col-md-5">--}}
 {{--                                    <figure class="blast">--}}
@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="secHeading">Our Products</h2>
+{{--                    <h2 class="secHeading">Our Products</h2>--}}
 {{--                    <h3>Sort by Categories</h3>--}}
 {{--                    <ul>--}}
 {{--                        <li><a href="">All</a></li>--}}
@@ -94,7 +94,7 @@
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <h3><a href="{{route('shop.shopByCategory')}}">air disc brake calipers</a></h3>
+                        <h3><a href="{{route('shop.shopByCategory')}}">brake shoe kits</a></h3>
 {{--                        <p>Lorem Ipsum is simply dummy text of--}}
 {{--                            the printing and typesetting...<span>$200</span></p>--}}
 {{--                        <a href="">aDD TO CART</a>--}}
@@ -107,7 +107,7 @@
                         </figure>
                     </div>
                     <div class="shopContent">
-                        <h3><a href="{{route('shop.shopByCategory')}}">brake shoe kits</a></h3>
+                        <h3><a href="{{route('shop.shopByCategory')}}">brake chambers</a></h3>
 {{--                        <p>Lorem Ipsum is simply dummy text of--}}
 {{--                            the printing and typesetting...<span>$200</span></p>--}}
 {{--                        <a href="">aDD TO CART</a>--}}

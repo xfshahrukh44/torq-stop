@@ -200,14 +200,17 @@ header {
     font-size: 3.75rem;
     text-transform: uppercase;
     font-family: "Frank";
+    color: var(--black);
 }
 
 .main-slider p {
     font-size: 1.5625rem;
-    color: var(--white);
+    color: var(--black);
     line-height: 1.2;
     margin: 20px 0 32px 0;
 }
+
+.inner
 
 .themeBtn {
     font-size: 1.375rem;
@@ -728,7 +731,9 @@ footer .form-group button:hover {
 .innerbaner .blast {
     text-align: right;
 }
-
+.innerbaner :is(h2,p){
+    color: var(--white);
+}
 /*About Page CSS Start*/
 .aboutInner .playBtn a {
     position: absolute;
@@ -782,7 +787,7 @@ footer .form-group button:hover {
 
 /*Categories Page CSS End*/
 /*Contact Page CSS Start*/
-.contactInner input {
+:is(.reviewForm,.contactInner) input {
     width: 100%;
     height: 3rem;
     background: transparent;
@@ -791,7 +796,7 @@ footer .form-group button:hover {
     margin: 1rem 0;
 }
 
-.contactInner textarea {
+:is(.reviewForm,.contactInner) textarea {
     width: 100%;
     background: transparent;
     border: 1px solid #707070;
@@ -799,20 +804,20 @@ footer .form-group button:hover {
     margin: 1rem 0;
 }
 
-.contactInner h4 {
+:is(.reviewForm,.contactInner) h4 {
     font-size: 2.125rem;
     color: #fff;
     margin-top: 2rem;
 }
 
-.contactInner button {
+:is(.reviewForm,.contactInner) button {
     background: var(--primary);
     font-size: 1.5rem;
     font-family: "Frank", sans-serif;
     padding: 1rem 1.5rem;
 }
 
-.contactInner button:hover {
+:is(.reviewForm,.contactInner) button:hover {
     background-color: #ffff;
     color: #000;
 }
@@ -2018,7 +2023,7 @@ ul.chooselist2 li {
     object-fit: cover;
     display: flex;
 }
-.carousel-item img{
+.innerbaner .carousel-item img{
     height: 200px;
 }
 

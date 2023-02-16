@@ -11,23 +11,23 @@
     <div class="main-slider">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-{{--                <div data-interval="5000" class="carousel-item active">--}}
-{{--                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"--}}
-{{--                         alt="First slide">--}}
-{{--                    <div class="carousel-caption">--}}
-{{--                        <div class="container">--}}
-{{--                            <div class="row align-items-center justify-content-between">--}}
-{{--                                <div class="col-md-6">--}}
-{{--                                    <h2>TorqStop--}}
-{{--                                        Products</h2>--}}
-{{--                                    <p>PROTECT YOUR INVESTMENT AND KEEP <br>--}}
-{{--                                        YOUR FLEET RUNNING STRONG.</p>--}}
-{{--                                    --}}{{--                                    <a href="" class="themeBtn"><span>Shop Now</span></a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                {{--                <div data-interval="5000" class="carousel-item active">--}}
+                {{--                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"--}}
+                {{--                         alt="First slide">--}}
+                {{--                    <div class="carousel-caption">--}}
+                {{--                        <div class="container">--}}
+                {{--                            <div class="row align-items-center justify-content-between">--}}
+                {{--                                <div class="col-md-6">--}}
+                {{--                                    <h2>TorqStop--}}
+                {{--                                        Products</h2>--}}
+                {{--                                    <p>PROTECT YOUR INVESTMENT AND KEEP <br>--}}
+                {{--                                        YOUR FLEET RUNNING STRONG.</p>--}}
+                {{--                                    --}}{{--                                    <a href="" class="themeBtn"><span>Shop Now</span></a>--}}
+                {{--                                </div>--}}
+                {{--                            </div>--}}
+                {{--                        </div>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
                 <div data-interval="5000" class="carousel-item active">
                     <video autoplay loop muted>
                         <source src="{{asset('themes/default/assets/images/slide1.mp4')}}">
@@ -51,9 +51,8 @@
                     </video>
                 </div>
                 <div data-interval="5000" class="carousel-item">
-                    <video autoplay loop muted>
-                        <source src="{{asset('themes/default/assets/images/slide3.mp4')}}">
-                    </video>
+                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                         alt="First slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -72,8 +71,10 @@
             <div class="row">
                 <div class="col-12">
                     <p>
-                        <span>With over 80 years manufacturing experience,</span> OPC Parts produces OE-quality, 100% NEW Light,
-                        Medium and Heavy-Duty Commercial Vehicle brake components under the <span>TorqStop™</span> brand or under
+                        <span>With over 80 years manufacturing experience,</span> OPC Parts produces OE-quality, 100%
+                        NEW Light,
+                        Medium and Heavy-Duty Commercial Vehicle brake components under the <span>TorqStop™</span> brand
+                        or under
                         your own Private Label.
                     </p>
                     <p>
@@ -92,7 +93,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/aboutImg.jpg')}}" alt="">
+                            <img src="{{asset('themes/default/assets/images/literature.jpg')}}" alt="">
                             <div class="iconOverlay">
                                 <i class="fas fa-file"></i>
                             </div>
@@ -107,7 +108,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/aboutImg.jpg')}}" alt="">
+                            <img src="{{asset('themes/default/assets/images/distributor-portal.jpg')}}" alt="">
                             <div class="iconOverlay">
                                 <i class="fas fa-file"></i>
                             </div>
@@ -122,7 +123,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/aboutImg.jpg')}}" alt="">
+                            <img src="{{asset('themes/default/assets/images/e-catalog.jpg')}}" alt="">
                             <div class="iconOverlay">
                                 <i class="fas fa-file"></i>
                             </div>
@@ -137,7 +138,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/aboutImg.jpg')}}" alt="">
+                            <img src="{{asset('themes/default/assets/images/represantative.jpg')}}" alt="">
                             <div class="iconOverlay">
                                 <i class="fas fa-file"></i>
                             </div>
@@ -152,7 +153,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/aboutImg.jpg')}}" alt="">
+                            <img src="{{asset('themes/default/assets/images/find-distributor.jpg')}}" alt="">
                             <div class="iconOverlay">
                                 <i class="fas fa-file"></i>
                             </div>
@@ -1741,7 +1742,7 @@
                 <div class="col-md-12 text-center">
                     <h2>Sign Up For <br>
                         Our Newsletter</h2>
-{{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
+                    {{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
                 </div>
             </div>
         </div>
