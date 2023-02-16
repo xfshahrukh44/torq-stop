@@ -52,7 +52,6 @@
                     </figure>
                 </div>
                 <div class="col-md-6">
-                    <h2 class="secHeading">About</h2>
                     <p>With over 80 years combined experience in the
                         automotive and heavy-duty aftermarket, the founders of OPC Parts had a vision to bring the next
                         level of quality, value and service to the industry. </p>
