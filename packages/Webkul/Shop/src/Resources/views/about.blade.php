@@ -48,7 +48,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <figure class="reveal">
-                        <img src="{{asset('themes/default/assets/images/abt3.png')}}" alt="">
+                        <img src="{{asset('themes/default/assets/images/aboutIntro.jpg')}}" alt="">
                     </figure>
                 </div>
                 <div class="col-md-6">

@@ -39,7 +39,7 @@
                                     <h2>TorqStop
                                         Products</h2>
                                     <p>PROTECT YOUR INVESTMENT AND KEEP <br>
-                                        YOUR FLEET RUNNING STRONG.</p>
+                                        YOUR FLEET RUNNING STRONG WHILE STAYING ON BUDGET.</p>
                                 </div>
                             </div>
                         </div>
@@ -49,10 +49,34 @@
                     <video autoplay loop muted>
                         <source src="{{asset('themes/default/assets/images/slide2.mp4')}}">
                     </video>
+                    <div class="carousel-caption  text-white">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-md-6">
+                                    {{--                                    <h2>TorqStop--}}
+                                    {{--                                        Products</h2>--}}
+                                    <p>FULL RANGE OF HYDRAULIC BRAKE PARTS FOR LIGHT AND MEDIUM DUTY TRUCKS CLASS 1-7,
+                                        INCLUDING LAST MILE DELIVERY VEHICLES.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div data-interval="5000" class="carousel-item">
                     <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
                          alt="First slide">
+                    <div class="carousel-caption text-white">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-md-6">
+                                    {{--                                    <h2>TorqStop--}}
+                                    {{--                                        Products</h2>--}}
+                                    <p>100% ALL-NEW, PREMIUM-QUALITY PARTS PROVIDE EXCEPTIONAL VALUE AND LOWEST COST PER
+                                        MILE.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -93,10 +117,12 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/literature.jpg')}}" alt="">
-                            <div class="iconOverlay">
-                                <i class="fas fa-file"></i>
-                            </div>
+                            <a href="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}" data-fancybox="PDF" data-download-src="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}"><img
+                                    src="{{asset('themes/default/assets/images/literature.jpg')}}" alt="">
+                                <div class="iconOverlay">
+                                    <i class="fas fa-file"></i>
+                                </div>
+                            </a>
                         </figure>
                         <div class="content">
                             <h4>
