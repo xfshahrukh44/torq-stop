@@ -33,8 +33,8 @@ class HomeController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @param  \Webkul\Core\Repositories\SliderRepository  $sliderRepository
-     * @param  \Webkul\Product\Repositories\SearchRepository  $searchRepository
+     * @param \Webkul\Core\Repositories\SliderRepository $sliderRepository
+     * @param \Webkul\Product\Repositories\SearchRepository $searchRepository
      * @return void
      */
     public function __construct(
@@ -42,7 +42,8 @@ class HomeController extends Controller
         SearchRepository $searchRepository,
         CategoryRepository $categoryRepository,
         ProductRepository $productRepository
-    ) {
+    )
+    {
         $this->sliderRepository = $sliderRepository;
 
         $this->searchRepository = $searchRepository;
@@ -97,7 +98,6 @@ class HomeController extends Controller
     public function productDetail(Request $request, $id)
     {
         $product = $this->productRepository->findById($id);
-
         $categories = $product->product_categories->toArray() ?? [];
         $images = $product->images->toArray() ?? [];
         $feature_image = $images[0] ?? null;
@@ -108,8 +108,6 @@ class HomeController extends Controller
         $product['categories'] = $categories;
         $product['feature_image'] = $feature_image;
         $product['images'] = $images;
-
-//        dd($product);
 
         return view('shop::product_detail', compact('product'));
     }
@@ -137,11 +135,11 @@ class HomeController extends Controller
         //prep data
         if ($request->method() == 'POST') {
             $name = $request->name;
-            $category_id = $request->category_id;
             $year = $request->year;
             $make = $request->make;
             $model = $request->model;
         }
+
         $data = [
             'name' => $name,
             'category_id' => $category_id,
@@ -150,8 +148,12 @@ class HomeController extends Controller
             'model' => $model,
         ];
 
+        if ($request->has('cate')) {
+            $data['category_id'] = $request->cate;
+        }
+
         //fetch categories
-        $categories = $this->categoryRepository->index();
+        $categories = $this->categoryRepository->allParents();
 
         //fetch products
 //        $products = $this->productRepository->getProductsForShop($data)->toArray();
@@ -169,9 +171,8 @@ class HomeController extends Controller
         return view('shop::shop', compact('categories', 'products', 'year_options', 'make_options', 'model_options', 'data'));
     }
 
-    public function shopByCategory (Request $request)
+    public function shopByCategory(Request $request)
     {
-//        dd($request->all());
         //init data
         $name = null;
         $category_id = null;
@@ -187,6 +188,7 @@ class HomeController extends Controller
             $make = $request->make;
             $model = $request->model;
         }
+
         $data = [
             'name' => $name,
             'category_id' => $category_id,
@@ -195,23 +197,29 @@ class HomeController extends Controller
             'model' => $model,
         ];
 
+        $cate = $request->cate;
+        if ($request->has('cate')) {
+            $data['category_id'] = $cate;
+        }
+
         //fetch categories
-        $categories = $this->categoryRepository->index();
+        $category = $this->categoryRepository->find($cate);
+        if ($category && !is_null($category->parent_id)) {
+            $cate = $category->parent_id;
+            $category = $this->categoryRepository->find($cate);
+        }
+
+        $categories = $this->categoryRepository->allChildren($cate);
 
         //fetch products
-//        $products = $this->productRepository->getProductsForShop($data)->toArray();
         $products = $this->productRepository->getProductsForShop($data);
-        //convert products into chunks of 6 (for frontend)
-//        $products = array_chunk($products, 6);
-        $products = $products->chunk(6, function($prods) {});
-//        dd($products);
 
         //prep filters' options
         $year_options = $this->getFilterOptions('year', $data['category_id']);
         $make_options = $this->getFilterOptions('make', $data['category_id']);
         $model_options = $this->getFilterOptions('model', $data['category_id']);
 
-        return view('shop::shop-by-category', compact('categories', 'products', 'year_options', 'make_options', 'model_options', 'data'));
+        return view('shop::shop-by-category', compact('categories','category', 'products', 'year_options', 'make_options', 'model_options', 'data'));
     }
 
     public function step1()
@@ -252,7 +260,7 @@ class HomeController extends Controller
     protected function getFilterOptions($field_name, $category_id)
     {
         $options = ProductCategoryField::where('field_name', $field_name);
-        $options->when($category_id, function($q) use($category_id) {
+        $options->when($category_id, function ($q) use ($category_id) {
             return $q->where('category_id', $category_id);
         });
         return $options->groupBy('field_value')->get();

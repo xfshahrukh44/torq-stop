@@ -21,7 +21,11 @@
 ~~~
 
 ~~~
-2. php artisan vendor:publish
+2. php artisan bagisto:install
+~~~
+
+~~~
+3. php artisan vendor:publish
 ~~~
 
 ##### select the number of `Provider: Webkul\Shop\Providers\ShopServiceProvider` in the options given

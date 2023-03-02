@@ -362,4 +362,18 @@ class CategoryRepository extends Repository
 
         //return $this->model->all();
     }
+
+    public function allParents()
+    {
+        $all_categories = $this->model->where('parent_id', null)->get();
+
+        return $all_categories->diff($this->model->where('id', 1)->get());
+    }
+
+    public function allChildren($cate_id)
+    {
+        $all_categories = $this->model->where('parent_id', $cate_id)->get();
+
+        return $all_categories->diff($this->model->where('id', 1)->get());
+    }
 }
