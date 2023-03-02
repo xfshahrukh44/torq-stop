@@ -29,9 +29,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="secHeading">{{$category->name}}</h2>
-                    <h3>Sort by Categories</h3>
+                    @if (count($categories) > 0)
+                        <h3>Sort by Categories</h3>
+                    @endif
                     <ul>
-                        <li><a href="{{route('shop.shopByCategory')}}?cate={{$category->id}}">All</a></li>
+                        @if (count($categories) > 0)
+                            <li><a href="{{route('shop.shopByCategory')}}?cate={{$category->id}}">All</a></li>
+                        @endif
                         @foreach($categories as $category)
                             <li class="nav-item {{request('cate') == $category->id ? 'active': ''}}" role="presentation">
                                 <a href="{{route('shop.shopByCategory')}}?cate={{$category->id}}">
