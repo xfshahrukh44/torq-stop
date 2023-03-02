@@ -962,7 +962,7 @@ class ProductRepository extends Repository
             });
         });
 
-        return $products->paginate();
+        return $products->get();
     }
 
     public function findById ($id) {

@@ -28,10 +28,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="secHeading">OUR SHOP</h2>
+                    <h2 class="secHeading">{{$category->name}}</h2>
                     <h3>Sort by Categories</h3>
                     <ul>
-                        <li><a href="{{route('shop.shopByCategory')}}">All</a></li>
+                        <li><a href="{{route('shop.shopByCategory')}}?cate={{$category->id}}">All</a></li>
                         @foreach($categories as $category)
                             <li class="nav-item {{request('cate') == $category->id ? 'active': ''}}" role="presentation">
                                 <a href="{{route('shop.shopByCategory')}}?cate={{$category->id}}">
@@ -39,7 +39,6 @@
                                 </a>
                             </li>
                         @endforeach
-                        <li><a href="">Video</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,10 +69,10 @@
             <img src="{{asset('themes/default/assets/images/productBg.png')}}" alt="">
         </figure>
 
-        <div class="row">
-            <div class="col-md-12">
-                {{$products->appends(request()->input())->links()}}
-            </div>
+{{--        <div class="row">--}}
+{{--            <div class="col-md-12">--}}
+{{--                {{$products->appends(request()->input())->links()}}--}}
+{{--            </div>--}}
         </div>
     </section>
 

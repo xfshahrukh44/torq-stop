@@ -228,7 +228,7 @@
                                     $custom_fields = $category ? json_decode($category->custom_fields) : [];
                                 @endphp
 
-                                @if(count($custom_fields) > 0)
+                                @if(!is_null($custom_fields) && count($custom_fields) > 0)
                                     @foreach($custom_fields as $custom_field)
                                         <div class="row">
                                             <div class="control-group">

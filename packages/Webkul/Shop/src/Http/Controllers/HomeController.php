@@ -153,7 +153,7 @@ class HomeController extends Controller
         }
 
         //fetch categories
-        $categories = $this->categoryRepository->index();
+        $categories = $this->categoryRepository->allParents();
 
         //fetch products
 //        $products = $this->productRepository->getProductsForShop($data)->toArray();
@@ -197,12 +197,19 @@ class HomeController extends Controller
             'model' => $model,
         ];
 
+        $cate = $request->cate;
         if ($request->has('cate')) {
-            $data['category_id'] = $request->cate;
+            $data['category_id'] = $cate;
         }
 
         //fetch categories
-        $categories = $this->categoryRepository->index();
+        $category = $this->categoryRepository->find($cate);
+        if ($category && !is_null($category->parent_id)) {
+            $cate = $category->parent_id;
+            $category = $this->categoryRepository->find($cate);
+        }
+
+        $categories = $this->categoryRepository->allChildren($cate);
 
         //fetch products
         $products = $this->productRepository->getProductsForShop($data);
@@ -212,7 +219,7 @@ class HomeController extends Controller
         $make_options = $this->getFilterOptions('make', $data['category_id']);
         $model_options = $this->getFilterOptions('model', $data['category_id']);
 
-        return view('shop::shop-by-category', compact('categories', 'products', 'year_options', 'make_options', 'model_options', 'data'));
+        return view('shop::shop-by-category', compact('categories','category', 'products', 'year_options', 'make_options', 'model_options', 'data'));
     }
 
     public function step1()
