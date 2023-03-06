@@ -52,7 +52,7 @@
                         <div class="productBox">
                             <figure class="reveal">
                                 <a href="{{route('shop.product_detail', $product['id'])}}">
-                                    <img src="{{ $product['images']['url'] ?? asset('themes/default/assets/images/default.png')}}" class="img-fluid"
+                                    <img src="{{ $product['images'][0]['url'] ?? asset('themes/default/assets/images/default.png')}}" class="img-fluid"
                                          alt="">
                                 </a>
                             </figure>
