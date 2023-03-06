@@ -101,10 +101,7 @@ class HomeController extends Controller
         $categories = $product->product_categories->toArray() ?? [];
         $images = $product->images->toArray() ?? [];
         $feature_image = $images[0] ?? null;
-        array_shift($images);
-
         $product = $product->toArray();
-
         $product['categories'] = $categories;
         $product['feature_image'] = $feature_image;
         $product['images'] = $images;

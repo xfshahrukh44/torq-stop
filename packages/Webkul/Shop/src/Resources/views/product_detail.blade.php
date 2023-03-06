@@ -35,9 +35,11 @@
                 <div class="col-md-6">
                     <div class="productImgMain">
                         <div class="product-detail-slider">
-                            <div>
-                                <img src="{{ $product['feature_image']['url'] ?? asset('themes/default/assets/images/default.png')}}" alt="">
-                            </div>
+                            @foreach($product['images'] as $image)
+                                <div>
+                                    <img class="ml-10" src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}" class="" alt="">
+                                </div>
+                            @endforeach
                         </div>
                         @if(count($product['images']) > 0)
                             <div class="product-detail-nav">
