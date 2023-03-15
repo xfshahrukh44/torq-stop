@@ -14,7 +14,7 @@
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-7">
-                                    <h2>Our Products</h2>
+                                    <h2>Our CATEGORIES</h2>
                                 </div>
                                 {{--                                <div class="col-md-5">--}}
                                 {{--                                    <figure class="blast">--}}
