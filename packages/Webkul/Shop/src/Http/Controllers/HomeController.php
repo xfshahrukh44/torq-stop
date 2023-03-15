@@ -262,4 +262,34 @@ class HomeController extends Controller
         });
         return $options->groupBy('field_value')->get();
     }
+
+    public function airBrake()
+    {
+        return view('shop::air-brake');
+    }
+
+    public function brakeRotors()
+    {
+        return view('shop::brake-rotors');
+    }
+
+    public function airDisc()
+    {
+        return view('shop::air-disc');
+    }
+
+    public function brakeShoe()
+    {
+        return view('shop::brake-shoe');
+    }
+
+    public function brakeChamber()
+    {
+        return view('shop::brake-chamber');
+    }
+
+    public function misc()
+    {
+        return view('shop::misc-hardware');
+    }
 }

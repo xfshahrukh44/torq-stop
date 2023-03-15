@@ -4,17 +4,32 @@
 
 @section('content')
 
-    <div class="main-slider innerbaner">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
-                         alt="First slide">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row align-items-center justify-content-between">
-                                <div class="col-md-7">
-                                    <h2>Shop</h2>
+
+    @if($category->id == 37)
+        @include('shop::air-brake')
+    @elseif($category->id == 33)
+        @include('shop::air-disc')
+    @elseif($category->id == 32)
+        @include('shop::brake-rotors')
+    @elseif($category->id == 34)
+        @include('shop::brake-shoe')
+    @elseif($category->id == 35)
+        @include('shop::brake-chamber')
+    @elseif($category->id == 36)
+        @include('shop::misc-hardware')
+    @else
+        <div class="main-slider innerbaner">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                             alt="First slide">
+                        <div class="carousel-caption">
+                            <div class="container">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-md-7">
+                                        <h2>{{$category->name}}</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -22,63 +37,8 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <section class="shopSec">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="secHeading">{{$category->name}}</h2>
-                    @if (count($categories) > 0)
-                        <h3>Sort by Categories</h3>
-                    @endif
-                    <ul>
-                        @if (count($categories) > 0)
-                            <li><a href="{{route('shop.shopByCategory')}}?cate={{$category->id}}">All</a></li>
-                        @endif
-                        @foreach($categories as $category)
-                            <li class="nav-item {{request('cate') == $category->id ? 'active': ''}}" role="presentation">
-                                <a href="{{route('shop.shopByCategory')}}?cate={{$category->id}}">
-                                    {{$category->name ?? ''}}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-            <div class="row mt-5">
-                @forelse($products as $product)
-                    <div class="col-md-3">
-                        <div class="productBox">
-                            <figure class="reveal">
-                                <a href="{{route('shop.product_detail', $product['id'])}}">
-                                    <img src="{{ $product['images'][0]['url'] ?? asset('themes/default/assets/images/default.png')}}" class="img-fluid"
-                                         alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="shopContent">
-                            <p>{{$product['name']}}<span>${{$product['price']}}</span></p>
-                            <a href="{{route('shop.step1')}}">ADD TO CART</a>
-                        </div>
-                    </div>
-                @empty
-                    <div class="col-md-12">
-                        <p class="alert alert-info text-center">No product found.</p>
-                    </div>
-                @endforelse
-            </div>
-        </div>
-        <figure class="shadowSec">
-            <img src="{{asset('themes/default/assets/images/productBg.png')}}" alt="">
-        </figure>
-
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                {{$products->appends(request()->input())->links()}}--}}
-{{--            </div>--}}
-        </div>
-    </section>
+        @include('shop::product-listings')
+    @endif
 
 @endsection
 

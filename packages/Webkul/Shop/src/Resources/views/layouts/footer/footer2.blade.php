@@ -56,6 +56,7 @@
 <script src="{{asset('themes/default/assets/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('themes/default/assets/js/popper.min.js')}}"></script>
 <script src="{{asset('themes/default/assets/js/gsap.js')}}"></script>
+<script src="{{asset('themes/default/assets/js/swiper.js')}}"></script>
 <script src="{{asset('themes/default/assets/js/scrollTrigger.js')}}"></script>
 <script src="{{asset('themes/default/assets/js/slick.min.js')}}"></script>
 <script src="{{asset('themes/default/assets/js/jquery.fancybox.min.js')}}"></script>

@@ -209,7 +209,8 @@ header {
     line-height: 1.2;
     margin: 20px 0 32px 0;
 }
-.main-slider .text-white p{
+
+.main-slider .text-white p {
     color: var(--white);
 }
 
@@ -414,13 +415,16 @@ header {
 .shopContent {
     margin: 0.75rem 0 3rem 0;
 }
-.shopContent h3{
+
+.shopContent h3 {
     font-size: 1.25rem;
     text-transform: capitalize;
 }
-.shopContent h3 > a{
+
+.shopContent h3 > a {
     color: var(--primary);
 }
+
 /* Shop Sec End */
 
 /* Testimonial Sec Start */
@@ -733,9 +737,11 @@ footer .form-group button:hover {
 .innerbaner .blast {
     text-align: right;
 }
-.innerbaner :is(h2,p){
+
+.innerbaner :is(h2,p) {
     color: var(--white);
 }
+
 /*About Page CSS Start*/
 .aboutInner .playBtn a {
     position: absolute;
@@ -914,12 +920,15 @@ footer .form-group button:hover {
     padding-right: 2rem;
 }
 
+.dfwSec ul.nav {
+    gap: 1rem;
+}
+
 .dfwSec .nav-link {
     color: #ed7d20;
     background-color: transparent;
     border: 2px solid #ed7d20;
     padding: 0.7rem 2rem;
-    margin: 0 0.4rem 0 0;
 }
 
 .dfwSec .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -2025,10 +2034,174 @@ ul.chooselist2 li {
     object-fit: cover;
     display: flex;
 }
-.innerbaner .carousel-item img{
+
+.innerbaner .carousel-item img {
     height: 200px;
 }
 
 .taglineSec p span {
     font-weight: 700;
+}
+
+/*revision 10-mar-2022*/
+
+.brakeSec .brakeContent h2 {
+    font-size: 3.125rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.brakeSec .brakeContent h3 {
+    font-size: 2.1875rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 1.5rem 0;
+}
+
+.brakeSec .brakeContent ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.brakeSec {
+    padding: 6rem 10rem;
+}
+
+.brakeSec .brakeContent li {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.8;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.brakeSec .brakeContent li i {
+    color: #F66C1D;
+}
+
+.brakeSlider img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+.brakeSlider {
+    margin: 0 0 2rem;
+}
+
+.brakeSliderNav img {
+    width: 100%;
+    height: 130px;
+    border-radius: 5px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.brakeSliderNav figure {
+    margin: 0 10px;
+}
+
+.brakeSec .row {
+    padding-block: 3rem;
+}
+
+.brakeSec .row + .row {
+    margin-top: 3rem;
+    border-top: 1px solid #707070;
+}
+
+.brakeSec img {
+    width: 100%;
+}
+
+.brakeSec table {
+    width: 100%;
+    text-align: center;
+}
+
+.brakeSec table, .brakeSec td, .brakeSec th {
+    border: 1px solid #DD741D;
+}
+
+.brakeSec td, .brakeSec th {
+    padding: 0.5rem 0;
+    color: #fff;
+}
+
+.brakeSec tr.themeBg {
+    background: #DD741D;
+    /* width: 100%; */
+}
+
+.brakeSec .brakeImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.brakeSec .brakeImg figure {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    object-fit: contain;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.brakeSec .brakeImg img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 100%;
+}
+
+.brakeSec .brakeImg .brakeImgContent {
+    display: block;
+    font-size: 1.5625rem;
+    color: #fff;
+    text-align: center;
+}
+
+.brakeSec .brakeImg + .brakeImg {
+    margin-top: 1rem;
+}
+
+.brakeSec .brakeImgRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.brakeSec tr.themeBg > * {
+    text-align: left;
+    padding-left: 1rem;
+    font-weight: 600;
+}
+
+.brakeSec table .imgBox img {
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+}
+
+.brakeSec table .imgBox {
+    background: #fff;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }

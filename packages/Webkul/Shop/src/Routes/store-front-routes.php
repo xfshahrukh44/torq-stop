@@ -29,7 +29,7 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
          */
         Route::fallback(\Webkul\Shop\Http\Controllers\ProductsCategoriesProxyController::class . '@index')
             ->defaults('_config', [
-                'product_view'  => 'shop::products.view',
+                'product_view' => 'shop::products.view',
                 'category_view' => 'shop::products.index',
             ])
             ->name('shop.productOrCategory.index');
@@ -63,6 +63,18 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     Route::get('/step2', [HomeController::class, 'step2'])->name('shop.step2');
     //step3
     Route::get('/step3', [HomeController::class, 'step3'])->name('shop.step3');
+//    Air Brake
+    Route::get('/air-brake', [HomeController::class, 'airBrake'])->name('airBrake');
+//    Air Brake
+    Route::get('/brake-rotor', [HomeController::class, 'brakeRotors'])->name('brakeRotors');
+//    Air Brake
+    Route::get('/air-disc', [HomeController::class, 'airDisc'])->name('airDisc');
+//    Air Brake
+    Route::get('/brake-shoe', [HomeController::class, 'brakeShoe'])->name('brakeShoe');
+//    Air Brake
+    Route::get('/brake-chamber', [HomeController::class, 'brakeChamber'])->name('brakeChamber');
+//    Misc Hardware
+    Route::get('/misc-hardware', [HomeController::class, 'misc'])->name('misc');
     //shop
 //    Route::get('/shop', [HomeController::class, 'shop'])->name('shop.shop');
     Route::match(['get', 'post'], '/shop', [HomeController::class, 'shop'])->name('shop.shop');
