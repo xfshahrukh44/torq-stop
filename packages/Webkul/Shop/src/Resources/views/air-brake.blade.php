@@ -1,23 +1,23 @@
 
-    <div class="main-slider innerbaner">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
-                         alt="First slide">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row align-items-center justify-content-between">
-                                <div class="col-md-6">
-                                    <h2>Brake Pads</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--    <div class="main-slider innerbaner">--}}
+{{--        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">--}}
+{{--            <div class="carousel-inner">--}}
+{{--                <div class="carousel-item active">--}}
+{{--                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"--}}
+{{--                         alt="First slide">--}}
+{{--                    <div class="carousel-caption">--}}
+{{--                        <div class="container">--}}
+{{--                            <div class="row align-items-center justify-content-between">--}}
+{{--                                <div class="col-md-6">--}}
+{{--                                    <h2>Brake Pads</h2>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
     <section class="brakeSec">
         <div class="container-fluid">
