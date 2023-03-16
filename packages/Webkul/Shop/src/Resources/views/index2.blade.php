@@ -53,10 +53,13 @@
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-6">
-                                    {{--                                    <h2>TorqStop--}}
-                                    {{--                                        Products</h2>--}}
-                                    <p>FULL RANGE OF HYDRAULIC BRAKE PARTS FOR LIGHT AND MEDIUM DUTY TRUCKS CLASS 1-7,
-                                        INCLUDING LAST MILE DELIVERY VEHICLES.</p>
+                                    <h2 class="text-white">
+                                        LIGHT AND MEDIUM-DUTY
+                                    </h2>
+                                    <p>
+                                        FULL RANGE OF HYDRAULIC BRAKE PARTS FOR LIGHT AND MEDIUM DUTY TRUCKS CLASS 1-7,
+                                        INCLUDING LAST MILE DELIVERY VEHICLES.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -69,10 +72,12 @@
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-6">
-                                    {{--                                    <h2>TorqStop--}}
-                                    {{--                                        Products</h2>--}}
-                                    <p>100% ALL-NEW, PREMIUM-QUALITY PARTS PROVIDE EXCEPTIONAL VALUE AND LOWEST COST PER
-                                        MILE.</p>
+                                    <h2 class="text-white">
+                                        ALL TORQSTOP PRODUCTS ARE 100% ALL-NEW – NO CORES
+                                    </h2>
+                                    <p>
+                                        ULTRA-PREMIUM-QUALITY PARTS PROVIDE EXCEPTIONAL VALUE AND LOWEST COST PER MILE.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +122,8 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <a href="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}" data-fancybox="PDF" data-download-src="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}"><img
+                            <a href="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}" data-fancybox="PDF"
+                               data-download-src="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}"><img
                                     src="{{asset('themes/default/assets/images/literature.jpg')}}" alt="">
                                 <div class="iconOverlay">
                                     <i class="fas fa-file"></i>

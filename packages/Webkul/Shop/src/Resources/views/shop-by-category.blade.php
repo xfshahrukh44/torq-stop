@@ -4,7 +4,25 @@
 
 @section('content')
 
-
+    <div class="main-slider innerbaner">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                         alt="First slide">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-md-7">
+                                    <h2>{{$category->name}}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     @if($category->id == 37)
         @include('shop::air-brake')
     @elseif($category->id == 33)
@@ -18,25 +36,6 @@
     @elseif($category->id == 36)
         @include('shop::misc-hardware')
     @else
-        <div class="main-slider innerbaner">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
-                             alt="First slide">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col-md-7">
-                                        <h2>{{$category->name}}</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         @include('shop::product-listings')
     @endif
 
