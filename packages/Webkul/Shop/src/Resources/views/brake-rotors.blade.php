@@ -23,7 +23,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="brakeContent">
-                    <h2>Air Brake Rotors</h2>
+{{--                    <h2>Air Brake Rotors</h2>--}}
                     <h3>Features and Benefits</h3>
                     <p>
                         The TorqStop™ line of air disc brake rotors delivers quality, value, and long service life.

@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="brakeContent">
-                    <h2>Drum Brake Shoes with Hardware</h2>
+{{--                    <h2>Drum Brake Shoes with Hardware</h2>--}}
                     <h3>Features and Benefits</h3>
                     <ul>
                         <li>
