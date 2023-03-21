@@ -24,7 +24,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="brakeContent">
-                        <h2>Air Brake Pads with Hardware</h2>
+{{--                        <h2>Air Brake Pads with Hardware</h2>--}}
                         <h3>Features and Benefits</h3>
 
                         <h3>Backing Plates:</h3>

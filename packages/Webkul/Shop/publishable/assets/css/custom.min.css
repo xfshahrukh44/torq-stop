@@ -141,6 +141,10 @@ header {
     line-height: 1;
     position: relative;
     transform: skewX(-25deg);
+    background: linear-gradient(to right, var(--primary), var(--primary));
+    background-size: 0% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 
 .navbar-nav .nav-item .nav-link span {
@@ -150,8 +154,8 @@ header {
 
 .navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item.active .nav-link {
-    background: var(--primary);
     color: var(--white);
+    background-size: 100% 100%;
 }
 
 .forminline a {
