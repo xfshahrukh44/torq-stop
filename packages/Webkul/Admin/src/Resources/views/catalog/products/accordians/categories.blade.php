@@ -10,24 +10,7 @@
         <tree-view behavior="normal" value-field="id" name-field="categories" input-type="checkbox" items='@json($categories)' value='@json($product->categories->pluck("id"))' id-field="custom_fields" fallback-locale="{{ config('app.fallback_locale') }}"></tree-view>
 
         <div class="custom_fields_wrapper">
-                <h2>Custom Fields</h2>
-{{--            <div class="category_seperator">--}}
-{{--                <div class="col-md-6">--}}
-{{--                    <div class="control-group">--}}
-{{--                        <label for="slug" class="required">Title</label>--}}
-{{--                        <input type="text" v-validate="'required'" class="control custom_fields_titles" value="" name="custom_fields_titles[]"/>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-6">--}}
-{{--                    <div class="control-group">--}}
-{{--                        <label for="slug" class="required">Type</label>--}}
-{{--                        <select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields_types[]">--}}
-{{--                            <option value="Text">Text</option>--}}
-{{--                            <option value="Selection">Selection</option>--}}
-{{--                        </select>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <h2>Custom Fields</h2>
         </div>
 
         {!! view_render_event('bagisto.admin.catalog.product.edit_form_accordian.categories.controls.after', ['product' => $product]) !!}
@@ -78,7 +61,7 @@
                                                         `+final_options+`
                                                     </select>`;
                             } else if (item.type == "Number") {
-                                bare_field = `<input type="number" step="0.01" v-validate="'required'" class="control" value="" name="custom_fields[${category_id}][${item.name}]" `+is_required+`/>`;
+                                bare_field = `<input type="number" v-validate="'required'" class="control" value="" name="custom_fields[${category_id}][${item.name}]" `+is_required+`/>`;
                             } else if (item.type == "Textarea") {
                                 bare_field = `<textarea v-validate="'required'" class="control" name="custom_fields[${category_id}][${item.name}]" cols="30" rows="10" `+is_required+`></textarea>`;
                             }
