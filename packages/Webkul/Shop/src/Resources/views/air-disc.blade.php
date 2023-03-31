@@ -84,16 +84,44 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="brakeImg">
+                            <div class="brakeImg mb-5">
                                 <figure>
-                                    <img src="{{asset('themes/default/assets/images/brake/calipar1.png')}}" alt="">
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/1.jpg')}}" alt="">
                                 </figure>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="brakeImg">
+                            <div class="brakeImg mb-5">
                                 <figure>
-                                    <img src="{{asset('themes/default/assets/images/brake/calipar2.png')}}" alt="">
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/2.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/3.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/4.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/5.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/6.jpg')}}" alt="">
                                 </figure>
                             </div>
                         </div>
