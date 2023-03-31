@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="secHeading">{{$category->name}}</h2>
+                <h2 class="secHeading">Product Details</h2>
                 @if (count($categories) > 0)
                     <h3>Sort by Categories</h3>
                 @endif

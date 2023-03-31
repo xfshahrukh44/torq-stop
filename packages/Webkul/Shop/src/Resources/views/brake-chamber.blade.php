@@ -120,7 +120,7 @@
                                     <img src="{{asset('themes/default/assets/images/brake/chamber5.png')}}" alt="">
                                 </figure>
                                 <span class="brakeImgContent text-start">
-                                        S-Cam Pigggyback
+                                        S-Cam Piggyback
                                         Brake Chamber
                                     </span>
                             </div>

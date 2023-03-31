@@ -46,9 +46,9 @@
                             <i class="fas fa-check-circle"></i>
                             23K Low-Met/ GF long-life friction (Other 20K and 23K friction options available)
                         </li>
-                        <li>
+                        <li class="align-items-center">
                             <i class="fas fa-check-circle"></i>
-                            Compliant with 2025 Copper-Free requirements
+                            Compliant with 2025 Copper-Free requirements <img width="50" height="50" src="{{asset('themes/default/assets/images/brake/shoe2.png')}}" alt="">
                         </li>
                         <li>
                             <i class="fas fa-check-circle"></i>
@@ -75,12 +75,11 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <figure>
-                    <img src="{{asset('themes/default/assets/images/brake/shoe1.png')}}" alt="">
-                </figure>
-                <figure class="mt-5">
-                    <img src="{{asset('themes/default/assets/images/brake/shoe2.png')}}" alt="">
-                </figure>
+                <div class="brakeImg">
+                    <figure>
+                        <img src="{{asset('themes/default/assets/images/brake/shoe1.png')}}" alt="">
+                    </figure>
+                </div>
             </div>
         </div>
         <div class="row">

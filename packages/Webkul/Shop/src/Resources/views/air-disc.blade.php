@@ -81,12 +81,24 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <figure>
-                    <img src="{{asset('themes/default/assets/images/brake/calipar1.png')}}" alt="">
-                </figure>
-                <figure class="mt-5">
-                    <img src="{{asset('themes/default/assets/images/brake/calipar2.png')}}" alt="">
-                </figure>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="brakeImg">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/calipar1.png')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/calipar2.png')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">

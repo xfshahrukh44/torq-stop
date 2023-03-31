@@ -20,7 +20,7 @@
 
 <section class="brakeSec">
     <div class="container-fluid">
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-md-6">
                 <div class="brakeContent">
 {{--                    <h2>Air Brake Rotors</h2>--}}
@@ -88,12 +88,17 @@
                 </div>
             </div>
             <div class="col-md-6">
+                <div class="brakeContent">
+                    <h3 class="text-center">
+                        Rotor Types
+                    </h3>
+                </div>
                 <div class="brakeImg">
                     <figure>
                         <img src="{{asset('themes/default/assets/images/brake/brakeImg1.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent">
-                            U-Shaped
+                            U-Shaped style
                         </span>
                 </div>
                 <div class="brakeImg">
@@ -101,7 +106,7 @@
                         <img src="{{asset('themes/default/assets/images/brake/brakeImg2.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent">
-                            Flat
+                            Flat style
                         </span>
                 </div>
                 <div class="brakeImg">
@@ -109,18 +114,23 @@
                         <img src="{{asset('themes/default/assets/images/brake/brakeImg3.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent">
-                            Hat
+                            Hat style
                         </span>
                 </div>
             </div>
             <div class="col-12">
+                <div class="brakeContent">
+                    <h3>
+                        Includes the following additional parts, as required by application:
+                    </h3>
+                </div>
                 <div class="brakeImgRow">
                     <div class="brakeImg">
                         <figure>
                             <img src="{{asset('themes/default/assets/images/brake/brakeImg4.png')}}" alt="">
                         </figure>
                         <span class="brakeImgContent">
-                            Hat
+                            Tone Ring
                         </span>
                     </div>
                     <div class="brakeImg">
@@ -128,7 +138,7 @@
                             <img src="{{asset('themes/default/assets/images/brake/brakeImg5.png')}}" alt="">
                         </figure>
                         <span class="brakeImgContent">
-                            Hat
+                            ADB22X Aftermarket-Style Retainer Hardware
                         </span>
                     </div>
                     <div class="brakeImg">
@@ -136,7 +146,7 @@
                             <img src="{{asset('themes/default/assets/images/brake/brakeImg6.png')}}" alt="">
                         </figure>
                         <span class="brakeImgContent">
-                            Hat
+                            ADB22X OE-Style Retainer Hardware
                         </span>
                     </div>
                     <div class="brakeImg">
@@ -144,7 +154,7 @@
                             <img src="{{asset('themes/default/assets/images/brake/brakeImg7.png')}}" alt="">
                         </figure>
                         <span class="brakeImgContent">
-                            Hat
+                            Rotor Mounting Bolts & Washers
                         </span>
                     </div>
                 </div>
@@ -203,7 +213,7 @@
                         <img src="{{asset('themes/default/assets/images/brake/spec2.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent text-start">
-                            Flat Style
+                            Hat Style
                         </span>
                 </div>
             </div>
@@ -213,7 +223,7 @@
                         <img src="{{asset('themes/default/assets/images/brake/spec3.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent text-start">
-                            Flat Style
+                            U-Shaped Style
                         </span>
                 </div>
             </div>

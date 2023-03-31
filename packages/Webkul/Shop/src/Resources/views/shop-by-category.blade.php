@@ -13,7 +13,7 @@
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
-                                <div class="col-md-7">
+                                <div class="col-12">
                                     <h2>{{$category->name}}</h2>
                                 </div>
                             </div>
