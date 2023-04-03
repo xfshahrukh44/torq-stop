@@ -223,20 +223,484 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @for($i=1;$i<=20;$i++)
-                            <tr>
-                                <td>D1203-8323</td>
-                                <td>23k</td>
-                                <td rowspan="2">Knorr Bremse</td>
-                                <td rowspan="2">SB7, SN7</td>
-                                <td rowspan="2">D1203-8323</td>
-                                <td rowspan="2">29087</td>
-                            </tr>
-                            <tr>
-                                <td>29D1203</td>
-                                <td>23k</td>
-                            </tr>
-                        @endfor
+                        <tr>
+                            <td>
+                                <p>23D1203</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Knorr Bremse</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>SB7, SN7</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1203-8323</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29087</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1203</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1310</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Meritor</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Elsa 2</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1310-8425</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29131</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1310</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1311</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Meritor</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>EX225 H2</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1311-8426</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29187</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1311</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1312</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Meritor</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D-Lisa</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1312-8427</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29090</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1312</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1323</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Meritor</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>EX225, H3 Transit</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1323-8435</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29188</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1323</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1369</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Bendix / Knorr</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>ADB22x, ADB22XLT, SK-7</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D13698479</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29158</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1369</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1370</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Meritor</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>EX225 L Series</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1370-8470</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29189</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1370</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1407</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Meritor</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D-Elsa 1</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1407-8515</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29030</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1407</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1438</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Wabco</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Pan 19-1</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1438-8556</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29159</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1438</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1518</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Wabco</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Pan 17</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1518-8727</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29088</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1518</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1560</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Meritor</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Volvo 9700</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1560-8771</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29125</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1560</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1583</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Haldex</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>DB22 LT</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1583-8795</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29175/ 29195</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1583</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1708</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Meritor</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>ELSA 225-3</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1708-8931</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29174, 29219, 29204,</p>
+
+                                <p>29218</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1708</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1777.2</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Wabco</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>MAXXUS 22 / MAXX 22T</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1777-</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29279, 29162</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1777.2</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D1777.1</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Wabco</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Pan 22-1</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D1777-9007</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29162</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D1777.1</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D2061</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>Wabco</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>MAXXUS</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D2061-9294</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29191</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D2061</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23D2252</p>
+                            </td>
+                            <td>
+                                <p>23k</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>SAF</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>P89 ST7</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>D2252-9490</p>
+                            </td>
+                            <td rowspan="2">
+                                <p>29318, 29319</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29D2252</p>
+                            </td>
+                            <td>
+                                <p>29k</p>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>

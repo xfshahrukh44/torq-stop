@@ -35,10 +35,10 @@
                             </a>
                         </figure>
                     </div>
-                    <div class="shopContent">
-                        <p>{{$product['name']}}<span>${{$product['price']}}</span></p>
-                        <a href="{{route('shop.step1')}}">ADD TO CART</a>
-                    </div>
+{{--                    <div class="shopContent">--}}
+{{--                        <p>{{$product['name']}}<span>${{$product['price']}}</span></p>--}}
+{{--                        <a href="{{route('shop.step1')}}">ADD TO CART</a>--}}
+{{--                    </div>--}}
                 </div>
             @empty
                 <div class="col-md-12">

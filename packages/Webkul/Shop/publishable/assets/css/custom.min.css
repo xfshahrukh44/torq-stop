@@ -2219,3 +2219,16 @@ ul.chooselist2 li {
     height: 50px;
     border-radius: 100%;
 }
+
+.productBanner .carousel-caption {
+    padding: 0 10rem;
+}
+
+.shopSec .row {
+    gap: 2rem 0;
+}
+
+.brakeSec td p {
+    font-size: 0.75rem;
+    margin: 0;
+}
