@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="secHeading">{{$category->name}}</h2>
+                <h2 class="secHeading">Product Details</h2>
                 @if (count($categories) > 0)
                     <h3>Sort by Categories</h3>
                 @endif
@@ -35,10 +35,10 @@
                             </a>
                         </figure>
                     </div>
-                    <div class="shopContent">
-                        <p>{{$product['name']}}<span>${{$product['price']}}</span></p>
-                        <a href="{{route('shop.step1')}}">ADD TO CART</a>
-                    </div>
+{{--                    <div class="shopContent">--}}
+{{--                        <p>{{$product['name']}}<span>${{$product['price']}}</span></p>--}}
+{{--                        <a href="{{route('shop.step1')}}">ADD TO CART</a>--}}
+{{--                    </div>--}}
                 </div>
             @empty
                 <div class="col-md-12">

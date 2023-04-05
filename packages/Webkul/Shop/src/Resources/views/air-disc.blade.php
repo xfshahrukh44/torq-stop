@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="brakeContent">
-{{--                    <h2>Air Brake Calipers</h2>--}}
+                    {{--                    <h2>Air Brake Calipers</h2>--}}
                     <h3>Features and Benefits</h3>
                     <ul>
                         <li>
@@ -81,12 +81,52 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <figure>
-                    <img src="{{asset('themes/default/assets/images/brake/calipar1.png')}}" alt="">
-                </figure>
-                <figure class="mt-5">
-                    <img src="{{asset('themes/default/assets/images/brake/calipar2.png')}}" alt="">
-                </figure>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/1.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/2.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/3.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/4.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/5.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="brakeImg mb-5">
+                                <figure>
+                                    <img src="{{asset('themes/default/assets/images/brake/caliper/6.jpg')}}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -114,28 +154,1170 @@
                                 Bendix
                             </td>
                         </tr>
-                        @for($i=1;$i<=10;$i++)
-                            <tr>
-                                <td>CAB001L</td>
-                                <td>ADB22X</td>
-                                <td>K081142, K109961X, K097850SC, K147430X</td>
-                                <td>Freightliner Kenworth Mack Navistar Peterbilt Volvo</td>
-                                <td>D1369</td>
-                                <td>Hat</td>
-                                <td>(A) Right</td>
-                                <td>Two Tappets</td>
-                            </tr>
-                            <tr>
-                                <td>CAB001L</td>
-                                <td>ADB22X</td>
-                                <td>K081142, K109961X, K097850SC, K147430X</td>
-                                <td>Freightliner Kenworth Mack Navistar Peterbilt Volvo</td>
-                                <td>D1369</td>
-                                <td>Hat</td>
-                                <td>(B) Left</td>
-                                <td>Two Tappets</td>
-                            </tr>
-                        @endfor
+                        <tr>
+                            <td>
+                                <p>CAB001L</p>
+                            </td>
+                            <td>
+                                <p>ADB22X</p>
+                            </td>
+                            <td>
+                                <p>K081142, K109961X, K097850SC, K147430X</p>
+                            </td>
+                            <td>
+                                <p>Freightliner Kenworth Mack Navistar Peterbilt Volvo</p>
+                            </td>
+                            <td>
+                                <p>D1369</p>
+                            </td>
+                            <td>
+                                <p>(A) Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAB001R</p>
+                            </td>
+                            <td>
+                                <p>ADB22X</p>
+                            </td>
+                            <td>
+                                <p>K081143, K109962X, K097851SC, K147429X</p>
+                            </td>
+                            <td>
+                                <p>Freightliner Kenworth Mack Navistar Peterbilt Volvo</p>
+                            </td>
+                            <td>
+                                <p>D1369</p>
+                            </td>
+                            <td>
+                                <p>(B) Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAB002L</p>
+                            </td>
+                            <td>
+                                <p>ADB22X</p>
+                            </td>
+                            <td>
+                                <p>K802984, K113887X</p>
+                            </td>
+                            <td>
+                                <p>All Trailers 2007 - 2018</p>
+                            </td>
+                            <td>
+                                <p>D1369</p>
+                            </td>
+                            <td>
+                                <p>(A) Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAB002R</p>
+                            </td>
+                            <td>
+                                <p>ADB22X</p>
+                            </td>
+                            <td>
+                                <p>K802985, K113888X</p>
+                            </td>
+                            <td>
+                                <p>All Trailers 2007 - 2018</p>
+                            </td>
+                            <td>
+                                <p>D1369</p>
+                            </td>
+                            <td>
+                                <p>(B) Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAB003L</p>
+                            </td>
+                            <td>
+                                <p>ADB22X-LT</p>
+                            </td>
+                            <td>
+                                <p>K802984, K113887X K149714SC, K165794X</p>
+                            </td>
+                            <td>
+                                <p>All Trailers 2019 - Current</p>
+                            </td>
+                            <td>
+                                <p>D1369*</p>
+                            </td>
+                            <td>
+                                <p>(A) Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAB003R</p>
+                            </td>
+                            <td>
+                                <p>ADB22X-LT</p>
+                            </td>
+                            <td>
+                                <p>K802985 K113888X, K149715SC, K165795X</p>
+                            </td>
+                            <td>
+                                <p>All Trailers 2019 - Current</p>
+                            </td>
+                            <td>
+                                <p>D1369*</p>
+                            </td>
+                            <td>
+                                <p>(B) Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRB001L</p>
+                            </td>
+                            <td>
+                                <p>ADB22X</p>
+                            </td>
+                            <td>
+                                <p>K081256, K109957X, K097846SC, K147136X</p>
+                            </td>
+                            <td>
+                                <p>Freightliner Western Star</p>
+                            </td>
+                            <td>
+                                <p>D1369</p>
+                            </td>
+                            <td>
+                                <p>(A) Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRB001R</p>
+                            </td>
+                            <td>
+                                <p>ADB22X</p>
+                            </td>
+                            <td>
+                                <p>K081257, K109958X, K097847SC, K147135X</p>
+                            </td>
+                            <td>
+                                <p>Freightliner Western Star</p>
+                            </td>
+                            <td>
+                                <p>D1369</p>
+                            </td>
+                            <td>
+                                <p>(B) Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr class="themeBg">
+                            <td colspan="10">
+                                Knorr
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAB004L</p>
+                            </td>
+                            <td>
+                                <p>SK7</p>
+                            </td>
+                            <td>
+                                <p>5400101200 / 03080006001Z / K012634</p>
+                            </td>
+                            <td>
+                                <p>SAF Holland 2009-2017</p>
+                            </td>
+                            <td>
+                                <p>D1369</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAB004R</p>
+                            </td>
+                            <td>
+                                <p>SK7</p>
+                            </td>
+                            <td>
+                                <p>5400101100 / 03080005901Z / K012633 / K132662X50</p>
+                            </td>
+                            <td>
+                                <p>SAF Holland 2009-2017</p>
+                            </td>
+                            <td>
+                                <p>D1369</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAB005L</p>
+                            </td>
+                            <td>
+                                <p>SN-7</p>
+                            </td>
+                            <td>
+                                <p>K003781, SN7185RC</p>
+                            </td>
+                            <td>
+                                <p>Transit, Coach, MCI, Prevost, Fire, Refuse</p>
+                            </td>
+                            <td>
+                                <p>D1203</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAB005R</p>
+                            </td>
+                            <td>
+                                <p>SN-7</p>
+                            </td>
+                            <td>
+                                <p>K003782, SN7195RC</p>
+                            </td>
+                            <td>
+                                <p>Transit, Coach, MCI, Prevost, Fire, Refuse</p>
+                            </td>
+                            <td>
+                                <p>D1203</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Bar with Clevis</p>
+                            </td>
+                        </tr>
+                        <tr class="themeBg">
+                            <td colspan="10">
+                                Meritor
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM001L</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L202R</p>
+                            </td>
+                            <td>
+                                <p>Hendrickson Axles</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM001R</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L201R</p>
+                            </td>
+                            <td>
+                                <p>Hendrickson Axles</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM002L</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L258</p>
+                            </td>
+                            <td>
+                                <p>Trailer</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM002R</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L257</p>
+                            </td>
+                            <td>
+                                <p>Trailer</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM003L</p>
+                            </td>
+                            <td>
+                                <p>EX225H2</p>
+                            </td>
+                            <td>
+                                <p>EX225H202</p>
+                            </td>
+                            <td>
+                                <p>KW, Pete, Mack, Volvo, Navistar, Transit</p>
+                            </td>
+                            <td>
+                                <p>D1311</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM003R</p>
+                            </td>
+                            <td>
+                                <p>EX225H2</p>
+                            </td>
+                            <td>
+                                <p>EX225H201</p>
+                            </td>
+                            <td>
+                                <p>KW, Pete, Mack, Volvo, Navistar, Transit</p>
+                            </td>
+                            <td>
+                                <p>D1311</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM004L</p>
+                            </td>
+                            <td>
+                                <p>EX225H3</p>
+                            </td>
+                            <td>
+                                <p>EX225H302</p>
+                            </td>
+                            <td>
+                                <p>Transit, Coach, MCI, Prevost, Fire, Refuse</p>
+                            </td>
+                            <td>
+                                <p>D1323</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM004R</p>
+                            </td>
+                            <td>
+                                <p>EX225H3</p>
+                            </td>
+                            <td>
+                                <p>EX225H301</p>
+                            </td>
+                            <td>
+                                <p>Transit, Coach, MCI, Prevost, Fire, Refuse</p>
+                            </td>
+                            <td>
+                                <p>D1323</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM005L</p>
+                            </td>
+                            <td>
+                                <p>EX225H2</p>
+                            </td>
+                            <td>
+                                <p>EX225H217 / EX225H227</p>
+                            </td>
+                            <td>
+                                <p>Mack, Volvo</p>
+                            </td>
+                            <td>
+                                <p>D1311</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM005R</p>
+                            </td>
+                            <td>
+                                <p>EX225H2</p>
+                            </td>
+                            <td>
+                                <p>EX225H218 / EX225H228</p>
+                            </td>
+                            <td>
+                                <p>Mack, Volvo</p>
+                            </td>
+                            <td>
+                                <p>D1311</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM006L</p>
+                            </td>
+                            <td>
+                                <p>ELSA 225-3</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Mack</p>
+                            </td>
+                            <td>
+                                <p>D1708</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM006R</p>
+                            </td>
+                            <td>
+                                <p>ELSA 225-3</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Mack</p>
+                            </td>
+                            <td>
+                                <p>D1708</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM007L</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L265</p>
+                            </td>
+                            <td>
+                                <p>Mack, Volvo Steer, Trailer</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAM007R</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L266</p>
+                            </td>
+                            <td>
+                                <p>Mack, Volvo Steer, Trailer</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM001L</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L276</p>
+                            </td>
+                            <td>
+                                <p>Truck Trailer</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM001R</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L275</p>
+                            </td>
+                            <td>
+                                <p>Truck Trailer</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM002L</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L243 / EX225L247 / EX225L269</p>
+                            </td>
+                            <td>
+                                <p>Mack, Volvo drive</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr class="themeBg">
+                            <td colspan="10">
+                                Meritor
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM002R</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L244 / EX225L248 / EX225L270</p>
+                            </td>
+                            <td>
+                                <p>Mack, Volvo drive</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM003L</p>
+                            </td>
+                            <td>
+                                <p>EX225H2</p>
+                            </td>
+                            <td>
+                                <p>EX225H215 / EX225H225</p>
+                            </td>
+                            <td>
+                                <p>Mack, Volvo</p>
+                            </td>
+                            <td>
+                                <p>D1311</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM003R</p>
+                            </td>
+                            <td>
+                                <p>EX225H2</p>
+                            </td>
+                            <td>
+                                <p>EX225H216 / EX225H226</p>
+                            </td>
+                            <td>
+                                <p>Mack, Volvo</p>
+                            </td>
+                            <td>
+                                <p>D1311</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM004L</p>
+                            </td>
+                            <td>
+                                <p>ELSA 225-3</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Mack</p>
+                            </td>
+                            <td>
+                                <p>D1708</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM004R</p>
+                            </td>
+                            <td>
+                                <p>ELSA 225-3</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Mack</p>
+                            </td>
+                            <td>
+                                <p>D1708</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM005L</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L216</p>
+                            </td>
+                            <td>
+                                <p>Freightliner, Western Star, Mack, Volvo</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRM005R</p>
+                            </td>
+                            <td>
+                                <p>EX225L2</p>
+                            </td>
+                            <td>
+                                <p>EX225L215</p>
+                            </td>
+                            <td>
+                                <p>Freightliner, Western Star, Mack, Volvo</p>
+                            </td>
+                            <td>
+                                <p>D1370</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Two Tappets</p>
+                            </td>
+                            <td>
+                                <p>Flat Plate with Bolt</p>
+                            </td>
+                        </tr>
+                        <tr class="themeBg">
+                            <td colspan="10">
+                                Wabco
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAW001L</p>
+                            </td>
+                            <td>
+                                <p>PAN22</p>
+                            </td>
+                            <td>
+                                <p>6402250800</p>
+                            </td>
+                            <td>
+                                <p>Hendrickson Axles</p>
+                            </td>
+                            <td>
+                                <p>D1777.1</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Pusher Plate</p>
+                            </td>
+                            <td>
+                                <p>Rolled Bar</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAW001R</p>
+                            </td>
+                            <td>
+                                <p>PAN22</p>
+                            </td>
+                            <td>
+                                <p>6402250810</p>
+                            </td>
+                            <td>
+                                <p>Hendrickson Axles</p>
+                            </td>
+                            <td>
+                                <p>D1777.1</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Pusher Plate</p>
+                            </td>
+                            <td>
+                                <p>Rolled Bar</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAW002L</p>
+                            </td>
+                            <td>
+                                <p>PAN22</p>
+                            </td>
+                            <td>
+                                <p>640225015 L / 40225015</p>
+                            </td>
+                            <td>
+                                <p>SAF Holland Axles</p>
+                            </td>
+                            <td>
+                                <p>D1777.1</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Pusher Plate</p>
+                            </td>
+                            <td>
+                                <p>Rolled Bar</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAW002R</p>
+                            </td>
+                            <td>
+                                <p>PAN22</p>
+                            </td>
+                            <td>
+                                <p>640225016 R / 40225016</p>
+                            </td>
+                            <td>
+                                <p>SAF Holland Axles</p>
+                            </td>
+                            <td>
+                                <p>D1777.1</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Pusher Plate</p>
+                            </td>
+                            <td>
+                                <p>Rolled Bar</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAW003L</p>
+                            </td>
+                            <td>
+                                <p>Maxx 22T</p>
+                            </td>
+                            <td>
+                                <p>6402220070 S-35973-L</p>
+                            </td>
+                            <td>
+                                <p>Hendrickson Axles</p>
+                            </td>
+                            <td>
+                                <p>D1777.2</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Pusher Plate</p>
+                            </td>
+                            <td>
+                                <p>Rolled Bar</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CAW003R</p>
+                            </td>
+                            <td>
+                                <p>Maxx 22T</p>
+                            </td>
+                            <td>
+                                <p>6402220080 S-35973-R</p>
+                            </td>
+                            <td>
+                                <p>Hendrickson Axles</p>
+                            </td>
+                            <td>
+                                <p>D1777.2</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Pusher Plate</p>
+                            </td>
+                            <td>
+                                <p>Rolled Bar</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRW001L</p>
+                            </td>
+                            <td>
+                                <p>Maxxus 22</p>
+                            </td>
+                            <td>
+                                <p>640322051</p>
+                            </td>
+                            <td>
+                                <p>Freightliner Western Star</p>
+                            </td>
+                            <td>
+                                <p>D2061</p>
+                            </td>
+                            <td>
+                                <p>Left</p>
+                            </td>
+                            <td>
+                                <p>Pusher Plate</p>
+                            </td>
+                            <td>
+                                <p>Rolled Bar</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>CRW001R</p>
+                            </td>
+                            <td>
+                                <p>Maxxus 22</p>
+                            </td>
+                            <td>
+                                <p>640322050</p>
+                            </td>
+                            <td>
+                                <p>Freightliner Western Star</p>
+                            </td>
+                            <td>
+                                <p>D2061</p>
+                            </td>
+                            <td>
+                                <p>Right</p>
+                            </td>
+                            <td>
+                                <p>Pusher Plate</p>
+                            </td>
+                            <td>
+                                <p>Rolled Bar</p>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>

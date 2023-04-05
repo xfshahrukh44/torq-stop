@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="brakeContent">
-{{--                    <h2>Air Brake Chambers</h2>--}}
+                    {{--                    <h2>Air Brake Chambers</h2>--}}
                     <h3>Features and Benefits</h3>
                     <ul>
                         <li>
@@ -120,7 +120,7 @@
                                     <img src="{{asset('themes/default/assets/images/brake/chamber5.png')}}" alt="">
                                 </figure>
                                 <span class="brakeImgContent text-start">
-                                        S-Cam Pigggyback
+                                        S-Cam Piggyback
                                         Brake Chamber
                                     </span>
                             </div>
@@ -148,17 +148,650 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @for($i=1;$i<=10;$i++)
-                            <tr>
-                                <td>23K1308T</td>
-                                <td>1308T</td>
-                                <td>Meritor “T”</td>
-                                <td>23k</td>
-                                <td>15</td>
-                                <td>4</td>
-                                <td>1</td>
-                            </tr>
-                        @endfor
+                        <tr>
+                            <td>
+                                <p>TST14</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>Type 14 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST16</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>Type 16 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST18</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>Type 18 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST20</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>Type 20 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST24</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>Type 24 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST1624</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>16/24 Double Spring Brake</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>Std.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST1824</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>18/24 Double Spring Brake</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>Std.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST2024</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>20/24 Double Spring Brake</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST2224</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>22/24 Double Spring Brake</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST2424</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>24/24 Double Spring Brake</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>TST2430</p>
+                            </td>
+                            <td>
+                                <p>Air Disc</p>
+                            </td>
+                            <td>
+                                <p>24/30 Double Spring Brake</p>
+                            </td>
+                            <td>
+                                <p>Rounded, no threads</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC2430PB</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>24/30 Double Spring Brake Piggyback</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Round</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC2430LSPB</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>24/30 Double Spring Brake Long Stroke Piggyback</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Square</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC3030PB</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>30/30 Double Spring Brake Piggyback</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Round</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC3030LSPB</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>30/30 Double Spring Brake Long Stroke Piggyback</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Square</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC9</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>Type 9 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>1/2 - 20</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>1.75</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC12</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>Type 12 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>1/2 - 20</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>1.75</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC16</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>Type 16 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>1/2 - 20</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.25</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC20</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>Type 20 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC24</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>Type 24 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC30</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>Type 30 Service Chamber</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC2424</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>24/24 Double Spring Brake</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Round</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC2430</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>24/30 Double Spring Brake</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Round</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC2430LS</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>24/30 Double Spring Brake Long Stroke</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Square</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC3030</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>30/30 Double Spring Brake</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Round</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC3030LS</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>30/30 Double Spring Brake Long Stroke</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Square</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC3030I</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>30/30 Double Spring Brake Intraxx</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Round</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SC3030ILS</p>
+                            </td>
+                            <td>
+                                <p>S-Cam</p>
+                            </td>
+                            <td>
+                                <p>30/30 Double Spring Brake Long Intraxx</p>
+                            </td>
+                            <td>
+                                <p>Fully Threaded</p>
+                            </td>
+                            <td>
+                                <p>5/8 - 16</p>
+                            </td>
+                            <td>
+                                <p>Square</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>

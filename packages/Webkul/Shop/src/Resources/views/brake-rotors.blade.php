@@ -20,10 +20,10 @@
 
 <section class="brakeSec">
     <div class="container-fluid">
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-md-6">
                 <div class="brakeContent">
-{{--                    <h2>Air Brake Rotors</h2>--}}
+                    {{--                    <h2>Air Brake Rotors</h2>--}}
                     <h3>Features and Benefits</h3>
                     <p>
                         The TorqStop™ line of air disc brake rotors delivers quality, value, and long service life.
@@ -88,12 +88,17 @@
                 </div>
             </div>
             <div class="col-md-6">
+                <div class="brakeContent">
+                    <h3 class="text-center">
+                        Rotor Types
+                    </h3>
+                </div>
                 <div class="brakeImg">
                     <figure>
                         <img src="{{asset('themes/default/assets/images/brake/brakeImg1.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent">
-                            U-Shaped
+                            U-Shaped style
                         </span>
                 </div>
                 <div class="brakeImg">
@@ -101,7 +106,7 @@
                         <img src="{{asset('themes/default/assets/images/brake/brakeImg2.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent">
-                            Flat
+                            Flat style
                         </span>
                 </div>
                 <div class="brakeImg">
@@ -109,18 +114,23 @@
                         <img src="{{asset('themes/default/assets/images/brake/brakeImg3.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent">
-                            Hat
+                            Hat style
                         </span>
                 </div>
             </div>
             <div class="col-12">
+                <div class="brakeContent">
+                    <h3>
+                        Includes the following additional parts, as required by application:
+                    </h3>
+                </div>
                 <div class="brakeImgRow">
                     <div class="brakeImg">
                         <figure>
                             <img src="{{asset('themes/default/assets/images/brake/brakeImg4.png')}}" alt="">
                         </figure>
                         <span class="brakeImgContent">
-                            Hat
+                            Tone Ring
                         </span>
                     </div>
                     <div class="brakeImg">
@@ -128,7 +138,7 @@
                             <img src="{{asset('themes/default/assets/images/brake/brakeImg5.png')}}" alt="">
                         </figure>
                         <span class="brakeImgContent">
-                            Hat
+                            ADB22X Aftermarket-Style Retainer Hardware
                         </span>
                     </div>
                     <div class="brakeImg">
@@ -136,7 +146,7 @@
                             <img src="{{asset('themes/default/assets/images/brake/brakeImg6.png')}}" alt="">
                         </figure>
                         <span class="brakeImgContent">
-                            Hat
+                            ADB22X OE-Style Retainer Hardware
                         </span>
                     </div>
                     <div class="brakeImg">
@@ -144,7 +154,7 @@
                             <img src="{{asset('themes/default/assets/images/brake/brakeImg7.png')}}" alt="">
                         </figure>
                         <span class="brakeImgContent">
-                            Hat
+                            Rotor Mounting Bolts & Washers
                         </span>
                     </div>
                 </div>
@@ -168,16 +178,506 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @for($i=1;$i<=20;$i++)
-                            <tr>
-                                <td>RHM56641</td>
-                                <td>Meritor® EX225</td>
-                                <td>Transit / Coach</td>
-                                <td>MCI, Oshkosh, Pierce, Orion, NABI</td>
-                                <td>No</td>
-                                <td>Hat</td>
-                            </tr>
-                        @endfor
+                        <tr>
+                            <td>
+                                <p>RHM56641</p>
+                            </td>
+                            <td>
+                                <p>Meritor&reg; EX225</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>MCI, Oshkosh, Pierce, Orion, NABI</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>Hat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUM56642</p>
+                            </td>
+                            <td>
+                                <p>Meritor&reg; EX225</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>MCI, Oshkosh, Pierce, Orion, NABI</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW71601</p>
+                            </td>
+                            <td>
+                                <p>WABCO PAN&trade; 19</p>
+                            </td>
+                            <td>
+                                <p>Trailer</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW75180</p>
+                            </td>
+                            <td>
+                                <p>WABCO PAN&trade; 17</p>
+                            </td>
+                            <td>
+                                <p>Trailer</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76603</p>
+                            </td>
+                            <td>
+                                <p>Knorr-Bremse SB/SN7</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>Prevost</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76604</p>
+                            </td>
+                            <td>
+                                <p>Knorr-Bremse SB/SN7</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>Prevost</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUM76606</p>
+                            </td>
+                            <td>
+                                <p>Meritor&reg; D-LISA</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>NABI, Gillig</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76612</p>
+                            </td>
+                            <td>
+                                <p>Knorr-Bremse SB/SN7</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>NOVA, BCI</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW76613</p>
+                            </td>
+                            <td>
+                                <p>WABCO PAN&trade; 22</p>
+                            </td>
+                            <td>
+                                <p>Trailer</p>
+                            </td>
+                            <td>
+                                <p>Ridewell</p>
+                            </td>
+                            <td>
+                                <p>Yes</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76617</p>
+                            </td>
+                            <td>
+                                <p>Bendix&reg; / Knorr-Bremse ADB22X&trade; and ADB225&trade;</p>
+                            </td>
+                            <td>
+                                <p>Truck / Trailer</p>
+                            </td>
+                            <td>
+                                <p>Hendrickson, Kenworth, Freightliner, International, Volvo, Peterbilt, MCI, Mack</p>
+                            </td>
+                            <td>
+                                <p>Yes</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76618</p>
+                            </td>
+                            <td>
+                                <p>Bendix&reg; / Knorr-Bremse ADB22X&trade; and ADB225&trade;</p>
+                            </td>
+                            <td>
+                                <p>Truck / Trailer</p>
+                            </td>
+                            <td>
+                                <p>Freightliner, Sterling</p>
+                            </td>
+                            <td>
+                                <p>Yes</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RHB76641</p>
+                            </td>
+                            <td>
+                                <p>Knorr-Bremse SB/SN7</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>Prevost</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>Hat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RHB76642</p>
+                            </td>
+                            <td>
+                                <p>Knorr-Bremse SN7</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>Alexander Dennis</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>Hat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFB76692</p>
+                            </td>
+                            <td>
+                                <p>Bendix&reg; / Knorr-Bremse ADB22X</p>
+                            </td>
+                            <td>
+                                <p>Truck / Trailer</p>
+                            </td>
+                            <td>
+                                <p>Kenworth, Peterbilt</p>
+                            </td>
+                            <td>
+                                <p>Yes</p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFB76694</p>
+                            </td>
+                            <td>
+                                <p>Bendix&reg; / Knorr-Bremse ADB22X</p>
+                            </td>
+                            <td>
+                                <p>Truck / Trailer</p>
+                            </td>
+                            <td>
+                                <p>Kenworth, Peterbilt</p>
+                            </td>
+                            <td>
+                                <p>Yes</p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUH76810</p>
+                            </td>
+                            <td>
+                                <p>Haldex DB22, DB22LT</p>
+                            </td>
+                            <td>
+                                <p>Truck</p>
+                            </td>
+                            <td>
+                                <p>Volvo, International, Mack</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW76619</p>
+                            </td>
+                            <td>
+                                <p>WABCO PAN&trade; 22</p>
+                            </td>
+                            <td>
+                                <p>Trailer</p>
+                            </td>
+                            <td>
+                                <p>U-SHAPED ROTOR_NO HARDW_ [WABCO PAN22]_ TRAILER_Cross: HENDRICKSON S-34172_DURA 76619</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUM76620</p>
+                            </td>
+                            <td>
+                                <p>Meritor&reg; EX225</p>
+                            </td>
+                            <td>
+                                <p>Truck</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RHM76621</p>
+                            </td>
+                            <td>
+                                <p>Meritor&reg; ELSA 2</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>Vanhool Front and Tag</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Hat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFM76624</p>
+                            </td>
+                            <td>
+                                <p>Meritor&reg; EX225L</p>
+                            </td>
+                            <td>
+                                <p>Truck</p>
+                            </td>
+                            <td>
+                                <p>Same rotor as RFM76624 but with rotor mounted bolt on ABS ring</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFS76626</p>
+                            </td>
+                            <td>
+                                <p>SAF-HOLLAND / Knorr ST7</p>
+                            </td>
+                            <td>
+                                <p>Trailer</p>
+                            </td>
+                            <td>
+                                <p>P89 Integral and P89 Plus axles. ST-7</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFM76628</p>
+                            </td>
+                            <td>
+                                <p>Meritor&reg; EX225L Steer Axle</p>
+                            </td>
+                            <td>
+                                <p>Truck</p>
+                            </td>
+                            <td>
+                                <p>Same rotor as RFM76628 but with hub mounted press on ABS ring</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFM76690</p>
+                            </td>
+                            <td>
+                                <p>Meritor&reg; ELSA 225-3</p>
+                            </td>
+                            <td>
+                                <p>Transit / Coach</p>
+                            </td>
+                            <td>
+                                <p>Volvo 9700, Mack</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFW76801</p>
+                            </td>
+                            <td>
+                                <p>WABCO PAN&trade; 22-1</p>
+                            </td>
+                            <td>
+                                <p>Truck / Trailer</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW76901</p>
+                            </td>
+                            <td>
+                                <p>Wabco MAXX 22, MAXX 22T</p>
+                            </td>
+                            <td>
+                                <p>Trailer</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -203,7 +703,7 @@
                         <img src="{{asset('themes/default/assets/images/brake/spec2.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent text-start">
-                            Flat Style
+                            Hat Style
                         </span>
                 </div>
             </div>
@@ -213,7 +713,7 @@
                         <img src="{{asset('themes/default/assets/images/brake/spec3.png')}}" alt="">
                     </figure>
                     <span class="brakeImgContent text-start">
-                            Flat Style
+                            U-Shaped Style
                         </span>
                 </div>
             </div>
@@ -235,20 +735,806 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @for($i=1;$i<=20;$i++)
-                            <tr>
-                                <td>RHM56641</td>
-                                <td>Hat</td>
-                                <td>17.1</td>
-                                <td>1.77</td>
-                                <td>5.19</td>
-                                <td>5.31</td>
-                                <td>6.61</td>
-                                <td>3/4”</td>
-                                <td>12</td>
-                                <td>No</td>
-                            </tr>
-                        @endfor
+                        <tr>
+                            <td>
+                                <p>RHM56641</p>
+                            </td>
+                            <td>
+                                <p>Hat</p>
+                            </td>
+                            <td>
+                                <p>17.1</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.19</p>
+                            </td>
+                            <td>
+                                <p>5.31</p>
+                            </td>
+                            <td>
+                                <p>6.61</p>
+                            </td>
+                            <td>
+                                <p>3/4&rdquo;</p>
+                            </td>
+                            <td>
+                                <p>12</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUM56642</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>17.1</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.64</p>
+                            </td>
+                            <td>
+                                <p>8.5</p>
+                            </td>
+                            <td>
+                                <p>10.5</p>
+                            </td>
+                            <td>
+                                <p>5/8&rdquo;-18</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW71601</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>14.84</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.91</p>
+                            </td>
+                            <td>
+                                <p>8.66</p>
+                            </td>
+                            <td>
+                                <p>9.82</p>
+                            </td>
+                            <td>
+                                <p>M16-2</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Cast-In</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW75180</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>12.8</p>
+                            </td>
+                            <td>
+                                <p>1.34</p>
+                            </td>
+                            <td>
+                                <p>5.85</p>
+                            </td>
+                            <td>
+                                <p>6.81</p>
+                            </td>
+                            <td>
+                                <p>7.72</p>
+                            </td>
+                            <td>
+                                <p>M14-2</p>
+                            </td>
+                            <td>
+                                <p>8</p>
+                            </td>
+                            <td>
+                                <p>Cast-In</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76603</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>17.1</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.35</p>
+                            </td>
+                            <td>
+                                <p>7.64</p>
+                            </td>
+                            <td>
+                                <p>8.66</p>
+                            </td>
+                            <td>
+                                <p>M16-1.5</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76604</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>17.1</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>7.08</p>
+                            </td>
+                            <td>
+                                <p>7.64</p>
+                            </td>
+                            <td>
+                                <p>9.84</p>
+                            </td>
+                            <td>
+                                <p>5/8&rdquo;-18</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Cast-In</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUM76606</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>17.1</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.65</p>
+                            </td>
+                            <td>
+                                <p>7.64</p>
+                            </td>
+                            <td>
+                                <p>9.84</p>
+                            </td>
+                            <td>
+                                <p>5/8&rdquo;-18</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Bolt-On</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76612</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.16</p>
+                            </td>
+                            <td>
+                                <p>7.99</p>
+                            </td>
+                            <td>
+                                <p>9.25</p>
+                            </td>
+                            <td>
+                                <p>M16-1.5</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW76613</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.91</p>
+                            </td>
+                            <td>
+                                <p>8.66</p>
+                            </td>
+                            <td>
+                                <p>9.82</p>
+                            </td>
+                            <td>
+                                <p>M16-2</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Cast-In</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76617</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.91</p>
+                            </td>
+                            <td>
+                                <p>8.66</p>
+                            </td>
+                            <td>
+                                <p>9.84</p>
+                            </td>
+                            <td>
+                                <p>5/8&rdquo;-11</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUB76618</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.45</p>
+                            </td>
+                            <td>
+                                <p>8.66</p>
+                            </td>
+                            <td>
+                                <p>9.84</p>
+                            </td>
+                            <td>
+                                <p>5/8&rdquo;-11</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RHB76641</p>
+                            </td>
+                            <td>
+                                <p>Hat</p>
+                            </td>
+                            <td>
+                                <p>16.98</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>4.54</p>
+                            </td>
+                            <td>
+                                <p>5.31</p>
+                            </td>
+                            <td>
+                                <p>6.5</p>
+                            </td>
+                            <td>
+                                <p>0.59&rdquo;</p>
+                            </td>
+                            <td>
+                                <p>14</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RHB76642</p>
+                            </td>
+                            <td>
+                                <p>Hat</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>4.12</p>
+                            </td>
+                            <td>
+                                <p>5.31</p>
+                            </td>
+                            <td>
+                                <p>6.5</p>
+                            </td>
+                            <td>
+                                <p>0.58&rdquo;</p>
+                            </td>
+                            <td>
+                                <p>14</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFB76692</p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                            <td>
+                                <p>17</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>9.05</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFB76694</p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                            <td>
+                                <p>17</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>9.05</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUH76810</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.9</p>
+                            </td>
+                            <td>
+                                <p>8.66</p>
+                            </td>
+                            <td>
+                                <p>9.82</p>
+                            </td>
+                            <td>
+                                <p>0.63&rdquo;-11</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Cast-In</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW76619</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.91</p>
+                            </td>
+                            <td>
+                                <p>8.65</p>
+                            </td>
+                            <td>
+                                <p>9.82</p>
+                            </td>
+                            <td>
+                                <p>M16-2</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Cast-In</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUM76620</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>6.28</p>
+                            </td>
+                            <td>
+                                <p>8.13</p>
+                            </td>
+                            <td>
+                                <p>11.25</p>
+                            </td>
+                            <td>
+                                <p>M16-1.5</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RHM76621</p>
+                            </td>
+                            <td>
+                                <p>Hat</p>
+                            </td>
+                            <td>
+                                <p>17.1</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>5.12</p>
+                            </td>
+                            <td>
+                                <p>5.15</p>
+                            </td>
+                            <td>
+                                <p>6.61</p>
+                            </td>
+                            <td>
+                                <p>3/4&rdquo;</p>
+                            </td>
+                            <td>
+                                <p>12</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFM76624</p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                            <td>
+                                <p>17.09</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>2.09</p>
+                            </td>
+                            <td>
+                                <p>6.56</p>
+                            </td>
+                            <td>
+                                <p>7.86</p>
+                            </td>
+                            <td>
+                                <p>0.66&rdquo;</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Bolt-On</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFS76626</p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>2.26</p>
+                            </td>
+                            <td>
+                                <p>7.01</p>
+                            </td>
+                            <td>
+                                <p>8.07</p>
+                            </td>
+                            <td>
+                                <p>0.59&rdquo;-15</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Bolt-On</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFM76628</p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                            <td>
+                                <p>17.09</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>2.09</p>
+                            </td>
+                            <td>
+                                <p>6.56</p>
+                            </td>
+                            <td>
+                                <p>7.86</p>
+                            </td>
+                            <td>
+                                <p>0.66&rdquo;</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Bolt-On</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFM76690</p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                            <td>
+                                <p>17.09</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>Splined</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>No</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RFW76801</p>
+                            </td>
+                            <td>
+                                <p>Flat</p>
+                            </td>
+                            <td>
+                                <p>16.93</p>
+                            </td>
+                            <td>
+                                <p>1.77</p>
+                            </td>
+                            <td>
+                                <p>2.09</p>
+                            </td>
+                            <td>
+                                <p>6.56</p>
+                            </td>
+                            <td>
+                                <p>7.86</p>
+                            </td>
+                            <td>
+                                <p>5/8&rdquo;-18</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Bolt-On</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>RUW76901</p>
+                            </td>
+                            <td>
+                                <p>U-Shaped</p>
+                            </td>
+                            <td>
+                                <p>16.34</p>
+                            </td>
+                            <td>
+                                <p>1.69</p>
+                            </td>
+                            <td>
+                                <p>5.91</p>
+                            </td>
+                            <td>
+                                <p>8.66</p>
+                            </td>
+                            <td>
+                                <p>9.82</p>
+                            </td>
+                            <td>
+                                <p>M16-2</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>Cast-In</p>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>

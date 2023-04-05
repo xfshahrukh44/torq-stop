@@ -4,16 +4,16 @@
 
 @section('content')
 
-    <div class="main-slider innerbaner">
+    <div class="main-slider innerbaner productBanner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
                          alt="First slide">
                     <div class="carousel-caption">
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="row align-items-center justify-content-between">
-                                <div class="col-md-7">
+                                <div class="col-12">
                                     <h2>{{$category->name}}</h2>
                                 </div>
                             </div>

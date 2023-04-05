@@ -35,7 +35,7 @@
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <h2>TorqStop
                                         Products</h2>
                                     <p>PROTECT YOUR INVESTMENT AND KEEP <br>
@@ -52,7 +52,7 @@
                     <div class="carousel-caption  text-white">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <h2 class="text-white">
                                         LIGHT AND MEDIUM-DUTY
                                     </h2>
@@ -71,9 +71,9 @@
                     <div class="carousel-caption text-white">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
-                                <div class="col-md-6">
+                                <div class="col-md-10">
                                     <h2 class="text-white">
-                                        ALL TORQSTOP PRODUCTS ARE 100% ALL-NEW – NO CORES
+                                        ALL TORQSTOP PRODUCTS ARE 100% ALL NEW – NO CORES
                                     </h2>
                                     <p>
                                         ULTRA-PREMIUM-QUALITY PARTS PROVIDE EXCEPTIONAL VALUE AND LOWEST COST PER MILE.
@@ -100,7 +100,7 @@
             <div class="row">
                 <div class="col-12">
                     <p>
-                        <span>With over 80 years manufacturing experience,</span> OPC Parts produces OE-quality, 100%
+                        <span>With over 90 years manufacturing experience,</span> OPC Parts produces OE-quality, 100%
                         NEW Light,
                         Medium and Heavy-Duty Commercial Vehicle brake components under the <span>TorqStop™</span> brand
                         or under
