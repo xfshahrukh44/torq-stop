@@ -15,3 +15,8 @@ use App\Http\Controllers\TempController;
 use Illuminate\Support\Facades\Route;
 
 //Route::get('temp', [TempController::class, 'index'])->name('temp');
+
+//sanitize product category fields
+Route::get('sanitize', function () {
+    sanitize_product_category_fields();
+})->name('temp');

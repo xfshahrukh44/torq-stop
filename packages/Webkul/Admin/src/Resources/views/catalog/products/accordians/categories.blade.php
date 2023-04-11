@@ -26,6 +26,8 @@
     <script>
         $(document).ready(function () {
             //get product_category_fields data
+            {{--const test = {!! $product_category_fields !!};--}}
+            {{--console.log('test', test);--}}
             const product_category_fields = JSON.parse(`{!! $product_category_fields !!}`);
 
             $('.checkbox').on('click', function () {
@@ -92,6 +94,13 @@
                 item.val(productCategoryField.field_value)
                 console.log("item", item, name)
             }
+
+            //sanitize
+            $('input').on('input', function() {
+                let inputValue = $(this).val();
+                let outputValue = inputValue.replace(/"/g, "''");
+                $(this).val(outputValue);
+            });
         });
     </script>
 @endpush
