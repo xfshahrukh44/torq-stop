@@ -103,7 +103,7 @@
                                 <span class="role">
                                     {{ auth()->guard('admin')->user()->role['name'] }}
                                 </span>
-                            </div>  
+                            </div>
                         </div>
                     </div>
                     <i class="icon arrow-down-icon active"></i>

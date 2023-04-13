@@ -5,7 +5,8 @@
 @section('content')
 
     <div class="preLoader black">
-        <img src="{{asset("themes/default/assets/images/pre12.png")}}" alt="">
+{{--        <img src="{{asset("themes/default/assets/images/pre12.png")}}" alt="">--}}
+        <img src="{{asset("themes/default/assets/images/logo11.png")}}" alt="">
     </div>
     <div class="preLoader white"></div>
     <div class="main-slider">
