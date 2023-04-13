@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-around">
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
-                <a href="tel:8889966896" class="cntctInfo"><i class="fas fa-phone-alt"></i>888-996-6896</a>
+                <a href="tel:8889966896" class="cntctInfo"><i class="fas fa-phone-alt"></i>1-888-996-6896</a>
             </div>
 {{--            <div class="col-md-4" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="300">--}}
 {{--                <a href="javascript:void(0)" class="cntctInfo"><i class="fas fa-map-marker-alt"></i>The TorqStop Shop city, <br>--}}
