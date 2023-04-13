@@ -25,9 +25,6 @@
 @push('scripts')
     <script>
         $(document).ready(function () {
-            //get product_category_fields data
-            {{--const test = {!! $product_category_fields !!};--}}
-            {{--console.log('test', test);--}}
             const product_category_fields = JSON.parse(`{!! $product_category_fields !!}`);
 
             $('.checkbox').on('click', function () {
@@ -88,11 +85,11 @@
             $('.checkbox').each(function () {
                 $(this).trigger('click');
             });
+
             for (const productCategoryField of product_category_fields) {
                 const name = `[name='custom_fields[${productCategoryField.category_id}][${productCategoryField.field_name}]']`
                 const item = $(name)
                 item.val(productCategoryField.field_value)
-                console.log("item", item, name)
             }
 
             //sanitize

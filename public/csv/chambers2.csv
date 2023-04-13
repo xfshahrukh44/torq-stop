@@ -1,0 +1,46 @@
+TorqStop P/N,Brake Type,DESCRIPTION,Part Terminology,Part Terminology ID,Brand ID (OPC),Sub Brand ID (TorqStop),Part Group,GL Code,# OF DIAPHRAGMS,PUSHROD TYPE,Pushrod Thread Size,PORT SHAPE,STROKE (in),NOTES,Image 1,Availability Status,UPC,EAN (Other Countries),GTIN-14 (Shipping Container Code),ItemWeight (lb),ItemLength (in),ItemWidth (in),ItemHeight (in),Items per Case,Carton Weight (lb),Carton Length (in),Carton Width (in),Carton Height (in),Items Per Pallet,Minimum Order QTY,Country of Origin,HTS Code,VMRS Code,Warranty 
+SC12,S-Cam,"Type 12"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,SCS,SCS,1,Fully Threaded,"1/2"" - 20",N/A,1.75,,S-CamSVC.jpg,Active,691303102517,691303102517,10691303102514,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC16,S-Cam,"Type 16"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,SCS,SCS,1,Fully Threaded,"1/2"" - 20",N/A,2.25,,S-CamSVC.jpg,Active,691303102524,691303102524,10691303102521,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC20,S-Cam,"Type 20"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,SCS,SCS,1,Fully Threaded,"5/8"" - 18",N/A,2.5,,S-CamSVC.jpg,Active,691303102531,691303102531,10691303102538,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC24,S-Cam,"Type 24"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,SCS,SCS,1,Fully Threaded,"5/8"" - 18",N/A,2.5,,S-CamSVC.jpg,Active,691303102548,691303102548,10691303102545,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC2424,S-Cam,24/24 Double Diaphragm  Spring Brake,Air Brake Spring and Service Brake Chamber Assembly,61510,JYFH,JYFK,SSB,SSB,2,Fully Threaded,"5/8"" - 18",Round,2.5,,S-CamSpring.jpg,Active,691303102555,691303102555,10691303102552,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC2430,S-Cam,24/30 Double Diaphragm  Spring Brake,Air Brake Spring and Service Brake Chamber Assembly,61510,JYFH,JYFK,SSB,SSB,2,Fully Threaded,"5/8"" - 18",Round,2.5,,S-CamSpring.jpg,Active,691303102562,691303102562,10691303102569,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC2430LS,S-Cam,24/30 Double Diaphragm  Spring Brake Long Stroke,Air Brake Spring and Service Brake Chamber Assembly,61510,JYFH,JYFK,SSB,SSB,2,Fully Threaded,"5/8"" - 18",Square,3,,S-CamSpring.jpg,Active,691303102579,691303102579,10691303102576,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC2430LSPB,S-Cam,24/30 Double Diaphragm  Spring Brake Long Stroke Piggyback,Air Brake Spring Brake Service Kit,61519,JYFH,JYFK,SPB,SPB,2,N/A,N/A,Square,3,,S-CamPiggyback.jpg,Active,691303102586,691303102586,10691303102583,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC2430PB,S-Cam,24/30 Double Diaphragm  Spring Brake Piggyback,Air Brake Spring Brake Service Kit,61519,JYFH,JYFK,SPB,SPB,2,N/A,N/A,Round,2.5,,S-CamPiggyback.jpg,Active,691303102593,691303102593,10691303102590,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC30,S-Cam,"Type 30"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,SCS,SCS,1,Fully Threaded,"5/8"" - 18",N/A,2.5,,S-CamSVC.jpg,Active,691303102609,691303102609,10691303102606,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC3030,S-Cam,30/30 Double Diaphragm  Spring Brake,Air Brake Spring and Service Brake Chamber Assembly,61510,JYFH,JYFK,SSB,SSB,2,Fully Threaded,"5/8"" - 18",Round,2.5,,S-CamSpring.jpg,Active,691303102616,691303102616,10691303102613,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC3030I,S-Cam,30/30 Double Diaphragm  Spring Brake Intraxx,Air Brake Spring and Service Brake Chamber Assembly,61510,JYFH,JYFK,SSB,SSB,2,Fully Threaded,"5/8"" - 18",Round,2.5,"Intraxx 12.5"" Pushrod",S-CamSpring.jpg,Active,691303102623,691303102623,10691303102620,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC3030ILS,S-Cam,30/30 Double Diaphragm  Spring Brake Long Intraxx,Air Brake Spring and Service Brake Chamber Assembly,61510,JYFH,JYFK,SSB,SSB,2,Fully Threaded,"5/8"" - 18",Square,3,"Intraxx 12.5"" Pushrod",S-CamSpring.jpg,Active,691303102630,691303102630,10691303102637,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC3030LS,S-Cam,30/30 Double Diaphragm  Spring Brake Long Stroke,Air Brake Spring and Service Brake Chamber Assembly,61510,JYFH,JYFK,SSB,SSB,2,Fully Threaded,"5/8"" - 18",Square,3,,S-CamSpring.jpg,Active,691303102647,691303102647,10691303102644,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC3030LSPB,S-Cam,30/30 Double Diaphragm  Spring Brake Long Stroke Piggyback,Air Brake Spring Brake Service Kit,61519,JYFH,JYFK,SPB,SPB,2,N/A,N/A,Square,3,,S-CamPiggyback.jpg,Active,691303102654,691303102654,10691303102651,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+SC3030PB,S-Cam,30/30 Double Diaphragm  Spring Brake Piggyback,Air Brake Spring Brake Service Kit,61519,JYFH,JYFK,SPB,SPB,2,N/A,N/A,Round,2.5,,S-CamPiggyback.jpg,Active,691303102661,691303102661,10691303102668,,,,,,,,,,,,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST14,Air Disc,"Type 14"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,ADS,ADS,1,"Rounded, no threads",N/A,N/A,"2.5""",,ADB_Svc.png,Active,691303102302,691303102302,10691303102309,6.17,5.71,6.97,7.83,2,13.45,11.81,8.27,8.27,180,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST16,Air Disc,"Type 16"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,ADS,ADS,1,"Rounded, no threads",N/A,N/A,"2.5""",,ADB_Svc.png,Active,691303102319,691303102319,10691303102316,6.42,5.71,6.97,7.83,2,13.94,11.81,8.27,8.27,180,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST1624,Air Disc,16/24 Double Diaphragm  Spring Brake,Air Disc Brake Spring Brake Chamber Assembly,61558,JYFH,JYFK,DSB,DSB,2,"Rounded, no threads",N/A,N/A,Std.,,ADB_Spring.png,Active,691303102357,691303102357,10691303102354,15.19,14.69,7.28,8.15,2,31.93,14.96,14.96,8.27,90,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST18,Air Disc,"Type 18"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,ADS,ADS,1,"Rounded, no threads",N/A,N/A,"2.5""",,ADB_Svc.png,Active,691303102326,691303102326,10691303102323,6.62,5.71,7.17,8.03,2,14.33,11.81,8.27,8.27,180,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST1824,Air Disc,18/24 Double Diaphragm  Spring Brake,Air Disc Brake Spring Brake Chamber Assembly,61558,JYFH,JYFK,DSB,DSB,2,"Rounded, no threads",N/A,N/A,Std.,,ADB_Spring.png,Active,691303102364,691303102364,10691303102361,15.44,15.08,7.28,8.15,2,32.41,14.96,14.96,8.27,90,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST20,Air Disc,"Type 20"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,ADS,ADS,1,"Rounded, no threads",N/A,N/A,"2.5""",,ADB_Svc.png,Active,691303102333,691303102333,10691303102330,6.68,5.71,7.17,8.03,2,14.46,11.81,8.27,8.27,180,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST2024,Air Disc,20/24 Double Diaphragm  Spring Brake,Air Disc Brake Spring Brake Chamber Assembly,61558,JYFH,JYFK,DSB,DSB,2,"Rounded, no threads",N/A,N/A,"2.5""",,ADB_Spring.png,Active,691303102371,691303102371,10691303102378,15.66,15.08,7.28,8.15,2,32.85,14.96,14.96,8.27,90,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST2224,Air Disc,22/24 Double Diaphragm  Spring Brake,Air Disc Brake Spring Brake Chamber Assembly,61558,JYFH,JYFK,DSB,DSB,2,"Rounded, no threads",N/A,N/A,"2.5""",,ADB_Spring.png,Active,691303102388,691303102388,10691303102385,15.88,14.88,7.28,8.15,2,33.3,14.96,14.96,8.27,90,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST24,Air Disc,"Type 24"" Diaphragm Service Chamber",Air Brake Chamber,19149,JYFH,JYFK,ADS,ADS,1,"Rounded, no threads",N/A,N/A,"2.5""",,ADB_Svc.png,Active,691303102340,691303102340,10691303102347,7.39,5.98,7.56,8.43,2,15.88,11.81,8.27,8.27,180,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST2424,Air Disc,24/24 Double Diaphragm  Spring Brake,Air Disc Brake Spring Brake Chamber Assembly,61558,JYFH,JYFK,DSB,DSB,2,"Rounded, no threads",N/A,N/A,"2.5""",,ADB_Spring.png,Active,691303102401,691303102401,10691303102408,16.1,14.88,7.28,8.15,2,33.74,14.96,14.96,8.27,90,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+TST2430,Air Disc,24/30 Double Diaphragm  Spring Brake,Air Disc Brake Spring Brake Chamber Assembly,61558,JYFH,JYFK,DSB,DSB,2,"Rounded, no threads",N/A,N/A,"2.5""",,ADB_Spring.png,Active,691303102418,691303102418,10691303102415,18.13,14.9,8.07,,,,,,,,50,CN,8412.31.0080,013-004-027,24 Months / Unlimited
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

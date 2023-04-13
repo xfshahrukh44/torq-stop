@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\ProductCategoryField;
 use Illuminate\Http\Request;
 use Webkul\Attribute\Repositories\AttributeRepository;
+use Webkul\Category\Models\Category;
 use Webkul\Category\Repositories\CategoryRepository;
+use Webkul\Product\Models\Product;
 use Webkul\Product\Repositories\ProductRepository;
 
 class TempController extends Controller
@@ -1618,5 +1621,536 @@ class TempController extends Controller
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         }
         return $randomString;
+    }
+
+    public function updateCategories (Request $request)
+    {
+        ini_set('max_execution_time', '0');
+
+        //rotors category
+        $rotors_result = $this->updateCategory('rotor',
+            [
+                'Part Terminology',
+                'Part Terminology ID',
+                'Brand ID',
+                'Sub Brand ID',
+                'Part Group',
+                'GL Code',
+                'EAN',
+                'GTIN',
+            ],
+            [
+                'part_terminology',
+                'part_terminology_id',
+                'brand_id',
+                'sub_brand_id',
+                'part_group',
+                'gl_code',
+                'ean',
+                'gtin',
+            ],
+            [
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+            ],
+            [
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+            ],
+            [
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ]
+        );
+        dump('$rotors_result: ' . $rotors_result);
+
+        //pads category
+        $pads_result = $this->updateCategory('pad',
+            [
+                'Part Terminology',
+                'Part Terminology ID',
+                'Brand ID',
+                'Sub Brand ID',
+                'Part Group',
+                'GL Code',
+                'EAN',
+                'GTIN',
+            ],
+            [
+                'part_terminology',
+                'part_terminology_id',
+                'brand_id',
+                'sub_brand_id',
+                'part_group',
+                'gl_code',
+                'ean',
+                'gtin',
+            ],
+            [
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+            ],
+            [
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+            ],
+            [
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ]
+        );
+        dump('$pads_result: ' . $pads_result);
+
+        //calipers category
+        $calipers_result = $this->updateCategory('caliper',
+            [
+                'Vendor PIN',
+                'Part Terminology',
+                'Part Terminology ID',
+                'Brand ID',
+                'Sub Brand ID',
+                'Part Group',
+                'GL Code',
+                'XREF No',
+                'EAN',
+                'GTIN',
+            ],
+            [
+                'vendor_pin',
+                'part_terminology',
+                'part_terminology_id',
+                'brand_id',
+                'sub_brand_id',
+                'part_group',
+                'gl_code',
+                'xref_no',
+                'ean',
+                'gtin',
+            ],
+            [
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+            ],
+            [
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+            ],
+            [
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ]
+        );
+        dump('$calipers_result: ' . $calipers_result);
+
+        //shoes category
+        $shoes_result = $this->updateCategory('shoe',
+            [
+                'Part Terminology',
+                'Part Terminology ID',
+                'Brand ID',
+                'Sub Brand ID',
+                'Part Group',
+                'GL Code',
+                'GAWR Code',
+                'EAN',
+                'GTIN',
+            ],
+            [
+                'part_terminology',
+                'part_terminology_id',
+                'brand_id',
+                'sub_brand_id',
+                'part_group',
+                'gl_code',
+                'gawr_code',
+                'ean',
+                'gtin',
+            ],
+            [
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+            ],
+            [
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+            ],
+            [
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ]
+        );
+        dump('$shoes_result: ' . $shoes_result);
+
+        //chambers category
+        $chambers_result = $this->updateCategory('chamber',
+            [
+                'Part Terminology',
+                'Part Terminology ID',
+                'Brand ID',
+                'Sub Brand ID',
+                'Part Group',
+                'GL Code',
+                'EAN',
+                'GTIN',
+            ],
+            [
+                'part_terminology',
+                'part_terminology_id',
+                'brand_id',
+                'sub_brand_id',
+                'part_group',
+                'gl_code',
+                'ean',
+                'gtin',
+            ],
+            [
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+            ],
+            [
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+            ],
+            [
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ]
+        );
+        dump('$chambers_result: ' . $chambers_result);
+
+        //miscs category
+        $miscs_result = $this->updateCategory('misc',
+            [
+                'Part Terminology',
+                'Part Terminology ID',
+                'Brand ID',
+                'Sub Brand ID',
+                'Part Group',
+                'GL Code',
+                'EAN',
+                'GTIN',
+            ],
+            [
+                'part_terminology',
+                'part_terminology_id',
+                'brand_id',
+                'sub_brand_id',
+                'part_group',
+                'gl_code',
+                'ean',
+                'gtin',
+            ],
+            [
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+                'Text',
+            ],
+            [
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+            ],
+            [
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ]
+        );
+        dump('$miscs_result: ' . $miscs_result);
+
+        dd('Done');
+    }
+
+    public function updateCategory ($cat_slug, $custom_fields_titles, $custom_fields_names, $custom_fields_types, $custom_fields_is_required, $custom_fields_selection_options)
+    {
+        $category = Category::whereHas('cat_flat', function ($q) use ($cat_slug) {
+            return $q->where('name', 'LIKE', '%'.$cat_slug.'%');
+        })->where('custom_fields', '!=', '[]')->first();
+
+        if (!$category) {
+            return false;
+        }
+
+        $custom_fields = json_decode($category->custom_fields);
+
+        foreach ($custom_fields_titles as $key => $custom_fields_title) {
+            $custom_fields []= [
+                'title' => $custom_fields_title,
+                'name' => $custom_fields_names[$key],
+                'type' => $custom_fields_types[$key],
+                'selection_options' => $custom_fields_selection_options[$key],
+                'is_required' => $custom_fields_is_required[$key],
+            ];
+        }
+        $category->custom_fields = json_encode($custom_fields);
+        $category->save();
+
+        return true;
+    }
+
+    public function updateProducts (Request $request)
+    {
+        ini_set('max_execution_time', '0');
+
+//        $file = asset('csv/miscs2.csv');
+//        $csv= file_get_contents($file);
+//        $rotors_array = array_map("str_getcsv", explode("\n", $csv));
+//        dd($rotors_array);
+
+        //rotors products
+        dump("R O T O R S");
+        $rotors_result = $this->updateCategoryProducts('csv/rotors2.csv', 2, 25, 'rotor', 0, [
+            'part_terminology' => 3,
+            'part_terminology_id' => 4,
+            'brand_id' => 5,
+            'sub_brand_id' => 6,
+            'part_group' => 7,
+            'gl_code' => 8,
+            'ean' => 37,
+            'gtin' => 38,
+        ]);
+        dump('R O T O R S result: ' . $rotors_result);
+        //------------------------------------------------------------------------------------------------------------------------
+
+        //pads products
+        dump("P A D S");
+        $pads_result = $this->updateCategoryProducts('csv/pads2.csv', 1, 34, 'pad', 0, [
+            'part_terminology' => 2,
+            'part_terminology_id' => 3,
+            'brand_id' => 4,
+            'sub_brand_id' => 5,
+            'part_group' => 6,
+            'gl_code' => 7,
+            'ean' => 28,
+            'gtin' => 29,
+        ]);
+        dump('P A D S result: ' . $pads_result);
+        //------------------------------------------------------------------------------------------------------------------------
+
+        //calipers products
+        dump("C A L I P E R S");
+        $calipers_result = $this->updateCategoryProducts('csv/calipers2.csv', 1, 44, 'caliper', 1, [
+            'vendor_pin' => 2,
+            'part_terminology' => 4,
+            'part_terminology_id' => 5,
+            'brand_id' => 6,
+            'sub_brand_id' => 7,
+            'part_group' => 8,
+            'gl_code' => 9,
+            'xref_no' => 12,
+            'ean' => 36,
+            'gtin' => 37,
+        ]);
+        dump('C A L I P E R S result: ' . $calipers_result);
+        //------------------------------------------------------------------------------------------------------------------------
+
+        //shoes products
+        dump("S H O E S");
+        $shoes_result = $this->updateCategoryProducts('csv/shoes2.csv', 1, 28, 'shoe', 1, [
+            'part_terminology' => 4,
+            'part_terminology_id' => 5,
+            'brand_id' => 6,
+            'sub_brand_id' => 7,
+            'part_group' => 8,
+            'gl_code' => 9,
+            'gawr_code' => 10,
+            'ean' => 24,
+            'gtin' => 25,
+        ]);
+        dump('S H O E S result: ' . $shoes_result);
+        //------------------------------------------------------------------------------------------------------------------------
+
+        //chambers products
+        dump("C H A M B E R S");
+        $chambers_result = $this->updateCategoryProducts('csv/chambers2.csv', 1, 27, 'chamber', 0, [
+            'part_terminology' => 3,
+            'part_terminology_id' => 4,
+            'brand_id' => 5,
+            'sub_brand_id' => 6,
+            'part_group' => 7,
+            'gl_code' => 8,
+            'ean' => 18,
+            'gtin' => 19,
+        ]);
+        dump('C H A M B E R S result: ' . $chambers_result);
+        //------------------------------------------------------------------------------------------------------------------------
+
+        //miscs products
+        dump("M I S C");
+        $miscs_result = $this->updateCategoryProducts('csv/miscs2.csv', 1, 13, 'misc', 0, [
+            'part_terminology' => 3,
+            'part_terminology_id' => 4,
+            'brand_id' => 5,
+            'sub_brand_id' => 6,
+            'part_group' => 7,
+            'gl_code' => 8,
+            'ean' => 13,
+            'gtin' => 14,
+        ]);
+        dump('M I S C result: ' . $miscs_result);
+        //------------------------------------------------------------------------------------------------------------------------
+
+        dd('Done!');
+    }
+
+    public function updateCategoryProducts ($csv_path, $start, $end, $cat_slug, $product_name_index, $update_key_values)
+    {
+        $file = asset($csv_path);
+        $csv= file_get_contents($file);
+        $array = array_map("str_getcsv", explode("\n", $csv));
+        $category = Category::whereHas('cat_flat', function ($q) use ($cat_slug) {
+            return $q->where('name', 'LIKE', '%'.$cat_slug.'%');
+        })->where('custom_fields', '!=', '[]')->first();
+
+        if (!$category) {
+            return false;
+        }
+
+        for ($i = $start; $i < $end + 1; $i++) {
+            $row_item = $array[$i];
+            $product_name = $row_item[$product_name_index];
+
+            $product = Product::whereHas('product_flats', function ($q) use ($product_name) {
+                return $q->where('name', $product_name);
+            })->first();
+
+            if (!$product) {
+                dump('Product not found. Skipping.');
+                continue;
+            }
+
+            foreach ($update_key_values as $field_name => $row_item_index) {
+                if (array_key_exists($row_item_index, $row_item)) {
+                    $field_value = $row_item[$row_item_index];
+                    ProductCategoryField::firstOrCreate([
+                        'product_id' => $product->id,
+                        'category_id' => $category->id,
+                        'field_name' => $field_name
+                    ], [
+                        'field_value' => $field_value
+                    ]);
+                } else {
+                    dump('error');
+                    // Handle the case where the key does not exist in the $row_item array
+                }
+
+            }
+        }
+
+        return true;
     }
 }

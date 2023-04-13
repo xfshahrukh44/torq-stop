@@ -207,4 +207,9 @@ class Category extends TranslatableModel implements CategoryContract
     {
         return CategoryFactory::new ();
     }
+
+    public function cat_flat ()
+    {
+        return $this->hasMany(CategoryTranslation::class);
+    }
 }
