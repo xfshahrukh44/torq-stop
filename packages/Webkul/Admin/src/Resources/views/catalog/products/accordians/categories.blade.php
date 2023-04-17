@@ -60,7 +60,7 @@
                                                         `+final_options+`
                                                     </select>`;
                             } else if (item.type == "Number") {
-                                bare_field = `<input type="number" v-validate="'required'" class="control" value="" name="custom_fields[${category_id}][${item.name}]" `+is_required+`/>`;
+                                bare_field = `<input type="number" v-validate="'required'" class="control" step="0.001" value="" name="custom_fields[${category_id}][${item.name}]" `+is_required+`/>`;
                             } else if (item.type == "Textarea") {
                                 bare_field = `<textarea v-validate="'required'" class="control" name="custom_fields[${category_id}][${item.name}]" cols="30" rows="10" `+is_required+`></textarea>`;
                             }
