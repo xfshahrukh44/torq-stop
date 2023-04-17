@@ -16,11 +16,11 @@
                                 <div class="col-md-7">
                                     <h2>Product detail</h2>
                                 </div>
-{{--                                <div class="col-md-5">--}}
-{{--                                    <figure class="blast">--}}
-{{--                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
+                                {{--                                <div class="col-md-5">--}}
+                                {{--                                    <figure class="blast">--}}
+                                {{--                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">--}}
+                                {{--                                    </figure>--}}
+                                {{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -34,21 +34,33 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="productImgMain">
-                        <div class="product-detail-slider">
+                        <figure class="mainImg">
                             @foreach($product['images'] as $image)
-                                <div>
-                                    <img class="ml-10" src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}" class="" alt="">
-                                </div>
+                                <img class="ml-10"
+                                     src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"
+                                     class="" alt="">
                             @endforeach
-                        </div>
+                        </figure>
+{{--                        <div class="product-detail-slider">--}}
+
+{{--                        </div>--}}
                         @if(count($product['images']) > 0)
-                            <div class="product-detail-nav">
-                                @foreach($product['images'] as $image)
-                                    <div>
-                                        <img class="ml-10" src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}" class="" alt="">
-                                    </div>
-                                @endforeach
-                            </div>
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-md-4">
+                                       @foreach($product['images'] as $image)
+                                           <figure>
+                                               <img class="ml-10"
+                                                    src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"
+                                                    class="" alt="">
+                                           </figure>
+                                       @endforeach
+                                   </div>
+                               </div>
+                           </div>
+{{--                            <div class="product-detail-nav">--}}
+                            {{--                                --}}
+                            {{--                            </div>--}}
                         @endif
                     </div>
                 </div>
@@ -56,17 +68,18 @@
                     <div class="prodctdetailContent">
                         <h2>{{$product['name']}}
                         </h2>
-                        <span>${{round($product['price'], 2)}} – ${{round($product['price'], 3)}}
+                        {{--                        <span>${{round($product['price'], 2)}} – ${{round($product['price'], 3)}}--}}
                         </span>
                         <p>{!! $product['description'] !!}</p>
                     </div>
                     <div class="proCounter count mr-4">
                         <span class="minus"><i class="fa fa-angle-down"></i></span>
-                        <input type="text" value="1" />
+                        <input type="text" value="1"/>
                         <span class="plus"><i class="fa fa-angle-up"></i></span>
                         <div class="cartBtn">
                             <!-- <a href="step1.php" class="themeBtn">Bulk Product </a> -->
-                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk Product
+                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk
+                                Product
                             </button>
 
                         </div>
@@ -92,7 +105,8 @@
                     </div>
                 </div>
                 <div class="sku">
-                    <p>SKU: {{$product['sku'] ?? ''}} Category: <a href="#">{{$product['categories'][0]['category']['translations'][0]['name'] ?? ''}}</a>
+                    <p>SKU: {{$product['sku'] ?? ''}} Category: <a
+                            href="#">{{$product['categories'][0]['category']['translations'][0]['name'] ?? ''}}</a>
                     </p>
                 </div>
 
@@ -115,7 +129,8 @@
         </div>
     </section>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -125,7 +140,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form  method="post">
+                    <form method="post">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Name</label>
                             <input type="text" class="form-control" placeholder="Name" required>

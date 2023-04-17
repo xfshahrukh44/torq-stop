@@ -1,4 +1,3 @@
-
 <section class="shopSec">
     <div class="container">
         <div class="row">
@@ -35,10 +34,12 @@
                             </a>
                         </figure>
                     </div>
-{{--                    <div class="shopContent">--}}
-{{--                        <p>{{$product['name']}}<span>${{$product['price']}}</span></p>--}}
+                    <div class="shopContent">
+                        <p>{{$product['name']}}
+{{--                            <span>${{$product['price']}}</span>--}}
+                        </p>
 {{--                        <a href="{{route('shop.step1')}}">ADD TO CART</a>--}}
-{{--                    </div>--}}
+                    </div>
                 </div>
             @empty
                 <div class="col-md-12">
