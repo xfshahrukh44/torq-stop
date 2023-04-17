@@ -35,30 +35,33 @@
                 <div class="col-md-6">
                     <div class="productImgMain">
                         <figure class="mainImg">
-                            @foreach($product['images'] as $image)
-                                <img class="ml-10"
-                                     src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"
-                                     class="" alt="">
-                            @endforeach
+                            {{--                            @foreach($product['images'] as $image)--}}
+                            {{--                                <img class="ml-10"--}}
+                            {{--                                     src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"--}}
+                            {{--                                     class="" alt="">--}}
+                            {{--                            @endforeach--}}
+                            <img class="ml-10"
+                                 src="{{ $product['images'][0]['url'] ?? asset('themes/default/assets/images/default.png')}}"
+                                 class="" alt="">
                         </figure>
-{{--                        <div class="product-detail-slider">--}}
+                        {{--                        <div class="product-detail-slider">--}}
 
-{{--                        </div>--}}
+                        {{--                        </div>--}}
                         @if(count($product['images']) > 0)
-                           <div class="container-fluid">
-                               <div class="row">
-                                   <div class="col-md-4">
-                                       @foreach($product['images'] as $image)
-                                           <figure>
-                                               <img class="ml-10"
-                                                    src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"
-                                                    class="" alt="">
-                                           </figure>
-                                       @endforeach
-                                   </div>
-                               </div>
-                           </div>
-{{--                            <div class="product-detail-nav">--}}
+                            <div class="container-fluid">
+                                <div class="row productsRow">
+                                    @foreach($product['images'] as $image)
+                                        <div class="col-md-4">
+                                            <figure>
+                                                <img class="ml-10"
+                                                     src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"
+                                                     class="" alt="">
+                                            </figure>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            {{--                            <div class="product-detail-nav">--}}
                             {{--                                --}}
                             {{--                            </div>--}}
                         @endif
