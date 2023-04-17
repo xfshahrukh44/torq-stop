@@ -295,7 +295,7 @@ header {
 }
 
 .productBox {
-    background-color: var(--secondary);
+    background-color: #fff;
     display: grid;
     place-items: center;
     padding: 3rem 0;
