@@ -2232,3 +2232,7 @@ ul.chooselist2 li {
     font-size: 0.75rem;
     margin: 0;
 }
+
+.productsRow{
+    gap: 2rem 0;
+}
