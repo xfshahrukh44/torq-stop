@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('update-categories', [TempController::class, 'updateCategories'])->name('temp');
 
-//Route::get('update-products', [TempController::class, 'updateProducts'])->name('temp');
+Route::get('update-products', [TempController::class, 'updateProducts'])->name('temp');
 
 //sanitize product category fields
 Route::get('sanitize', function () {
