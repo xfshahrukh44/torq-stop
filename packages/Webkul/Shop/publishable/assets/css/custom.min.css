@@ -2233,6 +2233,10 @@ ul.chooselist2 li {
     margin: 0;
 }
 
-.productsRow{
+.productsRow {
     gap: 2rem 0;
+}
+
+.productImgMain .productsRow {
+    margin-top: 1rem;
 }
