@@ -81,9 +81,9 @@
                         <span class="plus"><i class="fa fa-angle-up"></i></span>
                         <div class="cartBtn">
                             <!-- <a href="step1.php" class="themeBtn">Bulk Product </a> -->
-                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk
-                                Product
-                            </button>
+{{--                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk--}}
+{{--                                Product--}}
+{{--                            </button>--}}
 
                         </div>
                         <div class="cartBtn">
