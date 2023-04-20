@@ -18,6 +18,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('update-products', [TempController::class, 'updateProducts'])->name('temp');
 
+Route::get('add-custom-fields', function () {
+    addCustomFieldToCategory (
+        'rotor',
+        'Durabrake',
+        'durabrake',
+        'text',
+        'Yes',
+        [],
+    );
+})->name('addCustomFields');
+
 //sanitize product category fields
 Route::get('sanitize', function () {
     sanitize_product_category_fields();
