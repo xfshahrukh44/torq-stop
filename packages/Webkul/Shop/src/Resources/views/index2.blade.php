@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="preLoader black">
-{{--        <img src="{{asset("themes/default/assets/images/pre12.png")}}" alt="">--}}
+        {{--        <img src="{{asset("themes/default/assets/images/pre12.png")}}" alt="">--}}
         <img src="{{asset("themes/default/assets/images/logo11.png")}}" alt="">
     </div>
     <div class="preLoader white"></div>
@@ -123,7 +123,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-{{--                            <a href="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}" data-fancybox="PDF"--}}
+                            {{--                            <a href="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}" data-fancybox="PDF"--}}
                             <a target="_blank" href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF"
                                data-download-src="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}"><img
                                     src="{{asset('themes/default/assets/images/literature.jpg')}}" alt="">
@@ -143,9 +143,11 @@
                     <div class="infoCard">
                         <figure>
                             <img src="{{asset('themes/default/assets/images/distributor-portal.jpg')}}" alt="">
-                            <div class="iconOverlay">
-                                <i class="fas fa-file"></i>
-                            </div>
+                            <a href="https://torqstop-ecat.com/Login.aspx?indexlog=logon" target="_blank">
+                                <div class="iconOverlay">
+                                    <i class="fas fa-file"></i>
+                                </div>
+                            </a>
                         </figure>
                         <div class="content">
                             <h4>
@@ -158,9 +160,11 @@
                     <div class="infoCard">
                         <figure>
                             <img src="{{asset('themes/default/assets/images/e-catalog.jpg')}}" alt="">
-                            <div class="iconOverlay">
-                                <i class="fas fa-file"></i>
-                            </div>
+                            <a href="https://torqstop-ecat.com" target="_blank">
+                                <div class="iconOverlay">
+                                    <i class="fas fa-file"></i>
+                                </div>
+                            </a>
                         </figure>
                         <div class="content">
                             <h4>

@@ -2014,6 +2014,7 @@ class TempController extends Controller
         //rotors products
         dump("R O T O R S");
         $rotors_result = $this->updateCategoryProducts('csv/rotors2.csv', 2, 25, 'rotor', 0, [
+            'durabrake' => 1,
             'part_terminology' => 3,
             'part_terminology_id' => 4,
             'brand_id' => 5,
@@ -2290,7 +2291,7 @@ class TempController extends Controller
             foreach ($update_key_values as $field_name => $row_item_index) {
                 if (array_key_exists($row_item_index, $row_item)) {
                     $field_value = $row_item[$row_item_index];
-                    ProductCategoryField::firstOrCreate([
+                    ProductCategoryField::updateOrCreate([
                         'product_id' => $product->id,
                         'category_id' => $category->id,
                         'field_name' => $field_name

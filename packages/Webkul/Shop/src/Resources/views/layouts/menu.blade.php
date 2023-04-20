@@ -28,13 +28,13 @@
                                 <a class="nav-link" href="{{route('shop.shop')}}"><span>PRODUCTS</span></a>
                             </li>
                             <li class="nav-item {{ request()->is('') ? 'active' : '' }}">
-                                <a class="nav-link" href="#"><span>CATALOG</span></a>
+                                <a class="nav-link" target="_blank" href="https://torqstop-ecat.com"><span>CATALOG</span></a>
                             </li>
                             <li class="nav-item {{ request()->is('reviews') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{route('shop.reviews')}}"><span>REVIEWS</span></a>
                             </li>
                             <li class="nav-item {{ request()->is('') ? 'active' : '' }}">
-                                <a class="nav-link" href="#"><span>DISTRIBUTOR PORTAL</span></a>
+                                <a class="nav-link" target="_blank" href="https://torqstop-ecat.com/Login.aspx?indexlog=logon"><span>DISTRIBUTOR PORTAL</span></a>
                             </li>
                             <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{route('shop.contact')}}"><span>Contact us</span></a>
