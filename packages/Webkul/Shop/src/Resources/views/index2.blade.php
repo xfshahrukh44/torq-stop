@@ -123,7 +123,8 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <a href="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}" data-fancybox="PDF"
+{{--                            <a href="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}" data-fancybox="PDF"--}}
+                            <a target="_blank" href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF"
                                data-download-src="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}"><img
                                     src="{{asset('themes/default/assets/images/literature.jpg')}}" alt="">
                                 <div class="iconOverlay">
