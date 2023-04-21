@@ -25,6 +25,7 @@
                     <li><a href="{{route('shop.shop')}}">Shop</a></li>
                     <li><a href="{{route('shop.reviews')}}">reviews</a></li>
                     <li><a href="{{route('shop.contact')}}">Contact us</a></li>
+                    <li><a href="{{asset('pdf/terms-of-use.pdf')}}" data-fancybox="PDF">Terms of Use</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -44,7 +45,7 @@
         </div>
         <div class="row copyRight">
             <div class="col-md-12">
-                <p>Copyright © 2022. All Right Reserved.</p>
+                <p>Copyright © 2023. All Right Reserved.</p>
             </div>
         </div>
     </div>

@@ -56,7 +56,7 @@
                             <label for="one">Remember me</label>
                         </div>
                         <p>Please enter your e-mail address associated with your
-                            Dynamicfriction Account into the fieid below. We'll e-mail you
+                            Account into the fieid below. We'll e-mail you
                             instructions to reset your password. </p>
                         <div class="form-group">
                             <label>Email *</label>
@@ -91,7 +91,7 @@
                             <input type="text" placeholder="Email Address">
                         </div>
                         <div class="form-group">
-                            <label>Passwaord *</label>
+                            <label>Password *</label>
                             <input type="password" placeholder="***********">
                         </div>
                         <div class="form-group">
