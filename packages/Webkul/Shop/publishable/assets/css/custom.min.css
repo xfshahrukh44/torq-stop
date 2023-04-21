@@ -115,7 +115,7 @@ header.sticky {
 }
 
 header.sticky .navbar-brand img {
-    max-width: 100px;
+    /*max-width: 100px;*/
 }
 
 header {
@@ -1999,6 +1999,11 @@ ul.chooselist2 li {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.infoCard figure .iconOverlay button{
+    border: 0;
+    background: transparent;
+    padding: 0;
 }
 
 .infoCard figure img {

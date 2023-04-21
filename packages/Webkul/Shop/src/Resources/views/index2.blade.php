@@ -124,31 +124,40 @@
                     <div class="infoCard">
                         <figure>
                             {{--                            <a href="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}" data-fancybox="PDF"--}}
-{{--                            <a target="_blank" href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF" data-download-src="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}">--}}
-                            <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                <img src="{{asset('themes/default/assets/images/literature.jpg')}}" alt="">
-                                <div class="iconOverlay">
-                                    <i class="fas fa-file"></i>
+                            {{--                            <a target="_blank" href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF" data-download-src="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}">--}}
+
+                            <img src="{{asset('themes/default/assets/images/literature.jpg')}}" alt="">
+                            <div class="iconOverlay">
+                                <div class="dropdown">
+                                    <button type="button" data-toggle="dropdown" aria-expanded="false"><i
+                                            class="fas fa-file"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="{{asset('pdf/pfa.pdf')}}" data-fancybox="PDF"
+                                           >Flyer (PFA)</a>
+                                        <a class="dropdown-item" href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF"
+                                           >PDF 2</a>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
+
                         </figure>
                         <div class="content">
                             <h4>
                                 Catalogs and Literature
                             </h4>
                         </div>
-                        <div class="collapse" id="collapseExample">
-                            <div class="card card-body" style="background: #ed7d20;">
-                                <ul class="text-center">
-                                    <li>
-                                        <a href="{{asset('pdf/pfa.pdf')}}" data-fancybox="PDF" style="color: white;">Flyer (PFA)</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF" style="color: white;">PDF 2</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        {{--                        <div class="collapse" id="collapseExample">--}}
+                        {{--                            <div class="card card-body" style="background: #ed7d20;">--}}
+                        {{--                                <ul class="text-center">--}}
+                        {{--                                    <li>--}}
+                        {{--                                        <a href="{{asset('pdf/pfa.pdf')}}" data-fancybox="PDF" style="color: white;">Flyer (PFA)</a>--}}
+                        {{--                                    </li>--}}
+                        {{--                                    <li>--}}
+                        {{--                                        <a href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF" style="color: white;">PDF 2</a>--}}
+                        {{--                                    </li>--}}
+                        {{--                                </ul>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
                     </div>
                 </div>
                 <div class="col">
