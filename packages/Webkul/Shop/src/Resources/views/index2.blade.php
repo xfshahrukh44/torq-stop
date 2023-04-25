@@ -37,8 +37,9 @@
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-8">
-                                    <h2>TorqStop
-                                        Products</h2>
+{{--                                    <h2>TorqStop--}}
+{{--                                        Products</h2>--}}
+                                    <img src="{{asset('themes/default/assets/images/logoMainSec.png')}}" alt="" class="img-fluid">
                                     <p>PROTECT YOUR INVESTMENT AND KEEP <br>
                                         YOUR FLEET RUNNING STRONG WHILE STAYING ON BUDGET.</p>
                                 </div>
@@ -54,6 +55,7 @@
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-8">
+                                    <img src="{{asset('themes/default/assets/images/logoMainSec.png')}}" alt="" class="img-fluid">
                                     <h2 class="text-white">
                                         LIGHT AND MEDIUM-DUTY
                                     </h2>
@@ -73,6 +75,7 @@
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-10">
+                                    <img src="{{asset('themes/default/assets/images/logoMainSec.png')}}" alt="" class="img-fluid">
                                     <h2 class="text-white">
                                         ALL TORQSTOP PRODUCTS ARE 100% ALL NEW – NO CORES
                                     </h2>
@@ -133,9 +136,9 @@
                                             class="fas fa-file"></i></button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="{{asset('pdf/pfa.pdf')}}" data-fancybox="PDF"
-                                           >Flyer (PFA)</a>
+                                           >Product Flyer </a>
                                         <a class="dropdown-item" href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF"
-                                           >PDF 2</a>
+                                           >QR Catalog</a>
                                     </div>
                                 </div>
                             </div>

@@ -2000,7 +2000,8 @@ ul.chooselist2 li {
     align-items: center;
     justify-content: center;
 }
-.infoCard figure .iconOverlay button{
+
+.infoCard figure .iconOverlay button {
     border: 0;
     background: transparent;
     padding: 0;
@@ -2244,4 +2245,14 @@ ul.chooselist2 li {
 
 .productImgMain .productsRow {
     margin-top: 1rem;
+}
+
+.carousel-item .carousel-caption img {
+    height: auto;
+    width: 350px;
+    object-fit: contain;
+}
+
+.productBox figure a {
+    display: block;
 }
