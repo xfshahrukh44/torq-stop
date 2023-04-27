@@ -2,6 +2,7 @@
 
 namespace Webkul\Product\Repositories;
 
+use App\ProductCategoryField;
 use Exception;
 use Illuminate\Container\Container as App;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -86,6 +87,23 @@ class ProductRepository extends Repository
         Event::dispatch('catalog.product.update.before', $id);
 
         $product = $this->find($id);
+
+//        dd($data);
+        if(isset($data['custom_fields'])) {
+            $custom_fields = [];
+            foreach ($data['custom_fields'] as $category_id => $fields) {
+                foreach ($fields as $field_key => $field_value) {
+                    $custom_fields[]= [
+                        'category_id' => $category_id,
+                        'field_name' => $field_key,
+                        'field_value' => $field_value,
+                    ];
+                }
+            }
+            unset($data['custom_fields']);
+            $product->productCategoryFields()->delete();
+            $product->productCategoryFields()->createMany($custom_fields);
+        }
 
         $product = $product->getTypeInstance()->update($data, $id, $attribute);
 
@@ -903,5 +921,51 @@ class ProductRepository extends Repository
         Storage::makeDirectory('product/' . $copiedProduct->id);
 
         Storage::copy($data->path, $copiedProductImageVideo->path);
+    }
+
+    public function getProductsForShop($data)
+    {
+        $products = $this->model->query();
+
+        //when name
+        $products->when($data['name'], function($q) use($data) {
+            return $q->whereHas('product_flats', function($q) use($data) {
+                return $q->where('name', $data['name']);
+            });
+        });
+
+        //when category_id
+        $products->when($data['category_id'], function($q) use($data) {
+            return $q->whereHas('product_categories', function($q) use($data) {
+                return $q->where('category_id', $data['category_id']);
+            });
+        });
+
+        //when year
+        $products->when($data['year'], function($q) use($data) {
+            return $q->whereHas('productCategoryFields', function($q) use($data) {
+                return $q->where('field_name', 'year')->where('field_value', $data['year']);
+            });
+        });
+
+        //when make
+        $products->when($data['make'], function($q) use($data) {
+            return $q->whereHas('productCategoryFields', function($q) use($data) {
+                return $q->where('field_name', 'make')->where('field_value', $data['make']);
+            });
+        });
+
+        //when model
+        $products->when($data['model'], function($q) use($data) {
+            return $q->whereHas('productCategoryFields', function($q) use($data) {
+                return $q->where('field_name', 'model')->where('field_value', $data['model']);
+            });
+        });
+
+        return $products->get();
+    }
+
+    public function findById ($id) {
+        return $this->model->with('productCategoryFields')->findOrFail($id);
     }
 }

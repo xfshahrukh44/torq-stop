@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="content">
-        <form method="POST" action="{{ route('admin.catalog.categories.store') }}" @submit.prevent="onSubmit" enctype="multipart/form-data">
+        <form method="POST" id="create_category_form" action="{{ route('admin.catalog.categories.store') }}" @submit.prevent="onSubmit" enctype="multipart/form-data">
             <div class="page-header">
                 <div class="page-title">
                     <h1>
@@ -101,7 +101,7 @@
                                     @endforeach
                                 </span>
 
-                                <span class="control-info mt-10">{{ __('admin::app.catalog.categories.image-size') }}</span>   
+                                <span class="control-info mt-10">{{ __('admin::app.catalog.categories.image-size') }}</span>
                             </div>
 
                             {!! view_render_event('bagisto.admin.catalog.category.create_form_accordian.description_images.controls.after') !!}
@@ -182,6 +182,49 @@
                     </accordian>
 
                     {!! view_render_event('bagisto.admin.catalog.category.create_form_accordian.seo.after') !!}
+
+                    <accordian title="Custom Fields" :active="true">
+                        <div slot="body">
+                            <label class="btn btn-lg btn-primary mb-40 btn_add_custom_field" style="display: inline-block; width: auto;">Add Custom Field</label>
+                            <label class="btn btn-lg btn-danger mb-40 btn_remove_custom_field" style="display: inline-block; width: auto;" hidden="true">Remove Custom Field</label>
+
+                            <div class="custom_fields_wrapper">
+{{--                                                                <div class="row">--}}
+{{--                                                                    <div class="control-group">--}}
+{{--                                                                        <label for="slug" class="required">Title</label>--}}
+{{--                                                                        <input type="text" v-validate="'required'" class="control custom_fields_titles" value="" name="custom_fields_titles[]"/>--}}
+{{--                                                                    </div>--}}
+
+{{--                                                                    <div class="control-group">--}}
+{{--                                                                        <label for="slug" class="required">Name</label>--}}
+{{--                                                                        <input type="text" v-validate="'required'" class="control custom_fields_names" value="" readonly name="custom_fields_names[]"/>--}}
+{{--                                                                    </div>--}}
+
+{{--                                                                    <div class="control-group">--}}
+{{--                                                                        <label for="slug" class="required">Type</label>--}}
+{{--                                                                        <select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields_types[]">--}}
+{{--                                                                            <option value="Text">Text</option>--}}
+{{--                                                                            <option value="Selection">Selection</option>--}}
+{{--                                                                        </select>--}}
+{{--                                                                    </div>--}}
+
+{{--                                                                    <div class="control-group">--}}
+{{--                                                                        <label for="slug" class="required">Is Required?</label>--}}
+{{--                                                                        <select id="" v-validate="'required'" class="control custom_fields_is_required" name="custom_fields_is_required[]">--}}
+{{--                                                                            <option value="Yes">Yes</option>--}}
+{{--                                                                            <option value="No">No</option>--}}
+{{--                                                                        </select>--}}
+{{--                                                                    </div>--}}
+
+{{--                                                                    <div class="control-group" style="display: none;">--}}
+{{--                                                                        <label for="slug" class="required">Selection Options (comma seperated)</label>--}}
+{{--                                                                        <input type="text" v-validate="" class="control custom_fields_selection_options" value="" name="custom_fields_selection_options[]"/>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </div>--}}
+                            </div>
+
+                        </div>
+                    </accordian>
                 </div>
             </div>
         </form>
@@ -207,7 +250,7 @@
 
             data: function() {
                 return {
-                    isRequired: true,
+                    isRequired: true
                 }
             },
 
@@ -229,6 +272,110 @@
                         width: "100%",
                         plugins: 'image imagetools media wordcount save fullscreen code table lists link hr',
                         toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor link hr | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent  | removeformat | code | table',
+                    });
+
+                    //hide remove custom field button by default
+                    $('.btn_remove_custom_field').css('display', 'none');
+
+                    //btn_add_custom_field
+                    $('.btn_add_custom_field').on('click', function () {
+                        $('.custom_fields_wrapper').append(`<div class="row">
+                                                                <div class="control-group">
+                                                                    <label for="slug" class="required">Title</label>
+                                                                    <input type="text" v-validate="'required'" class="control custom_fields_titles" value="" name="custom_fields_titles[]"/>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <label for="slug" class="required">Name</label>
+                                                                    <input type="text" v-validate="'required'" class="control custom_fields_names" value="" readonly name="custom_fields_names[]"/>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <label for="slug" class="required">Type</label>
+                                                                    <select id="" v-validate="'required'" class="control custom_fields_types" name="custom_fields_types[]">
+                                                                        <option value="Text">Text</option>
+                                                                        <option value="Selection">Selection</option>
+                                                                        <option value="Number">Number</option>
+                                                                        <option value="Textarea">Textarea</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <label for="slug" class="required">Is Required?</label>
+                                                                    <select id="" v-validate="'required'" class="control custom_fields_is_required" name="custom_fields_is_required[]">
+                                                                        <option value="Yes">Yes</option>
+                                                                        <option value="No">No</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="control-group" style="display: none;">
+                                                                    <label for="slug">Selection Options (comma seperated)</label>
+                                                                    <input type="text" class="control custom_fields_selection_options" value="" name="custom_fields_selection_options[]"/>
+                                                                </div>
+                                                            </div>`);
+
+                        $('.btn_remove_custom_field').css('display', ($('.custom_fields_wrapper').children().length == 0) ? 'none' : 'inline-block');
+                    })
+
+                    //btn_remove_custom_field
+                    $('.btn_remove_custom_field').on('click', function () {
+                        $('.custom_fields_wrapper').children().last().remove();
+
+                        $(this).css('display', ($('.custom_fields_wrapper').children().length == 0) ? 'none' : 'inline-block');
+                    });
+
+                    //custom_fields_titles
+                    $('body').on('change keyup', '.custom_fields_titles', function () {
+                        let value = $(this).val();
+                        let sibling_name_field = $(this).parent().parent().children('div').eq(1).find('.custom_fields_names');
+
+                        //check for unique
+                        let title = $(this).val();
+                        let title_occurence = 0;
+                        $('.custom_fields_titles').each(function () {
+                            title_occurence += ($(this).val().toLowerCase() == title.toLowerCase()) ? 1 : 0;
+                        });
+                        if(title_occurence > 1) {
+                            $(this).val('');
+                            sibling_name_field.val('');
+                            return alert('Two fields cannot have the same title.');
+                        }
+
+
+                        populateNameField(sibling_name_field, value);
+                    });
+
+                    function populateNameField(field, value) {
+                        let slug = value.trim().replaceAll(' ', '_').toLowerCase();
+
+
+                        // let suffix = 0;
+                        // let check = false;
+                        //
+                        // // while (!check) {
+                        //     $('.custom_fields_names').not(field).each(function(index, item) {
+                        //         // check = !($(this).val() == slug && field.get(0) != $(this).get(0));
+                        //         check = !($(this).val() == slug);
+                        //
+                        //         if(!check) {
+                        //             return false;
+                        //         }
+                        //     });
+                        //
+                        //     if (!check) {
+                        //         suffix += 1;
+                        //     }
+                        // // }
+                        //
+                        // slug += (suffix == 0) ? '' : ('_' + suffix.toString());
+
+                        field.val(slug);
+                    }
+
+                    //custom_fields_types
+                    $('body').on('change', '.custom_fields_types', function () {
+                        $(this).parent().parent().children().last().css('display', ($(this).val() == 'Selection' ? 'inline-block' : 'none'));
+                        $(this).parent().parent().children().last().prop('required', ($(this).val() == 'Selection'));
                     });
                 });
             },

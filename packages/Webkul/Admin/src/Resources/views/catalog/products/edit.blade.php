@@ -10,7 +10,7 @@
             .content-container .content .page-header .page-title{
                 width: 100%;
             }
-            
+
             .content-container .content .page-header .page-title .control-group {
                 margin-top: 20px!important;
                 width: 100%!important;
@@ -21,7 +21,7 @@
                 margin-top: 10px!important;
                 float: left;
             }
-       }        
+       }
     </style>
 @endpush
 
@@ -243,6 +243,15 @@
                 toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor link hr | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent  | removeformat | code | table',
                 image_advtab: true,
             });
+
+            {{--$('.checkbox').on('click', function () {--}}
+            {{--    //if checked--}}
+            {{--    if ($(this).find('input').prop('checked')) {--}}
+            {{--        let custom_fields = '{{\Webkul\Category\Models\Category::find('temp')}}';--}}
+            {{--        custom_fields = custom_fields.replace('temp', $(this).find('input').prop('id'));--}}
+            {{--        console.log(custom_fields);--}}
+            {{--    }--}}
+            {{--});--}}
         });
     </script>
 @endpush

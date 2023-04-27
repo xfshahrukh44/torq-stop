@@ -113,7 +113,10 @@
             "Tests\\Functional\\": "tests/functional/",
             "Tests\\Trigger\\": "tests/trigger/",
             "Tests\\Unit\\": "tests/unit/"
-        }
+        },
+        "files": [
+            "app/Helpers/Helper.php"
+        ]
     },
     "extra": {
         "laravel": {

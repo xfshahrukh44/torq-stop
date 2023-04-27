@@ -8,7 +8,8 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/dfwBg.jpg')}}" alt="First slide">
+                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                         alt="First slide">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
@@ -55,7 +56,7 @@
                             <label for="one">Remember me</label>
                         </div>
                         <p>Please enter your e-mail address associated with your
-                            Dynamicfriction Account into the fieid below. We'll e-mail you
+                            Account into the fieid below. We'll e-mail you
                             instructions to reset your password. </p>
                         <div class="form-group">
                             <label>Email *</label>
@@ -90,7 +91,7 @@
                             <input type="text" placeholder="Email Address">
                         </div>
                         <div class="form-group">
-                            <label>Passwaord *</label>
+                            <label>Password *</label>
                             <input type="password" placeholder="***********">
                         </div>
                         <div class="form-group">

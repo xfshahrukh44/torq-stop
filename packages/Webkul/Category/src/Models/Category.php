@@ -52,6 +52,7 @@ class Category extends TranslatableModel implements CategoryContract
         'display_mode',
         'parent_id',
         'additional',
+        'custom_fields',
     ];
 
     /**
@@ -205,5 +206,10 @@ class Category extends TranslatableModel implements CategoryContract
     protected static function newFactory(): Factory
     {
         return CategoryFactory::new ();
+    }
+
+    public function cat_flat ()
+    {
+        return $this->hasMany(CategoryTranslation::class);
     }
 }

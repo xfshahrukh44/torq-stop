@@ -8,18 +8,19 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/innerBg.jpg')}}" alt="First slide">
+                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                         alt="First slide">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-7">
                                     <h2>Reviews</h2>
                                 </div>
-                                <div class="col-md-5">
-                                    <figure class="blast">
-                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">
-                                    </figure>
-                                </div>
+                                {{--                                <div class="col-md-5">--}}
+                                {{--                                    <figure class="blast">--}}
+                                {{--                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">--}}
+                                {{--                                    </figure>--}}
+                                {{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -31,141 +32,180 @@
 
     <section class="reviewSec">
         <div class="container">
+{{--            <div class="row">--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('themes/default/assets/images/user1.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('themes/default/assets/images/user2.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('themes/default/assets/images/user3.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('themes/default/assets/images/user1.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('themes/default/assets/images/user2.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('themes/default/assets/images/user3.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('temes/default/assets/images/user1.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('temes/default/assets/images/user2.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('temes/default/assets/images/user3.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('temes/default/assets/images/user1.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('temes/default/assets/images/user2.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('temes/default/assets/images/user3.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('temes/default/assets/images/user1.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('temes/default/assets/images/user2.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="testimonialBox">--}}
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('temes/default/assets/images/user3.png')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
+{{--                        <h4>David kennedy<span>Truck driver</span></h4>--}}
+{{--                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur--}}
+{{--                            adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('themes/default/assets/images/user1.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('themes/default/assets/images/user2.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('themes/default/assets/images/user3.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('themes/default/assets/images/user1.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('themes/default/assets/images/user2.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('themes/default/assets/images/user3.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('temes/default/assets/images/user1.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('temes/default/assets/images/user2.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('temes/default/assets/images/user3.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('temes/default/assets/images/user1.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('temes/default/assets/images/user2.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('temes/default/assets/images/user3.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('temes/default/assets/images/user1.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('temes/default/assets/images/user2.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonialBox">
-                        <figure>
-                            <img src="{{asset('temes/default/assets/images/user3.png')}}" class="img-fluid" alt="">
-                        </figure>
-                        <h4>David kennedy<span>Truck driver</span></h4>
-                        <p>Lorem ipsum dolor sit a consectetur adipiscing ex ea consequat Lorem ipsum dolor consectetur adipiscing ex ea commodo consequat psum consectetur adipiscing commodo consequat psum.</p>
-                    </div>
+                <div class="col-md-12">
+                    <form class="reviewForm">
+                        <h4>Submit A Review</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input name="customer_name" type="text" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input name="email" type="email" placeholder="Email">
+                            </div>
+                            <div class="col-md-12">
+                                <input name="company_name" type="text" placeholder="Company Name">
+                            </div>
+                            <div class="col-md-12">
+                                <textarea name="review" rows="7"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -178,7 +218,7 @@
                 <div class="col-md-12 text-center">
                     <h2>Sign Up For <br>
                         Our Newsletter</h2>
-                    <a href="" class="themeBtns"><span>Shop Now</span></a>
+                    {{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
                 </div>
             </div>
         </div>

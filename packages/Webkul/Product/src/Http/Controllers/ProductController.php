@@ -205,11 +205,13 @@ class ProductController extends Controller
     {
         $product = $this->productRepository->with(['variants', 'variants.inventories'])->findOrFail($id);
 
+        $product_category_fields = json_encode($product->productCategoryFields->toArray());
+
         $categories = $this->categoryRepository->getCategoryTree();
 
         $inventorySources = $this->inventorySourceRepository->findWhere(['status' => 1]);
 
-        return view($this->_config['view'], compact('product', 'categories', 'inventorySources'));
+        return view($this->_config['view'], compact('product', 'categories', 'inventorySources', 'product_category_fields'));
     }
 
     /**

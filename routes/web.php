@@ -10,3 +10,26 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+use App\Http\Controllers\TempController;
+use Illuminate\Support\Facades\Route;
+
+//Route::get('update-categories', [TempController::class, 'updateCategories'])->name('temp');
+
+Route::get('update-products', [TempController::class, 'updateProducts'])->name('temp');
+
+Route::get('add-custom-fields', function () {
+    addCustomFieldToCategory (
+        'rotor',
+        'Durabrake',
+        'durabrake',
+        'text',
+        'Yes',
+        [],
+    );
+})->name('addCustomFields');
+
+//sanitize product category fields
+Route::get('sanitize', function () {
+    sanitize_product_category_fields();
+})->name('sanitize');

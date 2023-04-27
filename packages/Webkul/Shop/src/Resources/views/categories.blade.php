@@ -8,18 +8,19 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/innerBg.jpg')}}" alt="First slide">
+                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                         alt="First slide">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-6">
                                     <h2>CATEGORIES</h2>
                                 </div>
-                                <div class="col-md-6">
-                                    <figure class="blast">
-                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">
-                                    </figure>
-                                </div>
+{{--                                <div class="col-md-6">--}}
+{{--                                    <figure class="blast">--}}
+{{--                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">--}}
+{{--                                    </figure>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -173,7 +174,7 @@
                 <div class="col-md-12 text-center">
                     <h2>Sign Up For <br>
                         Our Newsletter</h2>
-                    <a href="" class="themeBtns"><span>Shop Now</span></a>
+{{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
                 </div>
             </div>
         </div>

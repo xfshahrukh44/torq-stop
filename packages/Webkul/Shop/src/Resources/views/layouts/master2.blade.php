@@ -2,6 +2,11 @@
 {{--<title>{{$setting->company_name}} - @yield('title')</title>--}}
 <title>Torqstop Ecommerce | @yield('title')</title>
 
+<style>
+    img {
+        pointer-events: none;
+    }
+</style>
 
 <body>
 

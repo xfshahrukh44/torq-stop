@@ -8,18 +8,19 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/innerBg.jpg')}}" alt="First slide">
+                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                         alt="First slide">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-7">
                                     <h2>Product detail</h2>
                                 </div>
-                                <div class="col-md-5">
-                                    <figure class="blast">
-                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">
-                                    </figure>
-                                </div>
+                                {{--                                <div class="col-md-5">--}}
+                                {{--                                    <figure class="blast">--}}
+                                {{--                                        <img src="{{asset('themes/default/assets/images/abt1.png')}}" class="img-fluid" alt="">--}}
+                                {{--                                    </figure>--}}
+                                {{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -33,62 +34,82 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="productImgMain">
-                        <div class="product-detail-slider">
-                            <div>
-                                <img src="{{asset('themes/default/assets/images/pro111.png')}}" alt="">
+                        <figure class="mainImg">
+                            {{--                            @foreach($product['images'] as $image)--}}
+                            {{--                                <img class="ml-10"--}}
+                            {{--                                     src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"--}}
+                            {{--                                     class="" alt="">--}}
+                            {{--                            @endforeach--}}
+                            <img class="ml-10"
+                                 src="{{ $product['images'][0]['url'] ?? asset('themes/default/assets/images/default.png')}}"
+                                 class="" alt="">
+                        </figure>
+                        {{--                        <div class="product-detail-slider">--}}
+
+                        {{--                        </div>--}}
+                        @if(count($product['images']) > 0)
+                            <div class="container-fluid">
+                                <div class="row productsRow">
+                                    @foreach($product['images'] as $image)
+                                        <div class="col-md-4">
+                                            <figure>
+                                                <img class="ml-10"
+                                                     src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"
+                                                     class="" alt="">
+                                            </figure>
+                                        </div>
+                                    @endforeach
+                                </div>
                             </div>
-                            <div>
-                                <img src="{{asset('themes/default/assets/images/pro111.png')}}" alt="">
-                            </div>
-                            <div>
-                                <img src="{{asset('temes/default/assets/images/pro111.png')}}" alt="">
-                            </div>
-                            <div>
-                                <img src="{{asset('temes/default/assets/images/pro111.png')}}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-detail-nav">
-                            <div>
-                                <img class="ml-10" src="{{asset('temes/default/assets/images/pro22.png')}}" class="" alt="">
-                            </div>
-                            <div>
-                                <img class="ml-10" src="{{asset('temes/default/assets/images/pro22.png')}}" class="" alt="">">
-                            </div>
-                            <div>
-                                <img class="ml-10" src="{{asset('themes/default/assets/images/pro22.png')}}" class="" alt="">
-                            </div>
-                            <div>
-                                <img class="ml-10" src="{{asset('themes/default/assets/images/pro22.png')}}" class="" alt="">
-                            </div>
-                        </div>
+                            {{--                            <div class="product-detail-nav">--}}
+                            {{--                                --}}
+                            {{--                            </div>--}}
+                        @endif
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="prodctdetailContent">
-                        <h2>torqstop
+                        <h2>{{$product['name']}}
                         </h2>
-                        <span>$37.95 – $167.95
+                        {{--                        <span>${{round($product['price'], 2)}} – ${{round($product['price'], 3)}}--}}
                         </span>
-                        <p><span>Lorem Ipsum </span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
+                        <p>{!! $product['description'] !!}</p>
                     </div>
                     <div class="proCounter count mr-4">
                         <span class="minus"><i class="fa fa-angle-down"></i></span>
-                        <input type="text" value="1" />
+                        <input type="text" value="1"/>
                         <span class="plus"><i class="fa fa-angle-up"></i></span>
                         <div class="cartBtn">
                             <!-- <a href="step1.php" class="themeBtn">Bulk Product </a> -->
-                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk Product
-                            </button>
+{{--                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk--}}
+{{--                                Product--}}
+{{--                            </button>--}}
 
                         </div>
                         <div class="cartBtn">
                             <a href="{{route('shop.step1')}}" class="themeBtn">Add to Cart</a>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-sm table-bordered text-white">
+                                <tr class="text-center">
+                                    <th colspan="2">Details</th>
+                                </tr>
+                                @foreach($product['product_category_fields'] as $product_category_field)
+                                    <tr>
+                                        <th>{{$product_category_field['field_name']}}</th>
+                                        <td>{{$product_category_field['field_value']}}</td>
+                                    </tr>
+                                @endforeach
+                            </table>
+                        </div>
+                    </div>
                 </div>
                 <div class="sku">
-                    <p>SKU: HP5PK Category: <a href="#">Patches</a>
+                    <p>SKU: {{$product['sku'] ?? ''}} Category: <a
+                            href="#">{{$product['categories'][0]['category']['translations'][0]['name'] ?? ''}}</a>
                     </p>
                 </div>
 
@@ -111,7 +132,8 @@
         </div>
     </section>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -121,7 +143,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form  method="post">
+                    <form method="post">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Name</label>
                             <input type="text" class="form-control" placeholder="Name" required>
