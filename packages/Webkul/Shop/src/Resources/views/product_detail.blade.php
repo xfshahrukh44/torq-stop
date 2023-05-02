@@ -52,11 +52,13 @@
                                 <div class="row productsRow">
                                     @foreach($product['images'] as $image)
                                         <div class="col-md-4">
-                                            <figure>
-                                                <img class="ml-10"
-                                                     src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"
-                                                     class="" alt="">
-                                            </figure>
+                                            <a href="javascript:;" class="minImgs">
+                                                <figure>
+                                                    <img class="ml-10"
+                                                         src="{{ $image['url'] ?? asset('themes/default/assets/images/default.png')}}"
+                                                         class="" alt="">
+                                                </figure>
+                                            </a>
                                         </div>
                                     @endforeach
                                 </div>
