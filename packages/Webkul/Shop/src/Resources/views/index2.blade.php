@@ -201,9 +201,11 @@
                     <div class="infoCard">
                         <figure>
                             <img src="{{asset('themes/default/assets/images/represantative.jpg')}}" alt="">
-                            <div class="iconOverlay">
-                                <i class="fas fa-file"></i>
-                            </div>
+                            <a href="#" class="anchor_find_a_distributor">
+                                <div class="iconOverlay">
+                                    <i class="fas fa-file"></i>
+                                </div>
+                            </a>
                         </figure>
                         <div class="content">
                             <h4>
@@ -216,7 +218,7 @@
                     <div class="infoCard">
                         <figure>
                             <img src="{{asset('themes/default/assets/images/find-distributor.jpg')}}" alt="">
-                            <a href="#" id="anchor_find_a_distributor">
+                            <a href="#" class="anchor_find_a_distributor">
                                 <div class="iconOverlay">
                                     <i class="fas fa-file"></i>
                                 </div>
@@ -638,7 +640,7 @@
                 }
             });
 
-            $('#anchor_find_a_distributor').on('click', function () {
+            $('.anchor_find_a_distributor').on('click', function () {
                 $('#modal_us_map').modal('show');
             });
         });

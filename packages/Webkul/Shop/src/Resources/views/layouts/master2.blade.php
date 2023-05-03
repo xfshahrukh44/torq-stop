@@ -15,7 +15,7 @@
     @yield('content')
 
     {{--U.S. Map Modal--}}
-    <div class="modal fade" id="modal_us_map" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade mapModal" id="modal_us_map" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal_state_vendors" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade mapModal" id="modal_state_vendors" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
