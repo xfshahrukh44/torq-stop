@@ -62,6 +62,8 @@
 <script src="{{asset('themes/default/assets/js/slick.min.js')}}"></script>
 <script src="{{asset('themes/default/assets/js/jquery.fancybox.min.js')}}"></script>
 <script src="{{asset('themes/default/assets/js/custom.min.js')}}"></script>
+<script src="{{asset('plugins/us-map-1.0.1/lib/raphael.js')}}"></script>
+<script src="{{asset('plugins/us-map-1.0.1/jquery.usmap.js')}}"></script>
 @yield('script')
 
 
