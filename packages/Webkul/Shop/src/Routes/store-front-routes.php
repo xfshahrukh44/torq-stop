@@ -75,6 +75,8 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     Route::get('/brake-chamber', [HomeController::class, 'brakeChamber'])->name('brakeChamber');
 //    Misc Hardware
     Route::get('/misc-hardware', [HomeController::class, 'misc'])->name('misc');
+//    Catalogue
+    Route::get('/catalogue', [HomeController::class, 'catalogue'])->name('catalogue');
     //shop
 //    Route::get('/shop', [HomeController::class, 'shop'])->name('shop.shop');
     Route::match(['get', 'post'], '/shop', [HomeController::class, 'shop'])->name('shop.shop');
