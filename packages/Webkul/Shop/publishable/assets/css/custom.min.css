@@ -2249,17 +2249,18 @@ ul.chooselist2 li {
 
 .carousel-item .carousel-caption img {
     height: auto;
-    width: 350px;
+    width: 450px;
     object-fit: contain;
 }
 
 .productBox figure a {
     display: block;
 }
+
 .mapModal .modal-content {
-    background: rgba(0,0,0,0.35);
+    background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(15px);
-    box-shadow: 0 0 15px rgba(255,255,255,0.35);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.35);
 }
 
 .mapModal .modal-title {
@@ -2275,6 +2276,7 @@ ul.chooselist2 li {
     color: #fff;
     opacity: 1;
 }
+
 .mapModal .modal-body table th, .mapModal .modal-body table td, .mapModal .modal-body table td a {
     color: #Fff;
 }
