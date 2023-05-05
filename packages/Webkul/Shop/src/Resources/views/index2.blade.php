@@ -584,6 +584,13 @@
                     'territory': 'VA',
                 },
                 {
+                    'principal': 'Gary Taylor',
+                    'rep_group': 'Gary Taylor Sales',
+                    'phone': '540-520-2285',
+                    'email': 'gtayloerep@gmail.com',
+                    'territory': 'WV',
+                },
+                {
                     'principal': 'Don Orrell',
                     'rep_group': 'OPC Parts',
                     'phone': '704-996-6896',
@@ -620,7 +627,7 @@
                 click: function(event, data) {
                     // console.log('data', data);
                     $('#body_modal_state_vendors').html('');
-                    $('#exampleModalLongTitle').html('Vendor Across State ('+data.name+')');
+                    // $('#exampleModalLongTitle').html('Vendor Across State ('+data.name+')');
 
                     stateData.forEach((item) => {
                         console.log(item.territory == data.name);
