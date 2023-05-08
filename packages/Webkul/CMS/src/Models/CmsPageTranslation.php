@@ -13,6 +13,7 @@ class CmsPageTranslation extends Model implements CmsPageTranslationContract
         'page_title',
         'url_key',
         'html_content',
+        'content',
         'meta_title',
         'meta_description',
         'meta_keywords',
