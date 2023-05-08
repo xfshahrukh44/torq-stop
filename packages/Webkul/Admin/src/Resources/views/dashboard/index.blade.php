@@ -14,7 +14,7 @@
 
             <div class="page-action">
                 <date-filter></date-filter>
-               
+
             </div>
 
             <date-mobile-filter></date-mobile-filter>
@@ -415,8 +415,8 @@
 
                 <div id="date-submit" style="">
                     <button class="btn btn-lg btn-primary" @click="applyFilter">Submit</button>
-                </div>              
-            </div>            
+                </div>
+            </div>
         </div>
     </script>
 

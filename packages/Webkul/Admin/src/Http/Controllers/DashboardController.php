@@ -121,7 +121,7 @@ class DashboardController extends Controller
     public function index()
     {
         //redirect to catalog (for now)
-        return redirect()->route('admin.catalog.products.index');
+//        return redirect()->route('admin.catalog.products.index');
 
         $this->setStartEndDate();
 
