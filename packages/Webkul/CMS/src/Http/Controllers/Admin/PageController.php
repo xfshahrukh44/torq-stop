@@ -2,8 +2,13 @@
 
 namespace Webkul\CMS\Http\Controllers\Admin;
 
+//use AWS\CRT\HTTP\Request;
+//use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Webkul\Admin\DataGrids\CMSPageDataGrid;
 use Webkul\CMS\Http\Controllers\Controller;
+use Webkul\CMS\Models\CmsPage;
+use Webkul\CMS\Models\CmsPageTranslation;
 use Webkul\CMS\Repositories\CmsRepository;
 
 class PageController extends Controller
@@ -66,21 +71,61 @@ class PageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        $data = request()->all();
 
-        $this->validate(request(), [
-            'url_key'      => ['required', 'unique:cms_page_translations,url_key', new \Webkul\Core\Contracts\Validations\Slug],
-            'page_title'   => 'required',
-            'channels'     => 'required',
-            'html_content' => 'required',
-        ]);
+//        $data = $request->all();
 
-        $page = $this->cmsRepository->create(request()->all());
+//        $this->validate(request(), [
+//            'url_key'      => ['required', 'unique:cms_page_translations,url_key', new \Webkul\Core\Contracts\Validations\Slug],
+//            'page_title'   => 'required',
+//            'channels'     => 'required',
+//            'html_content' => 'required',
+//        ]);
 
-        session()->flash('success', trans('admin::app.response.create-success', ['name' => 'page']));
+        try{
+            $content = [
+                'sliderHeading0' => $request['sliderHeading0'],
+                'sliderHeading1' => $request['sliderHeading1'],
+                'sliderDes1' => $request['sliderDes1'],
+                'sliderHeading2' => $request['sliderHeading2'],
+                'sliderDes2' => $request['sliderDes2'],
+                'infoHeading0' => $request['infoHeading0'],
+                'infoHeading1' => $request['infoHeading1'],
+                'infoHeading2' => $request['infoHeading2'],
+                'infoHeading3' => $request['infoHeading3'],
+                'infoHeading4' => $request['infoHeading4'],
+            ];
 
+            $new_page = CmsPage::create([]);
+            $pages = new CmsPageTranslation;
+            $pages->content = json_encode($content);
+            $pages->url_key = $request['url_key'];
+            $pages->page_title = $request['page_title'];
+            $pages->channels = $request['channels'];
+            $pages->cms_page_id = $new_page->id;
+            $pages->save();
+
+
+//            $new_page = CmsPage::create([]);
+//            $pages = new CmsPageTranslation;
+//            $pages->content = json_encode($content);
+//            $pages = array_merge($data, ['content' => json_encode($content)]);
+//            $pages->cms_page_id = $new_page->id;
+//            $pages->save();
+            $page = $this->cmsRepository->create(request()->all());
+            session()->flash('success', trans('admin::app.response.create-success', ['name' => 'page']));
+            dd($page);
+        }catch (\Exception $exception){
+            return back()->with('error', $exception->getMessage());
+        }
+//        $new_page = CmsPage::create([]);
+//        $pages = new CmsPageTranslation;
+//        $pages->content = json_encode($content);
+//        $pages->cms_page_id = $new_page->id;
+//        $pages->save();
+//        $page = $this->cmsRepository->create(request()->all());
+//        session()->flash('success', trans('admin::app.response.create-success', ['name' => 'page']));
         return redirect()->route($this->_config['redirect']);
     }
 
