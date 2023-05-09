@@ -9,9 +9,9 @@ use Webkul\CMS\Contracts\CmsPage as CmsPageContract;
 use Webkul\Core\Models\ChannelProxy;
 
 
-class CmsPage extends TranslatableModel implements CmsPageContract, HasMedia
+class CmsPage extends TranslatableModel implements CmsPageContract
 {
-    use InteractsWithMedia;
+//    use InteractsWithMedia;
     protected $fillable = ['layout'];
 
     public $translatedAttributes = [
