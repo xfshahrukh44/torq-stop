@@ -67,6 +67,14 @@
 <script src="{{asset('themes/default/assets/js/custom.min.js')}}"></script>
 <script src="{{asset('plugins/us-map-1.0.1/lib/raphael.js')}}"></script>
 <script src="{{asset('plugins/us-map-1.0.1/jquery.usmap.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+@if(session()->has('success'))
+    <script type="text/javascript">  toastr.success('{{ session('success')}}');</script>
+    @php session()->remove('success'); @endphp
+@endif
+@if(session()->has('error'))
+    <script type="text/javascript"> toastr.error('{{ session('error')}}');</script>
+    @endif
 @yield('script')
 
 
