@@ -264,7 +264,7 @@
                             <div class="control-group" :class="[errors.has('html_content') ? 'has-error' : '']">
                                 <label for="html_content" class="required">{{ __('admin::app.cms.pages.content') }}</label>
 
-                                <textarea type="text" class="control" id="html_content" name="html_content" v-validate="'required'" data-vv-as="&quot;{{ __('admin::app.cms.pages.content') }}&quot;">{{ old('html_content') }}</textarea>
+                                <textarea type="text" class="control" id="content" name="html_content" v-validate="'required'" data-vv-as="&quot;{{ __('admin::app.cms.pages.content') }}&quot;">{{ old('html_content') }}</textarea>
 
                                 <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>
                             </div>
@@ -535,7 +535,7 @@
                             </div>
 
                         </div>
-                  </accordian>
+                    </accordian>
 
                     {!! view_render_event('bagisto.admin.cms.pages.create_form_accordian.general.after') !!}
 

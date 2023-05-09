@@ -13,7 +13,6 @@ use Webkul\CMS\Repositories\CmsRepository;
 
 class PageController extends Controller
 {
-
     /**
      * To hold the request variables from route file.
      *
@@ -74,8 +73,7 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-
-//        $data = $request->all();
+        $data = request()->all();
 
 //        $this->validate(request(), [
 //            'url_key'      => ['required', 'unique:cms_page_translations,url_key', new \Webkul\Core\Contracts\Validations\Slug],
