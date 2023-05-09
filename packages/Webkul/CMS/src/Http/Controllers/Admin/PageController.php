@@ -2,18 +2,12 @@
 
 namespace Webkul\CMS\Http\Controllers\Admin;
 
-//use AWS\CRT\HTTP\Request;
-//use Illuminate\Support\Facades\Request;
-use Illuminate\Http\Request;
 use Webkul\Admin\DataGrids\CMSPageDataGrid;
 use Webkul\CMS\Http\Controllers\Controller;
-use Webkul\CMS\Models\CmsPage;
-use Webkul\CMS\Models\CmsPageTranslation;
 use Webkul\CMS\Repositories\CmsRepository;
 
 class PageController extends Controller
 {
-
     /**
      * To hold the request variables from route file.
      *
@@ -175,7 +169,6 @@ class PageController extends Controller
             'infoHeading4' => $request->input('infoHeading4'),
 
         ]);
-        $pageTranslation->save();
 
         $this->cmsRepository->update(request()->all(), $id);
 
