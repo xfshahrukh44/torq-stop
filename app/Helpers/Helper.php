@@ -60,7 +60,7 @@ function send_mail($from, $to, $subject, $html) {
 
     // Sending email
     Mail::send([], [], function ($message) use ($to, $subject, $html) {
-        $message->to($to)
+        $message->from('no-reply@torqstop.com')->to($to)
             ->subject($subject)
             ->setBody($html, 'text/html'); // for HTML rich messages
     });
