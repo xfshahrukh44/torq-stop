@@ -5,6 +5,7 @@
 @stop
 
 @section('content')
+{{--    @dd('here')--}}
     <div class="content">
         <div class="page-header">
             <div class="page-title">
