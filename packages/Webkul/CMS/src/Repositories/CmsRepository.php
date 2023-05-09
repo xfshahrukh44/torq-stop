@@ -30,13 +30,15 @@ class CmsRepository extends Repository
         $model = $this->getModel();
 
         foreach (core()->getAllLocales() as $locale) {
-            foreach ($model->translatedAttributes as $attribute) {
-                if (isset($data[$attribute])) {
-                    $data[$locale->code][$attribute] = $data[$attribute];
+            if ($locale->code == 'en') {
+                foreach ($model->translatedAttributes as $attribute) {
+                    if (isset($data[$attribute])) {
+                        $data[$locale->code][$attribute] = $data[$attribute];
+                    }
                 }
             }
 
-            $data[$locale->code]['html_content'] = str_replace('=&gt;', '=>', $data[$locale->code]['html_content']);
+//            $data[$locale->code]['html_content'] = str_replace('=&gt;', '=>', $data[$locale->code]['html_content']);
         }
 
         $page = parent::create($data);
