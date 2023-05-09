@@ -15,13 +15,13 @@
 
                         {!! view_render_event('bagisto.shop.layout.header.wishlist.before') !!}
 
-                            @include('velocity::shop.layouts.particals.wishlist', ['isText' => true])
+{{--                            @include('velocity::shop.layouts.particals.wishlist', ['isText' => true])--}}
 
                         {!! view_render_event('bagisto.shop.layout.header.wishlist.after') !!}
 
                         {!! view_render_event('bagisto.shop.layout.header.compare.before') !!}
 
-                            @include('velocity::shop.layouts.particals.compare', ['isText' => true])
+{{--                            @include('velocity::shop.layouts.particals.compare', ['isText' => true])--}}
 
                         {!! view_render_event('bagisto.shop.layout.header.compare.after') !!}
 

@@ -28,7 +28,7 @@
                     $subMenuCollection['orders'] = $menuItem['children']['orders'];
                     $subMenuCollection['downloadables'] = $menuItem['children']['downloadables'];
 
-
+ $subMenuCollection['reviews'] = $menuItem['children']['reviews'];
 
                     unset(
                         $menuItem['children']['profile'],
@@ -55,7 +55,7 @@
 {{--            $subMenuCollection['compare'] = $menuItem['children']['compare'];--}}
 {{--            }--}}
 
-{{--            $subMenuCollection['reviews'] = $menuItem['children']['reviews'];--}}
+
 {{--            $subMenuCollection['address'] = $menuItem['children']['address'];--}}
             @foreach ($subMenuCollection as $index => $subMenuItem)
                 <li class="{{ $menu->getActive($subMenuItem) }}" title="{{ trans($subMenuItem['name']) }}">
