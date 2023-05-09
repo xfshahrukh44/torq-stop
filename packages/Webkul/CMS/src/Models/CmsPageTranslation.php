@@ -3,13 +3,13 @@
 namespace Webkul\CMS\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\MediaLibrary\HasMedia;
+//use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Webkul\CMS\Contracts\CmsPageTranslation as CmsPageTranslationContract;
 
-class CmsPageTranslation extends Model implements CmsPageTranslationContract, HasMedia
+class CmsPageTranslation extends Model implements CmsPageTranslationContract
 {
-    use InteractsWithMedia;
+//    use InteractsWithMedia;
     public $timestamps = false;
 
     protected $fillable = [
