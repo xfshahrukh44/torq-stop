@@ -5,6 +5,7 @@
 @endsection
 
 @section('content-wrapper')
+
     <div class="auth-content">
         <div class="sign-up-text">
             {{ __('shop::app.customer.login-text.no_account') }} - <a href="{{ route('customer.register.index') }}">{{ __('shop::app.customer.login-text.title') }}</a>
@@ -35,7 +36,7 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="checkbox"  id="shoPassword" >{{ __('shop::app.customer.login-form.show-password') }}  
+                        <input type="checkbox"  id="shoPassword" >{{ __('shop::app.customer.login-form.show-password') }}
                     </div>
 
                     <div class="col-md-6">
@@ -56,7 +57,7 @@
                 <div class="control-group">
 
                     {!! Captcha::render() !!}
-                    
+
                 </div>
 
                 {!! view_render_event('bagisto.shop.customers.login_form_controls.after') !!}
@@ -75,7 +76,7 @@
 {!! Captcha::renderJS() !!}
 <script>
     $(document).ready(function(){
-        $("#shoPassword").click(function() {              
+        $("#shoPassword").click(function() {
             var input = $('#password').attr("type");
             if (input == "password") {
                 $('#password').attr("type", "text");

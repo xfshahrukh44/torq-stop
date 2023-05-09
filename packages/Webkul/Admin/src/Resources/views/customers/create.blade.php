@@ -5,6 +5,7 @@
 @stop
 
 @section('content')
+
     <div class="content">
         <form method="POST" action="{{ route('admin.customer.store') }}" @submit.prevent="onSubmit">
 
