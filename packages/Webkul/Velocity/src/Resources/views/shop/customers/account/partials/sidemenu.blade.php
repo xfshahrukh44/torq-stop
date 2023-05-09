@@ -28,16 +28,7 @@
                     $subMenuCollection['orders'] = $menuItem['children']['orders'];
                     $subMenuCollection['downloadables'] = $menuItem['children']['downloadables'];
 
-                    if ($showWishlist) {
-                        $subMenuCollection['wishlist'] = $menuItem['children']['wishlist'];
-                    }
 
-                    if ($showCompare) {
-                        $subMenuCollection['compare'] = $menuItem['children']['compare'];
-                    }
-
-                    $subMenuCollection['reviews'] = $menuItem['children']['reviews'];
-                    $subMenuCollection['address'] = $menuItem['children']['address'];
 
                     unset(
                         $menuItem['children']['profile'],
@@ -56,7 +47,16 @@
                     $subMenuCollection = $menuItem['children'];
                 }
             @endphp
+{{--            if ($showWishlist) {--}}
+{{--            $subMenuCollection['wishlist'] = $menuItem['children']['wishlist'];--}}
+{{--            }--}}
 
+{{--            if ($showCompare) {--}}
+{{--            $subMenuCollection['compare'] = $menuItem['children']['compare'];--}}
+{{--            }--}}
+
+{{--            $subMenuCollection['reviews'] = $menuItem['children']['reviews'];--}}
+{{--            $subMenuCollection['address'] = $menuItem['children']['address'];--}}
             @foreach ($subMenuCollection as $index => $subMenuItem)
                 <li class="{{ $menu->getActive($subMenuItem) }}" title="{{ trans($subMenuItem['name']) }}">
                     <a class="unset fw6 full-width" href="{{ $subMenuItem['url'] }}">
