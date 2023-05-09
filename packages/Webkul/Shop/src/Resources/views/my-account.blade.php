@@ -104,9 +104,9 @@
 {{--                            <label>Address *</label>--}}
 {{--                            <input type="text" placeholder="Address">--}}
 {{--                        </div>--}}
-                        <figure>
-                            <img src="{{asset('themes/default/assets/images/rebort.jpg')}}" class="img-fluid" alt="">
-                        </figure>
+{{--                        <figure>--}}
+{{--                            <img src="{{asset('themes/default/assets/images/rebort.jpg')}}" class="img-fluid" alt="">--}}
+{{--                        </figure>--}}
                         <a href=""></a>
                         <button class="themeBtn22 mt-4">Register</button>
                     </form>
