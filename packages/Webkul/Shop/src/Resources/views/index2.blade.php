@@ -627,7 +627,7 @@
                 click: function(event, data) {
                     // console.log('data', data);
                     $('#body_modal_state_vendors').html('');
-                    // $('#exampleModalLongTitle').html('Vendor Across State ('+data.name+')');
+                    $('#exampleModalLongTitle2').html('Vendor Across State ('+data.name+')');
 
                     stateData.forEach((item) => {
                         console.log(item.territory == data.name);
