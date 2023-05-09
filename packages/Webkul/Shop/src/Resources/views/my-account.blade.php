@@ -28,14 +28,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <form action="dfw.php" class="form-box">
+                    <form action="{{route('customer.session.create')}}" class="form-box" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label>Email *</label>
-                            <input type="email" placeholder="your@email.com">
+                            <input type="email" placeholder="your@email.com" name="email" required>
                         </div>
                         <div class="form-group">
                             <label>Password *</label>
-                            <input type="password" placeholder="************">
+                            <input type="password" placeholder="************" name="password" required>
                         </div>
                         <div class="btnSec">
                             <div class="checkBox">
@@ -69,35 +70,40 @@
                 </div>
 
                 <div class="col-md-6">
-                    <form action="profile.php" class="form-box">
+                    <form action="{{route('customer.register.create')}}" class="form-box" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label>First Name *</label>
-                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="First Name" name="first_name" required>
                         </div>
                         <div class="form-group">
                             <label>Last Name *</label>
-                            <input type="text" placeholder="Last Name">
+                            <input type="text" placeholder="Last Name" name="last_name" required>
                         </div>
-                        <div class="form-group">
-                            <label>Company Name *</label>
-                            <input type="text" placeholder="Company Name">
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number *</label>
-                            <input type="text" placeholder="Phone Number">
-                        </div>
+{{--                        <div class="form-group">--}}
+{{--                            <label>Company Name *</label>--}}
+{{--                            <input type="text" placeholder="Company Name">--}}
+{{--                        </div>--}}
+{{--                        <div class="form-group">--}}
+{{--                            <label>Phone Number *</label>--}}
+{{--                            <input type="text" placeholder="Phone Number">--}}
+{{--                        </div>--}}
                         <div class="form-group">
                             <label>Email Address *</label>
-                            <input type="text" placeholder="Email Address">
+                            <input type="text" placeholder="Email Address" name="email" required>
                         </div>
                         <div class="form-group">
                             <label>Password *</label>
-                            <input type="password" placeholder="***********">
+                            <input type="password" placeholder="***********" name="password" required>
                         </div>
                         <div class="form-group">
-                            <label>Address *</label>
-                            <input type="text" placeholder="Address">
+                            <label>Confirm Password *</label>
+                            <input type="password" placeholder="***********" name="password_confirmation" required>
                         </div>
+{{--                        <div class="form-group">--}}
+{{--                            <label>Address *</label>--}}
+{{--                            <input type="text" placeholder="Address">--}}
+{{--                        </div>--}}
                         <figure>
                             <img src="{{asset('themes/default/assets/images/rebort.jpg')}}" class="img-fluid" alt="">
                         </figure>

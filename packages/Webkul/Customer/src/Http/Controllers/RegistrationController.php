@@ -3,6 +3,7 @@
 namespace Webkul\Customer\Http\Controllers;
 
 use Cookie;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
@@ -10,6 +11,7 @@ use Webkul\Core\Repositories\SubscribersListRepository;
 use Webkul\Customer\Http\Requests\CustomerRegistrationRequest;
 use Webkul\Customer\Mail\RegistrationEmail;
 use Webkul\Customer\Mail\VerificationEmail;
+use Webkul\Customer\Models\Customer;
 use Webkul\Customer\Repositories\CustomerGroupRepository;
 use Webkul\Customer\Repositories\CustomerRepository;
 use Webkul\Shop\Mail\SubscriptionEmail;
@@ -162,6 +164,11 @@ class RegistrationController extends Controller
             }
             session()->flash('success', trans('shop::app.customer.signup-form.success'));
         }
+
+        $customer = Customer::where('email', $data['email'])->first();
+        Auth::login($customer);
+
+        return redirect()->route('customer.profile.index');
 
         return redirect()->route($this->_config['redirect']);
     }
