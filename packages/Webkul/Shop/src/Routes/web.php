@@ -3,6 +3,10 @@
 /**
  * Store front routes.
  */
+
+use App\Http\Controllers\FrontController;
+use Illuminate\Support\Facades\Route;
+
 require 'store-front-routes.php';
 
 /**
@@ -16,3 +20,5 @@ require 'customer-routes.php';
  * cart, coupons, etc will be placed here.
  */
 require 'checkout-routes.php';
+
+Route::post('/customer/contact-us', [FrontController::class, 'send_mail'])->name('front.send_mail');

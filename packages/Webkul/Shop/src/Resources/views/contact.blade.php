@@ -46,30 +46,32 @@
                 </div>
             </div>
             <div class="row getContnt">
-                <div class="col-12">
-                    <h4>Contact Form</h4>
-                </div>
-                <div class="col-md-4">
-                    <input type="text" placeholder="Full Name">
-                </div>
-                <div class="col-md-4">
-                    <input type="text" placeholder="Phone Number">
-                </div>
-                <div class="col-md-4">
-                    <input type="text" placeholder="Company name">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" placeholder="Email adddress">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" placeholder="Subject">
-                </div>
-                <div class="col-12">
-                    <textarea  rows="10" placeholder="Message"></textarea>
-                </div>
-                <div class="col-12 text-center">
-                    <button>Send Message</button>
-                </div>
+                <form class="row getContnt" action="{{route('front.send_mail')}}" method="POST">
+                    <div class="col-12">
+                        <h4>Contact Form</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" placeholder="Full Name" name="name" required style="color: white;">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" placeholder="Phone Number" name="phone" required style="color: white;">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" placeholder="Company name" name="company" required style="color: white;">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" placeholder="Email adddress" name="email" required style="color: white;">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" placeholder="Subject" name="subject" required style="color: white;">
+                    </div>
+                    <div class="col-12">
+                        <textarea  rows="10" placeholder="Message" name="message" required style="color: white;"></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
