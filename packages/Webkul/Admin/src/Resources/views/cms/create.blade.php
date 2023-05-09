@@ -62,7 +62,7 @@
                                     <div id="image-preview-1" class="img-preview">
                                         <img id="preview-1" src="" alt="Preview" style="display:none;">
                                         <label for="image-upload-1" class="img-label" id="image-label">{{ __('Upload Image') }}</label>
-                                        <input type="file" name="Logo" onchange="previewImage(event, 'preview-1')"
+                                        <input type="file" name="logo" onchange="previewImage(event, 'preview-1')"
                                                class="img-upload @error('image1') is-invalid @enderror"
                                                id="image-upload-1"
                                                value="">

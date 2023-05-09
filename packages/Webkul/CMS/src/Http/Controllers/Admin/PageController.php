@@ -92,15 +92,17 @@ class PageController extends Controller
                 'infoHeading4' => $request['infoHeading4'],
             ];
 
+
             $new_page = CmsPage::create([]);
             $pages = new CmsPageTranslation;
-            $pages->content = json_encode($content);
+        $pages->content = json_encode($content);
             $pages->url_key = $request['url_key'];
             $pages->html_content = $request['html_content'];
             $pages->page_title = $request['page_title'];
 //            $pages->channels = $request['channels'];
             $pages->cms_page_id = $new_page->id;
             $pages->locale = 'en';
+
             $pages->save();
 
 //        $page = $this->cmsRepository->create(request()->all());
