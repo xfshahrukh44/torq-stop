@@ -155,7 +155,7 @@
                                         </li>
                                     @endif
 
-                                    @if ($showCompare)                                     
+                                    @if ($showCompare)
                                     <li>
                                         <a
                                             @auth('customer')
@@ -165,7 +165,7 @@
                                             @guest('customer')
                                                 href="{{ route('velocity.product.compare') }}"
                                             @endguest
-                                            
+
                                             > {{ __('shop::app.customer.compare.text') }}
                                         </a>
                                     </li>

@@ -66,21 +66,59 @@ class PageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        $data = request()->all();
 
-        $this->validate(request(), [
-            'url_key'      => ['required', 'unique:cms_page_translations,url_key', new \Webkul\Core\Contracts\Validations\Slug],
-            'page_title'   => 'required',
-            'channels'     => 'required',
-            'html_content' => 'required',
-        ]);
+//        $data = $request->all();
 
-        $page = $this->cmsRepository->create(request()->all());
+//        $this->validate(request(), [
+//            'url_key'      => ['required', 'unique:cms_page_translations,url_key', new \Webkul\Core\Contracts\Validations\Slug],
+//            'page_title'   => 'required',
+//            'channels'     => 'required',
+//            'html_content' => 'required',
+//        ]);
 
-        session()->flash('success', trans('admin::app.response.create-success', ['name' => 'page']));
+        try{
+            $content = [
+                'sliderHeading0' => $request['sliderHeading0'],
+                'sliderHeading1' => $request['sliderHeading1'],
+                'sliderDes1' => $request['sliderDes1'],
+                'sliderHeading2' => $request['sliderHeading2'],
+                'sliderDes2' => $request['sliderDes2'],
+                'infoHeading0' => $request['infoHeading0'],
+                'infoHeading1' => $request['infoHeading1'],
+                'infoHeading2' => $request['infoHeading2'],
+                'infoHeading3' => $request['infoHeading3'],
+                'infoHeading4' => $request['infoHeading4'],
+            ];
 
+
+            $new_page = CmsPage::create([]);
+            $pages = new CmsPageTranslation;
+        $pages->content = json_encode($content);
+            $pages->url_key = $request['url_key'];
+            $pages->html_content = $request['html_content'];
+            $pages->page_title = $request['page_title'];
+//            $pages->channels = $request['channels'];
+            $pages->cms_page_id = $new_page->id;
+            $pages->locale = 'en';
+
+            $pages->save();
+
+//        $page = $this->cmsRepository->create(request()->all());
+            session()->flash('success', trans('admin::app.response.create-success', ['name' => 'page']));
+
+        }catch (\Exception $exception){
+            return back()->with('error', $exception->getMessage());
+        }
+
+//        $new_page = CmsPage::create([]);
+//        $pages = new CmsPageTranslation;
+//        $pages->content = json_encode($content);
+//        $pages->cms_page_id = $new_page->id;
+//        $pages->save();
+//        $page = $this->cmsRepository->create(request()->all());
+//        session()->flash('success', trans('admin::app.response.create-success', ['name' => 'page']));
         return redirect()->route($this->_config['redirect']);
     }
 
@@ -103,19 +141,35 @@ class PageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Request $request,$id)
     {
         $locale = core()->getRequestedLocaleCode();
+//
+//        $this->validate(request(), [
+//            $locale . '.url_key'      => ['required', new \Webkul\Core\Contracts\Validations\Slug, function ($attribute, $value, $fail) use ($id) {
+//                if (! $this->cmsRepository->isUrlKeyUnique($id, $value)) {
+//                    $fail(trans('admin::app.response.already-taken', ['name' => 'Page']));
+//                }
+//            }],
+//            $locale . '.page_title'   => 'required',
+//            $locale . '.html_content' => 'required',
+//            'channels'                => 'required',
+//        ]);
 
-        $this->validate(request(), [
-            $locale . '.url_key'      => ['required', new \Webkul\Core\Contracts\Validations\Slug, function ($attribute, $value, $fail) use ($id) {
-                if (! $this->cmsRepository->isUrlKeyUnique($id, $value)) {
-                    $fail(trans('admin::app.response.already-taken', ['name' => 'Page']));
-                }
-            }],
-            $locale . '.page_title'   => 'required',
-            $locale . '.html_content' => 'required',
-            'channels'                => 'required',
+        $page = $this->cmsRepository->findOrFail($id);
+        $pageTranslation = $page->translate($locale);
+        $pageTranslation->content = json_encode([
+            'sliderHeading0' => $request->input('sliderHeading0'),
+            'sliderHeading1' => $request->input('sliderHeading1'),
+            'sliderDes1' => $request->input('sliderDes1'),
+            'sliderHeading2' => $request->input('sliderHeading2'),
+            'sliderDes2' => $request->input('sliderDes2'),
+            'infoHeading0' => $request->input('infoHeading0'),
+            'infoHeading1' => $request->input('infoHeading1'),
+            'infoHeading2' => $request->input('infoHeading2'),
+            'infoHeading3' => $request->input('infoHeading3'),
+            'infoHeading4' => $request->input('infoHeading4'),
+
         ]);
 
         $this->cmsRepository->update(request()->all(), $id);

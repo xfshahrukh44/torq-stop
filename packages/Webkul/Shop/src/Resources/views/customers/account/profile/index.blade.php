@@ -5,6 +5,7 @@
 @endsection
 
 @section('account-content')
+
     <div class="account-layout">
         <div class="account-head">
             <span class="back-icon"><a href="{{ route('customer.profile.index') }}"><i class="icon icon-menu-back"></i></a></span>
@@ -59,16 +60,16 @@
                     </tr>
 
                     <tr>
-                        <td> 
+                        <td>
                             <button type="submit" @click="showModal('deleteProfile')" class="btn btn-lg btn-primary mt-10">
                                 {{ __('shop::app.customer.account.address.index.delete') }}
                             </button>
-                        </td>                        
+                        </td>
                     </tr>
 
                     {!! view_render_event('bagisto.shop.customers.account.profile.view.table.after', ['customer' => $customer]) !!}
                 </tbody>
-            </table>           
+            </table>
 
             <form method="POST" action="{{ route('customer.profile.destroy') }}" @submit.prevent="onSubmit">
                 @csrf

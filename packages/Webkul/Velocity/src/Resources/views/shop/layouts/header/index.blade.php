@@ -3,7 +3,7 @@
         <a class="left navbar-brand" href="{{ route('shop.home.index') }}" aria-label="Logo">
             <img class="logo" src="{{ core()->getCurrentChannel()->logo_url ?? asset('themes/velocity/assets/images/logo-text.png') }}" alt="" />
         </a>
-
+@if(auth()->check())
         <div class="right searchbar">
             <div class="row">
                 <div class="col-lg-5 col-md-12">
@@ -34,6 +34,7 @@
                 </div>
             </div>
         </div>
+    @endif
     </div>
 </header>
 

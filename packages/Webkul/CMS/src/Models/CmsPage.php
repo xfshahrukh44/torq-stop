@@ -2,12 +2,16 @@
 
 namespace Webkul\CMS\Models;
 
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Webkul\Core\Eloquent\TranslatableModel;
 use Webkul\CMS\Contracts\CmsPage as CmsPageContract;
 use Webkul\Core\Models\ChannelProxy;
 
+
 class CmsPage extends TranslatableModel implements CmsPageContract
 {
+//    use InteractsWithMedia;
     protected $fillable = ['layout'];
 
     public $translatedAttributes = [

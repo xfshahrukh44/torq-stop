@@ -34,6 +34,7 @@
             <div class="row">
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
                     <a href="tel:18889966896" class="cntctInfo"><i class="fas fa-phone-alt"></i>1-888-996-6896 (Toll-Free)</a>
+                    <a href="tel:19809877272" class="cntctInfo">1-980-987-7272 (Local)</a>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="300">
                     <a href="javascript:void(0)" class="cntctInfo"><i class="fas fa-map-marker-alt"></i>P.O. Box 761, Denver, NC 28037</a>
@@ -41,9 +42,9 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="300">
                     <a href="mailto:info@torqStop.com" class="cntctInfo"><i class="fas fa-envelope"></i>info@torqStop.com</a>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
-                    <a href="tel:19809877272" class="cntctInfo"><i class="fas fa-phone-alt"></i>1-980-987-7272 (Local)</a>
-                </div>
+{{--                <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">--}}
+{{--                    <a href="tel:19809877272" class="cntctInfo"><i class="fas fa-phone-alt"></i>1-980-987-7272 (Local)</a>--}}
+{{--                </div>--}}
             </div>
             <div class="row getContnt">
                 <form class="row getContnt" action="{{route('front.send_mail')}}" method="POST">
