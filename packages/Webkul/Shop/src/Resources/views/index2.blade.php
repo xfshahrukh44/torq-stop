@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('content')
-
+{{--@dd('here')--}}
     <div class="preLoader black">
         {{--        <img src="{{asset("themes/default/assets/images/pre12.png")}}" alt="">--}}
         <img src="{{asset("themes/default/assets/images/logo11.png")}}" alt="">
