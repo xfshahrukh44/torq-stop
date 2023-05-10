@@ -137,8 +137,7 @@
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="{{asset('pdf/pfa.pdf')}}" data-fancybox="PDF"
                                            >Product Flyer </a>
-                                        <a class="dropdown-item" href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF"
-                                           >QR Catalog</a>
+                                        <a class="dropdown-item" href="{{route("catalogue")}}">QR Catalog</a>
                                     </div>
                                 </div>
                             </div>

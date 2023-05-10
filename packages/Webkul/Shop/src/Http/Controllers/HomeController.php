@@ -292,4 +292,9 @@ class HomeController extends Controller
     {
         return view('shop::misc-hardware');
     }
+
+    public function catalogue()
+    {
+        return view('shop::catalogue');
+    }
 }
