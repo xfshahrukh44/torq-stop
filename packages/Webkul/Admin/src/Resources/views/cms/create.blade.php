@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="content">
-        <form method="POST" action="{{ route('admin.cms.store') }}" @submit.prevent="onSubmit">
+        <form method="POST" action="{{ route('admin.cms.store') }}" @submit.prevent="onSubmit" enctype="multipart/form-data">
 
             <div class="page-header">
                 <div class="page-title">
@@ -73,69 +73,27 @@
                                 </div>
                             </div>
 
-{{--                            <div class="control-group" :class="[errors.has('logo') ? 'has-error' : '']">--}}
-{{--                                <label class="col-sm-12 col-md-2 col-form-label">Logo</label>--}}
-{{--                                <div class="img-upload ml-3">--}}
-{{--                                    <div id="preview" class="img-preview"--}}
-{{--                                                                                 style="background:url({{ !empty($abouts->getMedia('mission_section_image')->first())--}}
-{{--                                                                ? $abouts->getMedia('mission_section_image')->first()->getUrl()--}}
-{{--                                                                : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png' }})"--}}
-{{--                                    >--}}
-{{--                                        <label for="image-upload" class="img-label"--}}
-{{--                                               id="image-label">{{ __('Upload Logo') }}</label>--}}
-{{--                                        <input type="file" name="logo" onchange="previewImage(event)">--}}
-{{--                                    </div>--}}
-{{--                                    @error('logo')--}}
-{{--                                    <div class="alert alert-danger">{{ $message }}</div>--}}
-{{--                                    @enderror--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="control-group" :class="[errors.has('sliderImage0') ? 'has-error' : '']">--}}
-{{--                                <label class="col-sm-12 col-md-2 col-form-label">Slider One Image</label>--}}
-{{--                                <div class="img-upload ml-3">--}}
-{{--                                    <div id="image-preview" class="img-preview"--}}
-{{--                                         style="background:url({{ !empty($abouts->getMedia('mission_section_image')->first())--}}
-{{--                        ? $abouts->getMedia('mission_section_image')->first()->getUrl()--}}
-{{--                        : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png' }})"--}}
-{{--                                    >--}}
-{{--                                        <label for="image-upload" class="img-label"--}}
-{{--                                               id="image-label">{{ __('Upload Image') }}</label>--}}
-{{--                                        <input type="file" name="sliderImage0"--}}
-{{--                                               class="img-upload @error('sliderImage0') is-invalid @enderror"--}}
-{{--                                               id="image-upload"--}}
-{{--                                               value="">--}}
-{{--                                    </div>--}}
-{{--                                    @error('sliderImage0')--}}
-{{--                                    <div class="alert alert-danger">{{ $message }}</div>--}}
-{{--                                    @enderror--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
                             <div class="control-group">
                                 <label class="col-sm-12 col-md-2 col-form-label">Slider One Image</label>
                                 <div class="img-upload ml-3">
                                     <div id="image-preview-2" class="img-preview">
-                                        <img id="preview-2" src="" alt="Preview" style="display:none;">
-                                        <label for="image-upload-2" class="img-label" id="image-label">{{ __('Upload Image 2') }}</label>
-                                        <input type="file" name="sliderImage0" onchange="previewImage(event, 'preview-2')"
-                                               class="img-upload @error('image2') is-invalid @enderror"
-                                               id="image-upload-2"
-                                               value="">
+                                        <video width="400" controls style="display:none;">
+                                            <source src="" id="video_here">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                        {{--                                        <img id="preview-2" src="" alt="Preview" style="display:none;">--}}
+                                        <label for="image-upload-2" class="img-label" id="image-label">{{ __('Upload Slider One Video') }}</label>
+                                        <input type="file" name="sliderImage0" class="file_multi_video" accept="video/*"
+{{--                                               onchange="previewImage(event, 'preview-2')"--}}
+{{--                                               class="img-upload @error('image2') is-invalid @enderror"--}}
+{{--                                               id="image-upload-2"--}}
+                                               >
                                     </div>
                                     @error('image2')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
-
-{{--                            <div>--}}
-{{--                                <label class="col-sm-12 col-md-2 col-form-label">Slider One Image</label>--}}
-{{--                                <div class="img-upload ml-3">--}}
-{{--                                    <img id="preview" src="#" alt="Image Preview" style="display: none; max-width: 100%; max-height: 200px;">--}}
-{{--                                    <input type="file" name="sliderImage0" onchange="previewImage(event)">--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
 
                             <div class="control-group">
                                 <label>Slider One Heading</label>
@@ -144,12 +102,16 @@
                             </div>
 
                             <div class="control-group">
-                                <label class="col-sm-12 col-md-2 col-form-label">Slider Two Image</label>
+                                <label class="col-sm-12 col-md-2 col-form-label">Slider Two Video</label>
                                 <div class="img-upload ml-3">
                                     <div id="image-preview-3" class="img-preview">
-                                        <img id="preview-3" src="" alt="Preview" style="display:none;">
-                                        <label for="image-upload-3" class="img-label" id="image-label">{{ __('Upload Image') }}</label>
-                                        <input type="file" name="sliderImage1" onchange="previewImage(event, 'preview-3')"
+                                        <video width="400" controls style="display:none;">
+                                            <source src="" id="video_here1">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                        {{--                                        <img id="preview-3" src="" alt="Preview" style="display:none;">--}}
+                                        <label for="image-upload-3" class="img-label" id="image-label">{{ __('Upload Slider Two Video') }}</label>
+                                        <input type="file" name="sliderImage1" class="file_multi_video1" accept="video/*"
                                                class="img-upload @error('sliderImage1') is-invalid @enderror"
                                                id="image-upload-3"
                                                value="">
@@ -159,35 +121,6 @@
                                     @enderror
                                 </div>
                             </div>
-
-{{--                            <div>--}}
-{{--                                <label class="col-sm-12 col-md-2 col-form-label">Slider Two Image</label>--}}
-{{--                                <div class="img-upload ml-3">--}}
-{{--                                    <img id="preview" src="#" alt="Image Preview" style="display: none; max-width: 100%; max-height: 200px;">--}}
-{{--                                    <input type="file" name="sliderImage1" onchange="previewImage(event)">--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="control-group" :class="[errors.has('html_content') ? 'has-error' : '']">--}}
-{{--                                <label class="col-sm-12 col-md-2 col-form-label">Slider Two Image</label>--}}
-{{--                                <div class="img-upload ml-3">--}}
-{{--                                    <div id="image-preview" class="img-preview"--}}
-{{--                                        --}}{{--                                         style="background:url({{ !empty($abouts->getMedia('mission_section_image')->first())--}}
-{{--                                        --}}{{--                        ? $abouts->getMedia('mission_section_image')->first()->getUrl()--}}
-{{--                                        --}}{{--                        : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png' }})"--}}
-{{--                                    >--}}
-{{--                                        <label for="image-upload" class="img-label"--}}
-{{--                                               id="image-label">{{ __('Upload Image') }}</label>--}}
-{{--                                        <input type="file" name="sliderImage1"--}}
-{{--                                               class="img-upload @error('sliderImage1') is-invalid @enderror"--}}
-{{--                                               id="image-upload"--}}
-{{--                                               value="">--}}
-{{--                                    </div>--}}
-{{--                                    @error('sliderImage1')--}}
-{{--                                    <div class="alert alert-danger">{{ $message }}</div>--}}
-{{--                                    @enderror--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
 
                             <div class="control-group" :class="[errors.has('sliderHeading1') ? 'has-error' : '']">
                                 <label for="html_content" class="required">Slider Two Heading</label>
@@ -218,35 +151,6 @@
                                     @enderror
                                 </div>
                             </div>
-
-{{--                            <div>--}}
-{{--                                <label class="col-sm-12 col-md-2 col-form-label">Slider Three Image</label>--}}
-{{--                                <div class="img-upload ml-3">--}}
-{{--                                    <img id="preview" src="#" alt="Image Preview" style="display: none; max-width: 100%; max-height: 200px;">--}}
-{{--                                    <input type="file" name="sliderImage2" onchange="previewImage(event)">--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="control-group" :class="[errors.has('sliderImage2') ? 'has-error' : '']">--}}
-{{--                                <label class="col-sm-12 col-md-2 col-form-label">Slider Three Image</label>--}}
-{{--                                <div class="img-upload ml-3">--}}
-{{--                                    <div id="image-preview" class="img-preview"--}}
-{{--                                        --}}{{--                                         style="background:url({{ !empty($abouts->getMedia('mission_section_image')->first())--}}
-{{--                                        --}}{{--                        ? $abouts->getMedia('mission_section_image')->first()->getUrl()--}}
-{{--                                        --}}{{--                        : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png' }})"--}}
-{{--                                    >--}}
-{{--                                        <label for="image-upload" class="img-label"--}}
-{{--                                               id="image-label">{{ __('Upload Image') }}</label>--}}
-{{--                                        <input type="file" name="sliderImage2"--}}
-{{--                                               class="img-upload @error('sliderImage2') is-invalid @enderror"--}}
-{{--                                               id="image-upload"--}}
-{{--                                               value="">--}}
-{{--                                    </div>--}}
-{{--                                    @error('sliderImage2')--}}
-{{--                                    <div class="alert alert-danger">{{ $message }}</div>--}}
-{{--                                    @enderror--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
 
                             <div class="control-group" :class="[errors.has('sliderHeading2') ? 'has-error' : '']">
                                 <label for="html_content" class="required">Slider Three Heading</label>
@@ -594,6 +498,21 @@
                 image_advtab: true,
                 valid_elements : '*[*]',
             });
+
+            $(document).on("change", ".file_multi_video", function(evt) {
+                var $source = $('#video_here');
+                $source[0].src = URL.createObjectURL(this.files[0]);
+                $source.parent()[0].load();
+                $source.parent()[0].style.display='block';
+            });
+
+            $(document).on("change", ".file_multi_video1", function(evt) {
+                var $source = $('#video_here1');
+                $source[0].src = URL.createObjectURL(this.files[0]);
+                $source.parent()[0].load();
+                $source.parent()[0].style.display='block';
+            });
+
         });
 
         function previewImage(event, previewId) {

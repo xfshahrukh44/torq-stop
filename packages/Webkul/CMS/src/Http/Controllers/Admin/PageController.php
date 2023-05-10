@@ -2,8 +2,11 @@
 
 namespace Webkul\CMS\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use Webkul\Admin\DataGrids\CMSPageDataGrid;
 use Webkul\CMS\Http\Controllers\Controller;
+use Webkul\CMS\Models\CmsPage;
+use Webkul\CMS\Models\CmsPageTranslation;
 use Webkul\CMS\Repositories\CmsRepository;
 
 class PageController extends Controller
@@ -78,7 +81,7 @@ class PageController extends Controller
 //            'html_content' => 'required',
 //        ]);
 
-        try{
+//        try{
             $content = [
                 'sliderHeading0' => $request['sliderHeading0'],
                 'sliderHeading1' => $request['sliderHeading1'],
@@ -92,25 +95,59 @@ class PageController extends Controller
                 'infoHeading4' => $request['infoHeading4'],
             ];
 
-
             $new_page = CmsPage::create([]);
             $pages = new CmsPageTranslation;
-        $pages->content = json_encode($content);
+            $pages->content = json_encode($content);
+
+            if ($request->hasFile('logo')) {
+                $new_page->addMediaFromRequest('logo')->toMediaCollection('logo');
+            }
+
+        if ($request->hasFile('sliderImage0')) {
+            $new_page->addMediaFromRequest('sliderImage0')->toMediaCollection('slider_image1');
+        }
+
+        if ($request->hasFile('sliderImage1')) {
+            $new_page->addMediaFromRequest('sliderImage1')->toMediaCollection('slider_image2');
+        }
+
+        if ($request->hasFile('sliderImage2')) {
+            $new_page->addMediaFromRequest('sliderImage2')->toMediaCollection('slider_image3');
+        }
+
+        if ($request->hasFile('infoImage0')) {
+            $new_page->addMediaFromRequest('infoImage0')->toMediaCollection('info_image1');
+        }
+
+        if ($request->hasFile('infoImage1')) {
+            $new_page->addMediaFromRequest('infoImage1')->toMediaCollection('info_image2');
+        }
+
+        if ($request->hasFile('infoImage2')) {
+            $new_page->addMediaFromRequest('infoImage2')->toMediaCollection('info_image3');
+        }
+
+        if ($request->hasFile('infoImage3')) {
+            $new_page->addMediaFromRequest('infoImage3')->toMediaCollection('info_image4');
+        }
+
+        if ($request->hasFile('infoImage4')) {
+            $new_page->addMediaFromRequest('infoImage4')->toMediaCollection('info_image5');
+        }
+
             $pages->url_key = $request['url_key'];
             $pages->html_content = $request['html_content'];
             $pages->page_title = $request['page_title'];
 //            $pages->channels = $request['channels'];
             $pages->cms_page_id = $new_page->id;
             $pages->locale = 'en';
-
             $pages->save();
-
 //        $page = $this->cmsRepository->create(request()->all());
             session()->flash('success', trans('admin::app.response.create-success', ['name' => 'page']));
 
-        }catch (\Exception $exception){
-            return back()->with('error', $exception->getMessage());
-        }
+//        }catch (\Exception $exception){
+//            return back()->with('error', $exception->getMessage());
+//        }
 
 //        $new_page = CmsPage::create([]);
 //        $pages = new CmsPageTranslation;
@@ -171,6 +208,51 @@ class PageController extends Controller
             'infoHeading4' => $request->input('infoHeading4'),
 
         ]);
+        if ($request->hasFile('logo')) {
+            $page->clearMediaCollection('logo');
+            $page->addMediaFromRequest('logo')->toMediaCollection('logo');
+        }
+
+        if ($request->hasFile('sliderImage0')) {
+            $page->clearMediaCollection('slider_image1');
+            $page->addMediaFromRequest('sliderImage0')->toMediaCollection('slider_image1');
+        }
+
+        if ($request->hasFile('sliderImage1')) {
+            $page->clearMediaCollection('slider_image2');
+            $page->addMediaFromRequest('sliderImage1')->toMediaCollection('slider_image2');
+        }
+
+        if ($request->hasFile('sliderImage2')) {
+            $page->clearMediaCollection('slider_image3');
+            $page->addMediaFromRequest('sliderImage2')->toMediaCollection('slider_image3');
+        }
+
+        if ($request->hasFile('infoImage0')) {
+            $page->clearMediaCollection('info_image1');
+            $page->addMediaFromRequest('infoImage0')->toMediaCollection('info_image1');
+        }
+
+        if ($request->hasFile('infoImage1')) {
+            $page->clearMediaCollection('info_image2');
+            $page->addMediaFromRequest('infoImage1')->toMediaCollection('info_image2');
+        }
+
+        if ($request->hasFile('infoImage2')) {
+            $page->clearMediaCollection('info_image3');
+            $page->addMediaFromRequest('infoImage2')->toMediaCollection('info_image3');
+        }
+
+        if ($request->hasFile('infoImage3')) {
+            $page->clearMediaCollection('info_image4');
+            $page->addMediaFromRequest('infoImage3')->toMediaCollection('info_image4');
+        }
+
+        if ($request->hasFile('infoImage4')) {
+            $page->clearMediaCollection('info_image5');
+            $page->addMediaFromRequest('infoImage4')->toMediaCollection('info_image5');
+        }
+
 
         $this->cmsRepository->update(request()->all(), $id);
 
