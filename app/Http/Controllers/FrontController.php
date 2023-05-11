@@ -24,7 +24,7 @@ class FrontController extends Controller
             $message .= 'Message: ' . $msg . "<br />";
 
 //            $email = (Settings::find(1))->email;
-            $email = 'no-reply@torqstop.com';
+            $email = 'donorrell996@gmail.com';
 
             send_mail('no-reply@torqstop.com', $email, 'Customer Contact', $message);
 

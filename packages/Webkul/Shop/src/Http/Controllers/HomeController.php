@@ -2,6 +2,7 @@
 
 namespace Webkul\Shop\Http\Controllers;
 
+use App\Models\CustomerReview;
 use App\ProductCategoryField;
 use Illuminate\Http\Request;
 use Webkul\Category\Repositories\CategoryRepository;
@@ -166,6 +167,18 @@ class HomeController extends Controller
         $model_options = $this->getFilterOptions('model', $data['category_id']);
 
         return view('shop::shop', compact('categories', 'products', 'year_options', 'make_options', 'model_options', 'data'));
+    }
+
+    public function review(Request $request){
+
+        $review = new CustomerReview;
+        $review->customer_name = $request->customer_name;
+        $review->customer_email = $request->email;
+        $review->company_name = $request->company_name;
+        $review->text = $request->review;
+        $review->save();
+
+        return redirect()->back()->with('success','Thank You For Your Review');
     }
 
     public function shopByCategory(Request $request)
