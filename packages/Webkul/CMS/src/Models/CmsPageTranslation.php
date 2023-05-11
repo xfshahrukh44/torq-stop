@@ -32,4 +32,8 @@ class CmsPageTranslation extends Model implements CmsPageTranslationContract
         'locale',
         'cms_page_id',
     ];
+
+    public function page(){
+        return $this->belongsTo(CmsPage::class, 'cms_page_id');
+    }
 }

@@ -11,6 +11,7 @@ use Webkul\CMS\Repositories\CmsRepository;
 
 class PageController extends Controller
 {
+
     /**
      * To hold the request variables from route file.
      *
