@@ -569,6 +569,117 @@
                                 {{--                                <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>--}}
                             </div>
 
+                            <div class="control-group">
+                                <label for="html_content">Description</label>
+                                <textarea type="text" class="control" id="content" name="about_sec_des6" >{{ old('about_sec_des6') }}</textarea>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="col-sm-12 col-md-2 col-form-label">About Section Image</label>
+                                <div class="img-upload ml-12">
+                                    <div id="image-preview-12" class="img-preview">
+                                        <img id="preview-12" src="" alt="Preview" style="display:none;">
+                                        <label for="image-upload-12" class="img-label" id="image-label">{{ __('Upload Image') }}</label>
+                                        <input type="file" name="aboutSectionImage3" onchange="previewImage(event, 'preview-12')"
+                                               class="img-upload @error('aboutSectionImage3') is-invalid @enderror"
+                                               id="image-upload-3"
+                                               value="">
+                                    </div>
+                                    @error('aboutSectionImage3')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <br>
+                            <h1>Footer Section</h1>
+
+                            <div class="control-group">
+                                <label for="html_content" >Phone Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="phoneIcon" placeholder="{{ __('Phone Icon') }}">
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('trollNum') ? 'has-error' : '']">
+                                <label for="html_content" >Troll-Free Number</label>
+                                <input type="number" class="control" name="trollNum" placeholder="{{ __('Troll-Free Number') }}">{{ old('trollNum') }}
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('localNum') ? 'has-error' : '']">
+                                <label for="html_content" >Local Number</label>
+                                <input type="number" class="control" name="localNum" placeholder="{{ __('Local Number') }}">{{ old('localNum') }}
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Email Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="emailIcon" placeholder="{{ __('Social Icon') }}">
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('email') ? 'has-error' : '']">
+                                <label for="html_content" >Email</label>
+                                <input type="email" class="control" name="email" placeholder="{{ __('Email') }}">{{ old('email') }}
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Adress Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="addIcon" placeholder="{{ __('Address Icon') }}">
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('address') ? 'has-error' : '']">
+                                <label for="html_content" >Address</label>
+                                <input type="text" class="control" name="address" placeholder="{{ __('Address') }}">{{ old('address') }}
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Facebook Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="faceIcon" placeholder="{{ __('Facebook Icon') }}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Facebook Link</label>
+                                <input type="url" class="control" name="faceLink" placeholder="{{ __('Facebook Link') }}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Twitter Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="twitIcon" placeholder="{{ __('Address Icon') }}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Twitter Link</label>
+                                <input type="url" class="control" name="twitLink" placeholder="{{ __('Twitter Link') }}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Instagram Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="instaIcon" placeholder="{{ __('Address Icon') }}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Instagram Link</label>
+                                <input type="url" class="control" name="instaLink" placeholder="{{ __('Instagram Link') }}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Youtube Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="youtIcon" placeholder="{{ __('Address Icon') }}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Youtube Link</label>
+                                <input type="url" class="control" name="youtLink" placeholder="{{ __('Youtube Link') }}">
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('copyRight') ? 'has-error' : '']">
+                                <label for="html_content" >Description</label>
+                                <input type="text" class="control" name="copyRight">{{ old('copyRight') }}
+                            </div>
+
                         </div>
                   </accordian>
 
