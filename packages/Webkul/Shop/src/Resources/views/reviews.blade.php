@@ -185,21 +185,23 @@
 {{--                </div>--}}
 {{--            </div>--}}
             <div class="row">
+
                 <div class="col-md-12">
-                    <form class="reviewForm">
+                    <form class="reviewForm" method="POST" action="{{route('reviewForm.shop')}}" enctype="multipart/form-data">
+                        @csrf
                         <h4>Submit A Review</h4>
                         <div class="row">
                             <div class="col-md-6">
-                                <input name="customer_name" type="text" placeholder="Name">
+                                <input name="customer_name" type="text" placeholder="Name" required style="color: white;">
                             </div>
                             <div class="col-md-6">
-                                <input name="email" type="email" placeholder="Email">
+                                <input name="email" type="email" placeholder="Email" required style="color: white;">
                             </div>
                             <div class="col-md-12">
-                                <input name="company_name" type="text" placeholder="Company Name">
+                                <input name="company_name" type="text" placeholder="Company Name" style="color: white;">
                             </div>
                             <div class="col-md-12">
-                                <textarea name="review" rows="7"></textarea>
+                                <textarea name="review" rows="7" style="color: white;"></textarea>
                             </div>
                             <div class="col-md-12">
                                 <button type="submit">Submit</button>
