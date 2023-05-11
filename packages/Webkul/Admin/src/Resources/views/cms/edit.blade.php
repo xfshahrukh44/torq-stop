@@ -546,7 +546,6 @@
                                 <label for="html_content" >Description</label>
                                 <input type="text" class="control" name="copyRight" value="{{$decoded_content->copyRight ?? ''}}">
                             </div>
-
                         </div>
                     </accordian>
 
