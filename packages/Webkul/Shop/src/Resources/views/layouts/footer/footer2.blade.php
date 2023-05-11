@@ -1,9 +1,13 @@
 <footer>
+    @php
+        $decoded_content = json_decode($footer->content);
+    @endphp
+{{--    @dd($decoded_content)--}}
     <div class="container">
         <div class="row justify-content-around">
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
-                <a href="tel:8889966896" class="cntctInfo"><i class="fas fa-phone-alt"></i>1-888-996-6896 (Toll-Free)</a>
-                <a href="tel:19809877272" class="cntctInfo">1-980-987-7272 (Local)</a>
+                <a href="tel:8889966896" class="cntctInfo"><i class="{{$decoded_content->phoneIcon ?? ''}}"></i>{{$decoded_content->trollNum ?? ''}}(Troll-free)</a>
+                <a href="tel:19809877272" class="cntctInfo">{{$decoded_content->localNum ?? ''}}(Local-Free)</a>
             </div>
 {{--            <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">--}}
 {{--                <a href="tel:19809877272" class="cntctInfo"><i class="fas fa-phone-alt"></i>1-980-987-7272 (Local)</a>--}}
@@ -13,12 +17,12 @@
 {{--                    blog, street 12345</a>--}}
 {{--            </div>--}}
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="300">
-                <a href="mailto:info@torqstop.com" class="cntctInfo"><i class="fas fa-envelope"></i>info@torqstop.com</a>
+                <a href="mailto:info@torqstop.com" class="cntctInfo"><i class="{{$decoded_content->emailIcon ?? ''}}"></i>{{$decoded_content->email ?? ''}}</a>
             </div>
         </div>
         <div class="row justify-content-between border-top">
             <div class="col-md-4">
-                <a href="#" class="d-block text-center"><img src="{{asset("themes/default/assets/images/logo11.png")}}" alt=""></a>
+                <a href="#" class="d-block text-center"><img src="{{optional($footer->page->getMedia('logo')->first())->getUrl()}}" alt=""></a>
             </div>
             <div class="col-md-2">
                 <h3>Quick Links</h3>
@@ -40,16 +44,16 @@
                     <button><i class="fas fa-paper-plane"></i></button>
                 </div>
                 <ul class="socialList">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="{{$decoded_content->faceLink ?? ''}}"><i class="{{$decoded_content->faceIcon ?? ''}}"></i></a></li>
+                    <li><a href="{{$decoded_content->twitLink ?? ''}}"><i class="{{$decoded_content->twitIcon ?? ''}}"></i></a></li>
+                    <li><a href="{{$decoded_content->instaLink ?? ''}}"><i class="{{$decoded_content->instaIcon ?? ''}}"></i></a></li>
+                    <li><a href="{{$decoded_content->youtLink ?? ''}}"><i class="{{$decoded_content->youtIcon ?? ''}}"></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="row copyRight">
             <div class="col-md-12">
-                <p>Copyright © 2023. All Right Reserved.</p>
+                <p>{{$decoded_content->copyRight ?? ''}}</p>
             </div>
         </div>
     </div>

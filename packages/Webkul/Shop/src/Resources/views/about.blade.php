@@ -3,6 +3,9 @@
 @section('title', 'About')
 
 @section('content')
+    @php
+        $decoded_content = json_decode($about->content);
+    @endphp
 
     <div class="main-slider innerbaner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -14,7 +17,7 @@
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-6">
-                                    <h2>About us</h2>
+                                    <h2>{{$about->page_title}}</h2>
                                 </div>
                                 {{--                                <div class="col-md-6">--}}
                                 {{--                                    <figure class="blast">--}}
@@ -48,59 +51,23 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <figure class="reveal">
-                        <img src="{{asset('themes/default/assets/images/aboutIntro.jpg')}}" alt="">
+                        <img src="{{optional($about->page->getMedia('about_Section_Image2')->first())->getUrl()}}" alt="">
                     </figure>
                 </div>
                 <div class="col-md-6">
-                    <p>With over 90 years combined experience in the
-                        automotive and heavy-duty aftermarket, the founders of OPC Parts had a vision to bring the next
-                        level of quality, value and service to the industry. </p>
+                    {!! $decoded_content->about_sec_des ?? ''!!}
                 </div>
                 <div class="col-md-12">
-                    <p>TorqStop™ offers a wide range of premium brake products, manufactured in ISO 9001:2015 and
-                        IATF16949: 2016 certified factories. All of our light, medium and heavy-duty brake products
-                        conform to applicable FMVSS 105, FMVSS 135, FMVSS 121 and ECE R90 requirements. Our broad
-                        coverage, outstanding value and user-friendly lookup tools make TorqStop™ an easy choice for all
-                        of your commercial vehicle brake parts needs. All products are 100% NEW and CORE-FREE – saving
-                        you time, money and unnecessary handling of dirty, expensive cores.</p>
+                    {!! $decoded_content->about_sec_des2 ?? ''!!}
                 </div>
                 <div class="col-md-7">
-                    <h2 class="secHeading">WHY CHOOSE US
+                    <h2 class="secHeading"> {!! $decoded_content->aboutHeading1 ?? ''!!}
                     </h2>
-                    <p>First three reasons: Quality, Quality and Quality. We do not compromise on this subject.</p>
-                    <ul class="chooselist1">
-                        <li> IATF 16949:2016 Certified Factories</li>
-                        <li> ISO 9001:2015 Certified</li>
-                        <li> FMVSS 121 Compliant</li>
-                        <li> ECE R90 Compliant</li>
-                    </ul>
+                    {!! $decoded_content->about_sec_des3 ?? ''!!}
                     <h2 class="secHeading">
-                        OUR PRINCIPLES
+                        {!! $decoded_content->aboutHeading2 ?? ''!!}
                     </h2>
-                    <p>
-                        We are focused on building long-term relationships, not short-term profits.
-                    </p>
-                    <p>
-                        We will always act with Integrity and transparency to build trust, and always live up to our
-                        commitments.
-                    </p>
-                    <p>
-                        We will operate efficiently to keep overhead low, so we can provide the most competitive
-                        programs to our customers.
-                    </p>
-                    <p>
-                        We will maintain product and market expertise, playing a consultative role to our customers and
-                        providing valuable insights for better decision making.
-                    </p>
-                    <p>
-                        First to market with new product introductions, giving our customers an edge in the marketplace.
-                    </p>
-                    <ul class="chooselist2">
-                        <li>Focused on long-term relationships, not short-term profits</li>
-                        <li>Strong belief in integrity and transparency</li>
-                        <li>Low Overhead allows for competitive programs</li>
-                        <li>Speed to market on New Product Introduction</li>
-                    </ul>
+                    {!! $decoded_content->about_sec_des4 ?? ''!!}
                 </div>
                 <div class="col-md-5">
                     <figure>
@@ -108,25 +75,19 @@
                     </figure>
                 </div>
                 <div class="col-12">
-                    <h2 class="secHeading">Our Vision
+                    <h2 class="secHeading">{{$decoded_content->aboutHeading3 ?? ''}}
                     </h2>
-                    <p>To be a leading aftermarket supplier, widely recognized for providing high-quality brake
-                        components and world-class customer service at competitive prices; delivering maximum value to
-                        our customers</p>
+                    <p>  {!! $decoded_content->about_sec_des5 ?? ''!!}</p>
 
                 </div>
                 <div class="col-md-6">
                     <figure class="reveal">
-                        <img src="{{asset('themes/default/assets/images/about2.jpg')}}" alt="">
+                        <img src="{{optional($about->page->getMedia('about_Section_Image3')->first())->getUrl()}}" alt="">
                     </figure>
                 </div>
                 <div class="col-md-6">
-                    <h2 class="secHeading">Our
-                        Mission</h2>
-                    <p>To exceed our customer’s expectations in quality, delivery, and cost, through close customer
-                        interaction and continuous improvement. We will offer best-in-class cataloging, website, and
-                        product data in order to ensure our customers get the right part, on time, at the right
-                        price</p>
+                    <h2 class="secHeading">  {!! $decoded_content->aboutHeading4 ?? ''!!}</h2>
+                    <p>  {!! $decoded_content->about_sec_des6 ?? ''!!}</p>
                 </div>
                 {{--                <div class="col-12">--}}
                 {{--                    <h2 class="secHeading">WHO WE ARE?</h2>--}}

@@ -3,7 +3,9 @@
 @section('title', 'Contact')
 
 @section('content')
-
+    @php
+        $decoded_content = json_decode($contact->content);
+    @endphp
     <div class="main-slider innerbaner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -33,14 +35,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
-                    <a href="tel:18889966896" class="cntctInfo"><i class="fas fa-phone-alt"></i>1-888-996-6896 (Toll-Free)</a>
-                    <a href="tel:19809877272" class="cntctInfo">1-980-987-7272 (Local)</a>
+                    <a href="tel:18889966896" class="cntctInfo"><i class="{{$decoded_content->phoneIcon ?? ''}}"></i>{{$decoded_content->trollNum ?? ''}}(Toll-Free)</a>
+                    <a href="tel:19809877272" class="cntctInfo">{{$decoded_content->localNum ?? ''}}(Local)</a>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="300">
-                    <a href="javascript:void(0)" class="cntctInfo"><i class="fas fa-map-marker-alt"></i>P.O. Box 761, Denver, NC 28037</a>
+                    <a href="javascript:void(0)" class="cntctInfo"><i class="{{$decoded_content->addIcon ?? ''}}"></i>{{$decoded_content->address ?? ''}}</a>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="300">
-                    <a href="mailto:info@torqStop.com" class="cntctInfo"><i class="fas fa-envelope"></i>info@torqStop.com</a>
+                    <a href="mailto:info@torqStop.com" class="cntctInfo"><i class="{{$decoded_content->emailIcon ?? ''}}"></i>{{$decoded_content->email ?? ''}}</a>
                 </div>
 {{--                <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">--}}
 {{--                    <a href="tel:19809877272" class="cntctInfo"><i class="fas fa-phone-alt"></i>1-980-987-7272 (Local)</a>--}}
