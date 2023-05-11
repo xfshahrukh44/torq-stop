@@ -80,6 +80,7 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     //shop
 //    Route::get('/shop', [HomeController::class, 'shop'])->name('shop.shop');
     Route::match(['get', 'post'], '/shop', [HomeController::class, 'shop'])->name('shop.shop');
+    Route::post( '/review-form', [HomeController::class, 'review'])->name('reviewForm.shop');
     Route::match(['get', 'post'], '/shop-by-category', [HomeController::class, 'shopByCategory'])->name('shop.shopByCategory');
 
     /**

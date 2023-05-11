@@ -164,7 +164,7 @@
                             <div class="control-group" :class="[errors.has('sliderHeading1') ? 'has-error' : '']">
                                 <label for="html_content" class="required">Slider Two Heading</label>
 
-                                <input type="text" class="control" id="content" name="sliderHeading1" value="{{$decoded_content->sliderHeading1 ?? ''}}">
+                                <input type="text" class="control" name="sliderHeading1" value="{{$decoded_content->sliderHeading1 ?? ''}}">
                                 {{--                                <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>--}}
                             </div>
                             <div class="control-group" :class="[errors.has('sliderDes1') ? 'has-error' : '']">
@@ -203,12 +203,19 @@
                                 {{--                                <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>--}}
                             </div>
 
-                            <div class="control-group" :class="[errors.has('{{$locale}}[html_content]') ? 'has-error' : '']">
+{{--                            <div class="control-group" :class="[errors.has('{{$locale}}[html_content]') ? 'has-error' : '']">--}}
+{{--                                <label for="html_content" class="required">{{ __('admin::app.cms.pages.content') }}</label>--}}
+
+{{--                                <textarea type="text" class="control" id="content" name="{{$locale}}[html_content]" v-validate="'required'" data-vv-as="&quot;{{ __('admin::app.cms.pages.content') }}&quot;">{{ old($locale)['html_content'] ?? ($page->translate($locale)['html_content'] ?? '') }}</textarea>--}}
+
+{{--                                <span class="control-error" v-if="errors.has('{{$locale}}[html_content]')">@{{ errors.first('{!!$locale!!}[html_content]') }}</span>--}}
+{{--                            </div>--}}
+                            <div class="control-group">
                                 <label for="html_content" class="required">{{ __('admin::app.cms.pages.content') }}</label>
 
-                                <textarea type="text" class="control" id="content" name="{{$locale}}[html_content]" v-validate="'required'" data-vv-as="&quot;{{ __('admin::app.cms.pages.content') }}&quot;">{{ old($locale)['html_content'] ?? ($page->translate($locale)['html_content'] ?? '') }}</textarea>
+                                <textarea type="text" class="control" id="content" name="content" >{{$decoded_content->content ?? ''}}</textarea>
 
-                                <span class="control-error" v-if="errors.has('{{$locale}}[html_content]')">@{{ errors.first('{!!$locale!!}[html_content]') }}</span>
+{{--                                                                <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>--}}
                             </div>
 
                             <h1>Info Card Section</h1>
@@ -327,6 +334,219 @@
                                 {{--                                <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>--}}
                             </div>
 
+                            <h1>ABOUT SECTION</h1>
+
+                            <div class="control-group">
+                                <label for="html_content">About Section First Description</label>
+                                <textarea type="text" class="control" id="content" name="about_sec_des" >{{$decoded_content->about_sec_des ?? ''}}</textarea>
+{{--                                <span class="control-error" v-if="errors.has('{{$locale}}[html_content]')">@{{ errors.first('{!!$locale!!}[html_content]') }}</span>--}}
+                            </div>
+
+                            <div class="control-group">
+                                <label class="col-sm-12 col-md-2 col-form-label">About Section Image</label>
+                                <div class="img-upload ml-10">
+                                    <div id="image-preview-10" class="img-preview">
+                                        <img id="preview-10" src="{{optional($page->getMedia('about_Section_Image1')->first())->getUrl()}}" alt="Preview" >
+                                        <label for="image-upload-10" class="img-label" id="image-label">{{ __('Upload Image') }}</label>
+                                        <input type="file" name="aboutSectionImage1" onchange="previewImage(event, 'preview-10')"
+                                               class="img-upload @error('aboutSectionImage1') is-invalid @enderror"
+                                               id="image-upload-3"
+                                               value="">
+                                    </div>
+                                    @error('aboutSectionImage1')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content">About Section Second Description</label>
+                                <textarea type="text" class="control" id="content" name="about_sec_des2" >{{$decoded_content->about_sec_des2 ?? ''}}</textarea>
+                                {{--                                <span class="control-error" v-if="errors.has('{{$locale}}[html_content]')">@{{ errors.first('{!!$locale!!}[html_content]') }}</span>--}}
+                            </div>
+
+                            <h1>WHY CHOOSE US</h1>
+
+                            <div class="control-group" :class="[errors.has('aboutHeading1') ? 'has-error' : '']">
+                                <label for="html_content" >Heading</label>
+                                <input type="text" class="control" name="aboutHeading1" value="{{$decoded_content->aboutHeading1 ?? ''}}">
+                                {{--                                <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>--}}
+                            </div>
+
+
+                            <div class="control-group">
+                                <label for="html_content">Description</label>
+                                <textarea type="text" class="control" id="content" name="about_sec_des3" >{{$decoded_content->about_sec_des3 ?? ''}}</textarea>
+                                {{--                                <span class="control-error" v-if="errors.has('{{$locale}}[html_content]')">@{{ errors.first('{!!$locale!!}[html_content]') }}</span>--}}
+                            </div>
+
+                            <h1>OUR PRINCIPLES</h1>
+
+                            <div class="control-group" :class="[errors.has('aboutHeading2') ? 'has-error' : '']">
+                                <label for="html_content" >Heading</label>
+                                <input type="text" class="control" name="aboutHeading2" value="{{$decoded_content->aboutHeading2 ?? ''}}">
+                                {{--                                <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>--}}
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content">Description</label>
+                                <textarea type="text" class="control" id="content" name="about_sec_des4" >{{$decoded_content->about_sec_des4 ?? ''}}</textarea>
+                                {{--                                <span class="control-error" v-if="errors.has('{{$locale}}[html_content]')">@{{ errors.first('{!!$locale!!}[html_content]') }}</span>--}}
+                            </div>
+
+                            <div class="control-group">
+                                <label class="col-sm-12 col-md-2 col-form-label">About Section Image</label>
+                                <div class="img-upload ml-11">
+                                    <div id="image-preview-11" class="img-preview">
+                                        <img id="preview-11" src="{{optional($page->getMedia('about_Section_Image2')->first())->getUrl()}}" alt="Preview" >
+                                        <label for="image-upload-11" class="img-label" id="image-label">{{ __('Upload Image') }}</label>
+                                        <input type="file" name="aboutSectionImage2" onchange="previewImage(event, 'preview-11')"
+                                               class="img-upload @error('aboutSectionImage2') is-invalid @enderror"
+                                               id="image-upload-3"
+                                               value="">
+                                    </div>
+                                    @error('aboutSectionImage2')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
+
+                            <h1>Our Vision </h1>
+
+                            <div class="control-group" :class="[errors.has('aboutHeading3') ? 'has-error' : '']">
+                                <label for="html_content" >Heading</label>
+                                <input type="text" class="control" name="aboutHeading3" value="{{$decoded_content->aboutHeading3 ?? ''}}">
+                                {{--                                <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>--}}
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content">Description</label>
+                                <textarea type="text" class="control" id="content" name="about_sec_des5" >{{$decoded_content->about_sec_des5 ?? ''}}</textarea>
+                                {{--                                <span class="control-error" v-if="errors.has('{{$locale}}[html_content]')">@{{ errors.first('{!!$locale!!}[html_content]') }}</span>--}}
+                            </div>
+
+                            <h1>Our Mission</h1>
+
+                            <div class="control-group" :class="[errors.has('aboutHeading4') ? 'has-error' : '']">
+                                <label for="html_content" >Heading</label>
+                                <input type="text" class="control" name="aboutHeading4" value="{{$decoded_content->aboutHeading4 ?? ''}}">
+                                {{--                                <span class="control-error" v-if="errors.has('html_content')">@{{ errors.first('html_content') }}</span>--}}
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content">Description</label>
+                                <textarea type="text" class="control" id="content" name="about_sec_des6" >{{$decoded_content->about_sec_des6 ?? ''}}</textarea>
+                                {{--                                <span class="control-error" v-if="errors.has('{{$locale}}[html_content]')">@{{ errors.first('{!!$locale!!}[html_content]') }}</span>--}}
+                            </div>
+
+                            <div class="control-group">
+                                <label class="col-sm-12 col-md-2 col-form-label">About Section Image</label>
+                                <div class="img-upload ml-12">
+                                    <div id="image-preview-12" class="img-preview">
+                                        <img id="preview-12" src="{{optional($page->getMedia('about_Section_Image3')->first())->getUrl()}}" alt="Preview">
+                                        <label for="image-upload-12" class="img-label" id="image-label">{{ __('Upload Image') }}</label>
+                                        <input type="file" name="aboutSectionImage3" onchange="previewImage(event, 'preview-12')"
+                                               class="img-upload @error('aboutSectionImage3') is-invalid @enderror"
+                                               id="image-upload-3"
+                                               value="">
+                                    </div>
+                                    @error('aboutSectionImage3')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <br>
+                            <h1>Footer Section</h1>
+
+                            <div class="control-group">
+                                <label for="html_content" >Phone Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="phoneIcon" placeholder="{{ __('Phone Icon') }}" value="{{$decoded_content->phoneIcon ?? ''}}">
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('trollNum') ? 'has-error' : '']">
+                                <label for="html_content" >Troll-Free Number</label>
+                                <input type="number" class="control" name="trollNum" placeholder="{{ __('Troll-Free Number') }}" value="{{$decoded_content->trollNum ?? ''}}">
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('localNum') ? 'has-error' : '']">
+                                <label for="html_content" >Local Number</label>
+                                <input type="number" class="control" name="localNum" placeholder="{{ __('Local Number') }}" value="{{$decoded_content->localNum ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Email Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="emailIcon" placeholder="{{ __('Social Icon') }}" value="{{$decoded_content->emailIcon ?? ''}}">
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('email') ? 'has-error' : '']">
+                                <label for="html_content" >Email</label>
+                                <input type="email" class="control" name="email" placeholder="{{ __('Email') }}" value="{{$decoded_content->email ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Adress Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="addIcon" placeholder="{{ __('Address Icon') }}" value="{{$decoded_content->addIcon ?? ''}}">
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('address') ? 'has-error' : '']">
+                                <label for="html_content" >Address</label>
+                                <input type="text" class="control" name="address" placeholder="{{ __('Address') }}" value="{{$decoded_content->address ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Facebook Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="faceIcon" placeholder="{{ __('Facebook Icon') }}" value="{{$decoded_content->faceIcon ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Facebook Link</label>
+                                <input type="url" class="control" name="faceLink" placeholder="{{ __('Facebook Link') }}" value="{{$decoded_content->faceLink ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Twitter Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="twitIcon" placeholder="{{ __('Address Icon') }}" value="{{$decoded_content->twitIcon ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Twitter Link</label>
+                                <input type="url" class="control" name="twitLink" placeholder="{{ __('Twitter Link') }}" value="{{$decoded_content->twitLink ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Instagram Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="instaIcon" placeholder="{{ __('Address Icon') }}" value="{{$decoded_content->instaIcon ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Instagram Link</label>
+                                <input type="url" class="control" name="instaLink" placeholder="{{ __('Instagram Link') }}" value="{{$decoded_content->instaLink ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Youtube Icon</label>
+                                <i class="" id="icn"></i>
+                                <input type="text" id="icons" class="control" name="youtIcon" placeholder="{{ __('Address Icon') }}" value="{{$decoded_content->youtIcon ?? ''}}">
+                            </div>
+
+                            <div class="control-group">
+                                <label for="html_content" >Youtube Link</label>
+                                <input type="url" class="control" name="youtLink" placeholder="{{ __('Youtube Link') }}" value="{{$decoded_content->youtLink ?? ''}}">
+                            </div>
+
+                            <div class="control-group" :class="[errors.has('copyRight') ? 'has-error' : '']">
+                                <label for="html_content" >Description</label>
+                                <input type="text" class="control" name="copyRight" value="{{$decoded_content->copyRight ?? ''}}">
+                            </div>
+
                         </div>
                     </accordian>
 
@@ -395,6 +615,19 @@
                 $source.parent()[0].load();
                 $source.parent()[0].style.display='block';
             });
+
+            $( "#icons" ).autocomplete({
+                source: icons,
+                select: function (event, ui) {
+                    var label = ui.item.label;
+                    var value = ui.item.value;
+                    $('#icn').prop('class',value);
+                }
+            })
+
+            $('#icons').on('change',function(){
+                $('#icn').prop('class',$(this).val());
+            })
 
         });
 

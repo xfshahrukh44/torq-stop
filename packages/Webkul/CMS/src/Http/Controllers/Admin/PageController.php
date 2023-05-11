@@ -81,18 +81,46 @@ class PageController extends Controller
 //            'html_content' => 'required',
 //        ]);
 
-//        try{
+        try{
             $content = [
                 'sliderHeading0' => $request['sliderHeading0'],
                 'sliderHeading1' => $request['sliderHeading1'],
                 'sliderDes1' => $request['sliderDes1'],
                 'sliderHeading2' => $request['sliderHeading2'],
                 'sliderDes2' => $request['sliderDes2'],
+                'content' => $request['content'],
                 'infoHeading0' => $request['infoHeading0'],
                 'infoHeading1' => $request['infoHeading1'],
                 'infoHeading2' => $request['infoHeading2'],
                 'infoHeading3' => $request['infoHeading3'],
                 'infoHeading4' => $request['infoHeading4'],
+                'about_sec_des' => $request['about_sec_des'],
+                'about_sec_des2' => $request['about_sec_des2'],
+                'aboutHeading1' => $request['aboutHeading1'],
+                'about_sec_des3' => $request['about_sec_des3'],
+                'aboutHeading2' => $request['aboutHeading2'],
+                'about_sec_des4' => $request['about_sec_des4'],
+                'aboutHeading3' => $request['aboutHeading3'],
+                'about_sec_des5' => $request['about_sec_des5'],
+                'aboutHeading4' => $request['aboutHeading4'],
+                'about_sec_des6' => $request['about_sec_des6'],
+
+                'phoneIcon' => $request['phoneIcon'],
+                'trollNum' => $request['trollNum'],
+                'localNum' => $request['localNum'],
+                'emailIcon' => $request['emailIcon'],
+                'email' => $request['email'],
+                'addIcon' => $request['addIcon'],
+                'address' => $request['address'],
+                'faceIcon' => $request['faceIcon'],
+                'faceLink' => $request['faceLink'],
+                'twitIcon' => $request['twitIcon'],
+                'twitLink' => $request['twitLink'],
+                'instaIcon' => $request['instaIcon'],
+                'instaLink' => $request['instaLink'],
+                'youtIcon' => $request['youtIcon'],
+                'youtLink' => $request['youtLink'],
+                'copyRight' => $request['copyRight'],
             ];
 
             $new_page = CmsPage::create([]);
@@ -135,6 +163,18 @@ class PageController extends Controller
             $new_page->addMediaFromRequest('infoImage4')->toMediaCollection('info_image5');
         }
 
+        if ($request->hasFile('aboutSectionImage1')) {
+            $new_page->addMediaFromRequest('aboutSectionImage1')->toMediaCollection('about_Section_Image1');
+        }
+
+        if ($request->hasFile('aboutSectionImage2')) {
+            $new_page->addMediaFromRequest('aboutSectionImage2')->toMediaCollection('about_Section_Image2');
+        }
+
+        if ($request->hasFile('aboutSectionImage3')) {
+            $new_page->addMediaFromRequest('aboutSectionImage3')->toMediaCollection('about_Section_Image3');
+        }
+
             $pages->url_key = $request['url_key'];
             $pages->html_content = $request['html_content'];
             $pages->page_title = $request['page_title'];
@@ -145,17 +185,10 @@ class PageController extends Controller
 //        $page = $this->cmsRepository->create(request()->all());
             session()->flash('success', trans('admin::app.response.create-success', ['name' => 'page']));
 
-//        }catch (\Exception $exception){
-//            return back()->with('error', $exception->getMessage());
-//        }
+        }catch (\Exception $exception){
+            return back()->with('error', $exception->getMessage());
+        }
 
-//        $new_page = CmsPage::create([]);
-//        $pages = new CmsPageTranslation;
-//        $pages->content = json_encode($content);
-//        $pages->cms_page_id = $new_page->id;
-//        $pages->save();
-//        $page = $this->cmsRepository->create(request()->all());
-//        session()->flash('success', trans('admin::app.response.create-success', ['name' => 'page']));
         return redirect()->route($this->_config['redirect']);
     }
 
@@ -197,16 +230,45 @@ class PageController extends Controller
         $pageTranslation = $page->translate($locale);
         $pageTranslation->content = json_encode([
             'sliderHeading0' => $request->input('sliderHeading0'),
+//            'sliderHeading0' => $request['sliderHeading0'],
             'sliderHeading1' => $request->input('sliderHeading1'),
             'sliderDes1' => $request->input('sliderDes1'),
             'sliderHeading2' => $request->input('sliderHeading2'),
             'sliderDes2' => $request->input('sliderDes2'),
+            'content' => $request->input('content'),
             'infoHeading0' => $request->input('infoHeading0'),
             'infoHeading1' => $request->input('infoHeading1'),
             'infoHeading2' => $request->input('infoHeading2'),
             'infoHeading3' => $request->input('infoHeading3'),
             'infoHeading4' => $request->input('infoHeading4'),
 
+            'about_sec_des' => $request->input('about_sec_des'),
+            'about_sec_des2' => $request->input('about_sec_des2'),
+            'aboutHeading1' => $request->input('aboutHeading1'),
+            'about_sec_des3' => $request->input('about_sec_des3'),
+            'aboutHeading2' => $request->input('aboutHeading2'),
+            'about_sec_des4' => $request->input('about_sec_des4'),
+            'aboutHeading3' => $request->input('aboutHeading3'),
+            'about_sec_des5' => $request->input('about_sec_des5'),
+            'aboutHeading4' => $request->input('aboutHeading4'),
+            'about_sec_des6' => $request->input('about_sec_des6'),
+
+            'phoneIcon' => $request->input('phoneIcon'),
+            'trollNum' => $request->input('trollNum'),
+            'localNum' => $request->input('localNum'),
+            'emailIcon' => $request->input('emailIcon'),
+            'email' => $request->input('email'),
+            'addIcon' => $request->input('addIcon'),
+            'address' => $request->input('address'),
+            'faceIcon' => $request->input('faceIcon'),
+            'faceLink' => $request->input('faceLink'),
+            'twitIcon' => $request->input('twitIcon'),
+            'twitLink' => $request->input('twitLink'),
+            'instaIcon' => $request->input('instaIcon'),
+            'instaLink' => $request->input('instaLink'),
+            'youtIcon' => $request->input('youtIcon'),
+            'youtLink' => $request->input('youtLink'),
+            'copyRight' => $request->input('copyRight'),
         ]);
         if ($request->hasFile('logo')) {
             $page->clearMediaCollection('logo');
@@ -253,8 +315,25 @@ class PageController extends Controller
             $page->addMediaFromRequest('infoImage4')->toMediaCollection('info_image5');
         }
 
+        if ($request->hasFile('aboutSectionImage1')) {
+            $page->clearMediaCollection('about_Section_Image1');
+            $page->addMediaFromRequest('aboutSectionImage1')->toMediaCollection('about_Section_Image1');
+        }
 
-        $this->cmsRepository->update(request()->all(), $id);
+        if ($request->hasFile('aboutSectionImage2')) {
+            $page->clearMediaCollection('about_Section_Image2');
+            $page->addMediaFromRequest('aboutSectionImage2')->toMediaCollection('about_Section_Image2');
+        }
+
+        if ($request->hasFile('aboutSectionImage3')) {
+            $page->clearMediaCollection('about_Section_Image3');
+            $page->addMediaFromRequest('aboutSectionImage3')->toMediaCollection('about_Section_Image3');
+        }
+
+        $pageTranslation->save();
+
+//        $this->cmsRepository->update(request()->all(), $id);
+//        dd(request()->all());
 
         session()->flash('success', trans('admin::app.response.update-success', ['name' => 'Page']));
 
