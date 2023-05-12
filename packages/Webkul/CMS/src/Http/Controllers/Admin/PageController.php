@@ -11,6 +11,7 @@ use Webkul\CMS\Repositories\CmsRepository;
 
 class PageController extends Controller
 {
+
     /**
      * To hold the request variables from route file.
      *
@@ -83,6 +84,7 @@ class PageController extends Controller
 
         try{
             $content = [
+                'homeHeading' => $request['homeHeading'],
                 'sliderHeading0' => $request['sliderHeading0'],
                 'sliderHeading1' => $request['sliderHeading1'],
                 'sliderDes1' => $request['sliderDes1'],
@@ -94,6 +96,7 @@ class PageController extends Controller
                 'infoHeading2' => $request['infoHeading2'],
                 'infoHeading3' => $request['infoHeading3'],
                 'infoHeading4' => $request['infoHeading4'],
+                'aboutHeading' => $request['aboutHeading'],
                 'about_sec_des' => $request['about_sec_des'],
                 'about_sec_des2' => $request['about_sec_des2'],
                 'aboutHeading1' => $request['aboutHeading1'],
@@ -104,7 +107,8 @@ class PageController extends Controller
                 'about_sec_des5' => $request['about_sec_des5'],
                 'aboutHeading4' => $request['aboutHeading4'],
                 'about_sec_des6' => $request['about_sec_des6'],
-
+                'newsTitle' => $request['newsTitle'],
+                'footerHeading' => $request['footerHeading'],
                 'phoneIcon' => $request['phoneIcon'],
                 'trollNum' => $request['trollNum'],
                 'localNum' => $request['localNum'],
@@ -175,6 +179,10 @@ class PageController extends Controller
             $new_page->addMediaFromRequest('aboutSectionImage3')->toMediaCollection('about_Section_Image3');
         }
 
+            if ($request->hasFile('newsImage')) {
+                $new_page->addMediaFromRequest('newsImage')->toMediaCollection('news_Image');
+            }
+
             $pages->url_key = $request['url_key'];
             $pages->html_content = $request['html_content'];
             $pages->page_title = $request['page_title'];
@@ -229,8 +237,8 @@ class PageController extends Controller
         $page = $this->cmsRepository->findOrFail($id);
         $pageTranslation = $page->translate($locale);
         $pageTranslation->content = json_encode([
+            'homeHeading' => $request->input('homeHeading'),
             'sliderHeading0' => $request->input('sliderHeading0'),
-//            'sliderHeading0' => $request['sliderHeading0'],
             'sliderHeading1' => $request->input('sliderHeading1'),
             'sliderDes1' => $request->input('sliderDes1'),
             'sliderHeading2' => $request->input('sliderHeading2'),
@@ -241,7 +249,7 @@ class PageController extends Controller
             'infoHeading2' => $request->input('infoHeading2'),
             'infoHeading3' => $request->input('infoHeading3'),
             'infoHeading4' => $request->input('infoHeading4'),
-
+            'aboutHeading' => $request->input('aboutHeading'),
             'about_sec_des' => $request->input('about_sec_des'),
             'about_sec_des2' => $request->input('about_sec_des2'),
             'aboutHeading1' => $request->input('aboutHeading1'),
@@ -252,7 +260,8 @@ class PageController extends Controller
             'about_sec_des5' => $request->input('about_sec_des5'),
             'aboutHeading4' => $request->input('aboutHeading4'),
             'about_sec_des6' => $request->input('about_sec_des6'),
-
+            'newsTitle' => $request->input('newsTitle'),
+            'footerHeading' => $request->input('footerHeading'),
             'phoneIcon' => $request->input('phoneIcon'),
             'trollNum' => $request->input('trollNum'),
             'localNum' => $request->input('localNum'),
@@ -328,6 +337,11 @@ class PageController extends Controller
         if ($request->hasFile('aboutSectionImage3')) {
             $page->clearMediaCollection('about_Section_Image3');
             $page->addMediaFromRequest('aboutSectionImage3')->toMediaCollection('about_Section_Image3');
+        }
+
+        if ($request->hasFile('newsImage')) {
+            $page->clearMediaCollection('news_Image');
+            $page->addMediaFromRequest('newsImage')->toMediaCollection('news_Image');
         }
 
         $pageTranslation->save();

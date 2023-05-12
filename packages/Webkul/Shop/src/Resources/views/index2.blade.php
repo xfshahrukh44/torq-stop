@@ -3,10 +3,12 @@
 @section('title', 'Home')
 
 @section('content')
-{{--@dd('here')--}}
+@php
+    $decoded_content = json_decode($home->content);
+@endphp
     <div class="preLoader black">
         {{--        <img src="{{asset("themes/default/assets/images/pre12.png")}}" alt="">--}}
-        <img src="{{asset("themes/default/assets/images/logo11.png")}}" alt="">
+        <img src="{{optional($home->page->getMedia('logo')->first())->getUrl()}}" alt="">
     </div>
     <div class="preLoader white"></div>
     <div class="main-slider">
@@ -31,7 +33,7 @@
                 {{--                </div>--}}
                 <div data-interval="5000" class="carousel-item active">
                     <video autoplay loop muted>
-                        <source src="{{asset('themes/default/assets/images/slide1.mp4')}}">
+                        <source src="{{optional($home->page->getMedia('slider_image1')->first())->getUrl()}}">
                     </video>
                     <div class="carousel-caption">
                         <div class="container">
@@ -39,9 +41,8 @@
                                 <div class="col-md-8">
 {{--                                    <h2>TorqStop--}}
 {{--                                        Products</h2>--}}
-                                    <img src="{{asset('themes/default/assets/images/logoMainSec.png')}}" alt="" class="img-fluid">
-                                    <p>PROTECT YOUR INVESTMENT AND KEEP <br>
-                                        YOUR FLEET RUNNING STRONG WHILE STAYING ON BUDGET.</p>
+                                    <img src="{{optional($home->page->getMedia('logo')->first())->getUrl()}}" alt="" class="img-fluid">
+                                    <p>{!!  $decoded_content->sliderHeading0 ?? '' !!}</p>
                                 </div>
                             </div>
                         </div>
@@ -49,19 +50,18 @@
                 </div>
                 <div data-interval="5000" class="carousel-item">
                     <video autoplay loop muted>
-                        <source src="{{asset('themes/default/assets/images/slide2.mp4')}}">
+                        <source src="{{optional($home->page->getMedia('slider_image2')->first())->getUrl()}}">
                     </video>
                     <div class="carousel-caption  text-white">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-8">
-                                    <img src="{{asset('themes/default/assets/images/logoMainSec.png')}}" alt="" class="img-fluid">
+                                    <img src="{{optional($home->page->getMedia('logo')->first())->getUrl()}}" alt="" class="img-fluid">
                                     <h2 class="text-white">
-                                        LIGHT AND MEDIUM-DUTY
+                                        {!!  $decoded_content->sliderHeading1 ?? '' !!}
                                     </h2>
                                     <p>
-                                        FULL RANGE OF HYDRAULIC BRAKE PARTS FOR LIGHT AND MEDIUM DUTY TRUCKS CLASS 1-7,
-                                        INCLUDING LAST MILE DELIVERY VEHICLES.
+                                        {!!  $decoded_content->sliderDes1 ?? '' !!}
                                     </p>
                                 </div>
                             </div>
@@ -69,18 +69,18 @@
                     </div>
                 </div>
                 <div data-interval="5000" class="carousel-item">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                    <img class="img-fluid w-100" src="{{optional($home->page->getMedia('slider_image3')->first())->getUrl()}}"
                          alt="First slide">
                     <div class="carousel-caption text-white">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-10">
-                                    <img src="{{asset('themes/default/assets/images/logoMainSec.png')}}" alt="" class="img-fluid">
+                                    <img src="{{optional($home->page->getMedia('logo')->first())->getUrl()}}" alt="" class="img-fluid">
                                     <h2 class="text-white">
-                                        ALL TORQSTOP PRODUCTS ARE 100% ALL NEW – NO CORES
+                                        {!!  $decoded_content->sliderHeading2 ?? '' !!}
                                     </h2>
                                     <p>
-                                        ULTRA-PREMIUM-QUALITY PARTS PROVIDE EXCEPTIONAL VALUE AND LOWEST COST PER MILE.
+                                        {!!  $decoded_content->sliderDes2 ?? '' !!}
                                     </p>
                                 </div>
                             </div>
@@ -104,16 +104,7 @@
             <div class="row">
                 <div class="col-12">
                     <p>
-                        <span>With over 90 years manufacturing experience,</span> OPC Parts produces OE-quality, 100%
-                        NEW Light,
-                        Medium and Heavy-Duty Commercial Vehicle brake components under the <span>TorqStop™</span> brand
-                        or under
-                        your own Private Label.
-                    </p>
-                    <p>
-                        OPC Parts believes in building longstanding, mutually beneficial relationships. Customer
-                        service is paramount. Our products are high-quality, competitively priced, and readily available
-                        to keep your equipment running and safe.
+                        {!! $decoded_content->content ?? '' !!}
                     </p>
                 </div>
             </div>
@@ -129,7 +120,7 @@
                             {{--                            <a href="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}" data-fancybox="PDF"--}}
                             {{--                            <a target="_blank" href="{{asset('pdf/torq.pdf')}}" data-fancybox="PDF" data-download-src="{{asset('themes/default/assets/images/torqStop-R7.jpg')}}">--}}
 
-                            <img src="{{asset('themes/default/assets/images/literature.jpg')}}" alt="">
+                            <img src="{{optional($home->page->getMedia('info_image1')->first())->getUrl()}}" alt="">
                             <div class="iconOverlay">
                                 <div class="dropdown">
                                     <button type="button" data-toggle="dropdown" aria-expanded="false"><i
@@ -145,7 +136,7 @@
                         </figure>
                         <div class="content">
                             <h4>
-                                Catalogs and Literature
+                                {!!  $decoded_content->infoHeading0 ?? '' !!}
                             </h4>
                         </div>
                         {{--                        <div class="collapse" id="collapseExample">--}}
@@ -165,7 +156,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/distributor-portal.jpg')}}" alt="">
+                            <img src="{{optional($home->page->getMedia('info_image2')->first())->getUrl()}}" alt="">
                             <a href="https://torqstop-ecat.com/Login.aspx?indexlog=logon" target="_blank">
                                 <div class="iconOverlay">
                                     <i class="fas fa-file"></i>
@@ -174,7 +165,7 @@
                         </figure>
                         <div class="content">
                             <h4>
-                                Distributor Portal
+                                {!!  $decoded_content->infoHeading1 ?? '' !!}
                             </h4>
                         </div>
                     </div>
@@ -182,7 +173,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/e-catalog.jpg')}}" alt="">
+                            <img src="{{optional($home->page->getMedia('info_image3')->first())->getUrl()}}" alt="">
                             <a href="https://torqstop-ecat.com" target="_blank">
                                 <div class="iconOverlay">
                                     <i class="fas fa-file"></i>
@@ -191,7 +182,7 @@
                         </figure>
                         <div class="content">
                             <h4>
-                                e-CATALOG
+                                {!!  $decoded_content->infoHeading2 ?? '' !!}
                             </h4>
                         </div>
                     </div>
@@ -199,7 +190,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/represantative.jpg')}}" alt="">
+                            <img src="{{optional($home->page->getMedia('info_image4')->first())->getUrl()}}" alt="">
                             <a href="#" class="anchor_find_a_distributor">
                                 <div class="iconOverlay">
                                     <i class="fas fa-file"></i>
@@ -208,7 +199,7 @@
                         </figure>
                         <div class="content">
                             <h4>
-                                CONTACT YOUR TERRITORY REPRESENTATIVE
+                                {!!  $decoded_content->infoHeading3 ?? '' !!}
                             </h4>
                         </div>
                     </div>
@@ -216,7 +207,7 @@
                 <div class="col">
                     <div class="infoCard">
                         <figure>
-                            <img src="{{asset('themes/default/assets/images/find-distributor.jpg')}}" alt="">
+                            <img src="{{optional($home->page->getMedia('info_image5')->first())->getUrl()}}" alt="">
                             <a href="#" class="anchor_find_a_distributor">
                                 <div class="iconOverlay">
                                     <i class="fas fa-file"></i>
@@ -225,7 +216,7 @@
                         </figure>
                         <div class="content">
                             <h4>
-                                Find a Distributor
+                                {!!  $decoded_content->infoHeading4 ?? '' !!}
                             </h4>
                         </div>
                     </div>
@@ -234,18 +225,18 @@
         </div>
     </section>
 
-    <section class="signupSec">
-        <img src="{{asset('themes/default/assets/images/truck.png')}}" class="img-fluid truck" alt="">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <h2>Sign Up For <br>
-                        Our Newsletter</h2>
-                    {{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="signupSec">--}}
+{{--        <img src="{{asset('themes/default/assets/images/truck.png')}}" class="img-fluid truck" alt="">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row justify-content-center">--}}
+{{--                <div class="col-md-12 text-center">--}}
+{{--                    <h2>Sign Up For <br>--}}
+{{--                        Our Newsletter</h2>--}}
+{{--                    --}}{{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
 @endsection
 

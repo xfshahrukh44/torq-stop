@@ -6,6 +6,7 @@ use App\Models\CustomerReview;
 use App\ProductCategoryField;
 use Illuminate\Http\Request;
 use Webkul\Category\Repositories\CategoryRepository;
+use Webkul\CMS\Models\CmsPageTranslation;
 use Webkul\Product\Repositories\ProductRepository;
 use Webkul\Shop\Http\Controllers\Controller;
 use Webkul\Core\Repositories\SliderRepository;
@@ -13,6 +14,8 @@ use Webkul\Product\Repositories\SearchRepository;
 
 class HomeController extends Controller
 {
+
+
     /**
      * Slider repository instance.
      *
@@ -61,19 +64,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index($id)
     {
 //        dd('here');
         $sliderData = $this->sliderRepository->getActiveSliders();
+        $home = CmsPageTranslation::where('page_title', 'CMS_PAGE')->first();
 
-        return view('shop::index2', compact('sliderData'));
+        return view('shop::index2', compact('sliderData', 'home'));
 
         return view($this->_config['view'], compact('sliderData'));
     }
 
     public function about()
     {
-        return view('shop::about');
+        $about = CmsPageTranslation::where('page_title', 'CMS_PAGE')->first();
+        return view('shop::about', compact('about'));
     }
 
     public function myAccount()
@@ -88,7 +93,8 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view('shop::contact');
+        $contact = CmsPageTranslation::where('page_title', 'CMS_PAGE')->first();
+        return view('shop::contact', compact('contact'));
     }
 
     public function dfw()
