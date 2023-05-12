@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         view()->composer('*', function ($view) {
-            $footer = CmsPageTranslation::where('page_title', 'Footer')->first();
+            $footer = CmsPageTranslation::where('page_title', 'CMS_PAGE')->first();
             $view->with('footer', $footer);
         });
     }

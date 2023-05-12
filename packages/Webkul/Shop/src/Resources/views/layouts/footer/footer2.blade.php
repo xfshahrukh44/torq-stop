@@ -3,11 +3,23 @@
         $decoded_content = json_decode($footer->content);
     @endphp
 {{--    @dd($decoded_content)--}}
+
+    <section class="signupSec">
+        <img src="{{optional($footer->page->getMedia('news_Image')->first())->getUrl()}}" class="img-fluid truck" alt="">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <h2>{{$decoded_content->newsTitle ?? ''}}</h2>
+                    {{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="container">
         <div class="row justify-content-around">
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
-                <a href="tel:8889966896" class="cntctInfo"><i class="{{$decoded_content->phoneIcon ?? ''}}"></i>{{$decoded_content->trollNum ?? ''}}(Troll-free)</a>
-                <a href="tel:19809877272" class="cntctInfo">{{$decoded_content->localNum ?? ''}}(Local-Free)</a>
+                <a href="tel:8889966896" class="cntctInfo"><i class="{{$decoded_content->phoneIcon ?? ''}}"></i>{{$decoded_content->trollNum ?? ''}}</a>
+                <a href="tel:19809877272" class="cntctInfo">{{$decoded_content->localNum ?? ''}}</a>
             </div>
 {{--            <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">--}}
 {{--                <a href="tel:19809877272" class="cntctInfo"><i class="fas fa-phone-alt"></i>1-980-987-7272 (Local)</a>--}}

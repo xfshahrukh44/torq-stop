@@ -225,18 +225,18 @@
         </div>
     </section>
 
-    <section class="signupSec">
-        <img src="{{asset('themes/default/assets/images/truck.png')}}" class="img-fluid truck" alt="">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <h2>Sign Up For <br>
-                        Our Newsletter</h2>
-                    {{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="signupSec">--}}
+{{--        <img src="{{asset('themes/default/assets/images/truck.png')}}" class="img-fluid truck" alt="">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row justify-content-center">--}}
+{{--                <div class="col-md-12 text-center">--}}
+{{--                    <h2>Sign Up For <br>--}}
+{{--                        Our Newsletter</h2>--}}
+{{--                    --}}{{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
 @endsection
 
