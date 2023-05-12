@@ -35,8 +35,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
-                    <a href="tel:18889966896" class="cntctInfo"><i class="{{$decoded_content->phoneIcon ?? ''}}"></i>{{$decoded_content->trollNum ?? ''}}(Toll-Free)</a>
-                    <a href="tel:19809877272" class="cntctInfo">{{$decoded_content->localNum ?? ''}}(Local)</a>
+                    <a href="tel:18889966896" class="cntctInfo"><i class="{{$decoded_content->phoneIcon ?? ''}}"></i>{{$decoded_content->trollNum ?? ''}}</a>
+                    <a href="tel:19809877272" class="cntctInfo">{{$decoded_content->localNum ?? ''}}</a>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="300">
                     <a href="javascript:void(0)" class="cntctInfo"><i class="{{$decoded_content->addIcon ?? ''}}"></i>{{$decoded_content->address ?? ''}}</a>
