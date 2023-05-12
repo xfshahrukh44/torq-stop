@@ -68,7 +68,7 @@ class HomeController extends Controller
     {
 //        dd('here');
         $sliderData = $this->sliderRepository->getActiveSliders();
-        $home = CmsPageTranslation::where('page_title', 'Home')->first();
+        $home = CmsPageTranslation::where('page_title', 'CMS_PAGE')->first();
 
         return view('shop::index2', compact('sliderData', 'home'));
 
@@ -77,7 +77,7 @@ class HomeController extends Controller
 
     public function about()
     {
-        $about = CmsPageTranslation::where('page_title', 'About Us')->first();
+        $about = CmsPageTranslation::where('page_title', 'CMS_PAGE')->first();
         return view('shop::about', compact('about'));
     }
 
@@ -93,7 +93,7 @@ class HomeController extends Controller
 
     public function contact()
     {
-        $contact = CmsPageTranslation::where('page_title', 'Footer')->first();
+        $contact = CmsPageTranslation::where('page_title', 'CMS_PAGE')->first();
         return view('shop::contact', compact('contact'));
     }
 

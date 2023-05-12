@@ -11,13 +11,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid w-100" src="{{asset('themes/default/assets/images/mainBanner.jpg')}}"
+                    <img class="img-fluid w-100" src="{{optional($about->page->getMedia('slider_image3')->first())->getUrl()}}"
                          alt="First slide">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-6">
-                                    <h2>{{$about->page_title}}</h2>
+                                    <h2>{{$decoded_content->aboutHeading ?? ''}}</h2>
                                 </div>
                                 {{--                                <div class="col-md-6">--}}
                                 {{--                                    <figure class="blast">--}}
@@ -51,7 +51,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <figure class="reveal">
-                        <img src="{{optional($about->page->getMedia('about_Section_Image2')->first())->getUrl()}}" alt="">
+                        <img src="{{optional($about->page->getMedia('about_Section_Image1')->first())->getUrl()}}" alt="">
                     </figure>
                 </div>
                 <div class="col-md-6">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-md-5">
                     <figure>
-                        <img src="{{asset('themes/default/assets/images/about1.jpg')}}" class="img-fluid" alt="">
+                        <img src="{{optional($about->page->getMedia('about_Section_Image2')->first())->getUrl()}}" class="img-fluid" alt="">
                     </figure>
                 </div>
                 <div class="col-12">
@@ -123,17 +123,17 @@
     </section>
 
 
-    <section class="signupSec">
-        <img src="{{asset('themes/default/assets/images/truck.png')}}" class="img-fluid truck" alt="">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <h2>Sign Up For <br>
-                        Our Newsletter</h2>
-                    {{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="signupSec">--}}
+{{--        <img src="{{asset('themes/default/assets/images/truck.png')}}" class="img-fluid truck" alt="">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row justify-content-center">--}}
+{{--                <div class="col-md-12 text-center">--}}
+{{--                    <h2>Sign Up For <br>--}}
+{{--                        Our Newsletter</h2>--}}
+{{--                    --}}{{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
 @endsection
