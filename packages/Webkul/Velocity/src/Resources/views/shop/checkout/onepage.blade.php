@@ -172,10 +172,10 @@
                                 <span>Total</span>
                                 <strong>${{$cart->grand_total ?? ''}}</strong>
                             </div>
-                            <hr class="w-100">
-                            <div class="col-md-12 text-center shippngBTn mt-4">
-                                <a href="{{route('shop.step3')}}" class="themeBtns">proceed to checkout</a>
-                            </div>
+{{--                            <hr class="w-100">--}}
+{{--                            <div class="col-md-12 text-center shippngBTn mt-4">--}}
+{{--                                <a href="{{route('shop.step3')}}" class="themeBtns">proceed to checkout</a>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
 
