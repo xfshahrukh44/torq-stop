@@ -5,6 +5,7 @@
 @stop
 
 @section('content-wrapper')
+{{--@dd("HEr");--}}
     <section class="cart">
         @if ($cart)
             <div class="title">

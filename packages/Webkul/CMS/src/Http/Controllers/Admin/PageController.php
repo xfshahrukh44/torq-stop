@@ -2,6 +2,8 @@
 
 namespace Webkul\CMS\Http\Controllers\Admin;
 
+use App\Models\CustomerReview;
+use Datatables;
 use Illuminate\Http\Request;
 use Webkul\Admin\DataGrids\CMSPageDataGrid;
 use Webkul\CMS\Http\Controllers\Controller;
@@ -410,4 +412,66 @@ class PageController extends Controller
 
         return redirect()->route('admin.cms.index');
     }
+
+//    //*** JSON Request
+//    public function reviewDatatables()
+//    {
+//        $datas = CustomerReview::latest('id')->get();
+//        //--- Integrating This Collection Into Datatables
+//        return Datatables::of($datas)
+////	                            ->addColumn('name', function(Review $data) {
+////									$name =  mb_strlen(strip_tags($data->product->name),'UTF-8') > 50 ? mb_substr(strip_tags($data->product->name),0,50,'UTF-8').'...' : strip_tags($data->product->name);
+////	                                $product = '<a href="'.route('front.product',$data->product->slug).'" target="_blank">'.$name.'</a>';
+////	                                return $product;
+////	                            })
+//            ->addColumn('name', function (CustomerReview $data) {
+//                $name = $data->name;
+//                return $name;
+//            })
+//            ->addColumn('last_name', function (CustomerReview $data) {
+//                $last_name = $data->last_name;
+//                return $last_name;
+//            })
+//            ->addColumn('review', function (CustomerReview $data) {
+//                $text = mb_strlen(strip_tags($data->review), 'UTF-8') > 250 ? mb_substr(strip_tags($data->review), 0, 250, 'UTF-8') . '...' : strip_tags($data->review);
+//                return $text;
+//            })
+//            ->addColumn('action', function (CustomerReview $data) {
+//                return '<div class="action-list"><a data-href="' . route('admin-rating-show', $data->id) . '" class="view details-width" data-toggle="modal" data-target="#modal1"> <i class="fas fa-eye"></i>' . __('Details') . '</a><a href="javascript:;" data-href="' . route('admin-rating-delete', $data->id) . '" data-toggle="modal" data-target="#confirm-delete" class="delete"><i class="fas fa-trash-alt"></i></a></div>';
+//            })
+//            ->rawColumns(['product', 'action'])
+//            ->toJson(); //--- Returning Json Data To Client Side
+//    }
+//
+//    public function reviewIndex()
+//    {
+//        return view($this->_config['view']);
+////        return view('admin::review.index');
+//    }
+//
+//    //*** GET Request
+//    public function reviewShow($id)
+//    {
+//        $data = CustomerReview::findOrFail($id);
+////	        dd($data);
+//        return view('admin::review.show', compact('data'));
+//    }
+//
+//    //*** GET Request Delete
+//    public function reviewDestroy($id)
+//    {
+//        $rating = CustomerReview::findOrFail($id);
+////		    dd($rating);
+//        $rating->delete();
+//        //--- Redirect Section
+//        $msg = __('Data Deleted Successfully.');
+//        return response()->json($msg);
+//        //--- Redirect Section Ends
+//    }
+
+
+
+
+
+
 }

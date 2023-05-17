@@ -69,9 +69,19 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
 
     Route::post('/checkout/save-order', [OnepageController::class, 'saveOrder'])->name('shop.checkout.save-order');
 
+    Route::post('/checkout/proceed-to-checkout', [OnepageController::class, 'proceedToCheckOut'])
+        ->defaults('_config', [
+            'redirect' => 'shop::checkout.success'
+        ])
+        ->name('shop.checkout.proceed-to-checkout');
+
     Route::get('/checkout/success', [OnepageController::class, 'success'])->defaults('_config', [
         'view' => 'shop::checkout.success'
     ])->name('shop.checkout.success');
+
+    Route::get('/checkout/cancel', [OnepageController::class, 'failure'])->defaults('_config', [
+        'redirect' => 'shop.checkout.cart.index'
+    ])->name('shop.checkout.cancel');
 
     Route::prefix('customer')->group(function () {
         /**
