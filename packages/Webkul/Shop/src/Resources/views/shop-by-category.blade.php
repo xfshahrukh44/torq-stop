@@ -3,7 +3,7 @@
 @section('title', 'Shop')
 
 @section('content')
-
+{{--@dd('here')--}}
     <div class="main-slider innerbaner productBanner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">

@@ -5,7 +5,7 @@
 @stop
 
 @section('content-wrapper')
-
+{{--@dd('here')--}}
     <div class="content full-page dashboard">
         <div class="page-header">
             <div class="page-title">
@@ -137,6 +137,17 @@
                         {{ core()->formatBasePrice($statistics['total_unpaid_invoices']) }}
                     </div>
                 </div>
+
+                <div class="dashboard-card d-flex justify-content-center">
+                    <div class="title">
+                        <a href="{{ route('admin.customer.reviews') }}">
+                            <span>{{ __('Customer Reviews') }}</span>
+                        </a>
+                    </div>
+                </div>
+{{--                <li>--}}
+{{--                    <a href=""><span>{{ __('Product Reviews') }}</span></a>--}}
+{{--                </li>--}}
 
             </div>
 

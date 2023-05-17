@@ -63,6 +63,9 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     Route::get('/step2', [HomeController::class, 'step2'])->name('shop.step2');
     //step3
     Route::get('/step3', [HomeController::class, 'step3'])->name('shop.step3');
+
+    Route::post('/process_payment',[HomeController::class, 'process_payment'])->name('front.process_payment');
+//    Route::post('/place_order',[HomeController::class, 'place_order'])->name('front.place_order');
 //    Air Brake
     Route::get('/air-brake', [HomeController::class, 'airBrake'])->name('airBrake');
 //    Air Brake
