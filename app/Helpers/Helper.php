@@ -1,8 +1,51 @@
 <?php
 
+use App\Models\Setting;
 use App\ProductCategoryField;
 use Illuminate\Support\Facades\Mail;
 use Webkul\Category\Models\Category;
+
+function get_stripe_secret_key ()
+{
+    if (!$setting = Setting::find(1)) {
+        return false;
+    }
+
+    if ($setting->is_test_mode) {
+        return $setting->stripe_test_secret_key;
+    }
+
+    return $setting->stripe_live_secret_key;
+}
+
+function get_stripe_publishable_key ()
+{
+    if (!$setting = Setting::find(1)) {
+        return false;
+    }
+
+    if ($setting->is_test_mode) {
+        return $setting->stripe_test_publishable_key;
+    }
+
+    return $setting->stripe_test_publishable_key;
+}
+
+function get_cart_count () {
+    if (!Auth::check()) {
+        return 0;
+    }
+
+    $cart = Cart::where([
+        'customer_id' => auth()->guard()->user()->id,
+    ])->orderBy('created_at', 'DESC')->first();
+
+    if (!$cart) {
+        return 0;
+    }
+
+    return $cart->items->count();
+}
 
 function sanitize_product_category_fields ()
 {
@@ -76,5 +119,30 @@ function send_mail($from, $to, $subject, $html) {
         return true;
     } else {
         return false;
+    }
+
+    function generateRandomString($length = 6) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
+    function get_payment_keys() {
+        $setting = Setting::findOrFail(1);
+        return [
+            "secret_key" => $setting->stripe_env == 'Testing' ? $setting->stripe_testing_secret_key : $setting->stripe_secret_key,
+            "publishable_key" => $setting->stripe_env == 'Testing' ? $setting->stripe_testing_publishable_key : $setting->stripe_publishable_key,
+        ];
+    }
+
+    function get_tax_value($total) {
+        $settings = Setting::find(1);
+        $tax_rate = $settings->tax_rate;
+
+        return floatval(str_replace(',', '', $total)) * (floatval($tax_rate) / 100);
     }
 }

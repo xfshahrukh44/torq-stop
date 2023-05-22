@@ -3,7 +3,7 @@
 @section('title', 'Product Detail')
 
 @section('content')
-
+    {{--@dd('here')--}}
     <div class="main-slider innerbaner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -77,21 +77,33 @@
                         </span>
                         <p>{!! $product['description'] !!}</p>
                     </div>
-                    <div class="proCounter count mr-4">
-                        <span class="minus"><i class="fa fa-angle-down"></i></span>
-                        <input type="text" value="1"/>
-                        <span class="plus"><i class="fa fa-angle-up"></i></span>
-                        <div class="cartBtn">
-                            <!-- <a href="step1.php" class="themeBtn">Bulk Product </a> -->
-{{--                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk--}}
-{{--                                Product--}}
-{{--                            </button>--}}
+                    {{--                     @dd($product['inventory_sources'][0]['pivot']['qty']);--}}
+                    <form action="{{ route('cart.add', $product['id']) }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $product['id'] }}">
+                        <div class="proCounter count mr-4">
+                            <span class="minus"><i class="fa fa-angle-down"></i></span>
+                            <input type="text" name="quantity" value="1">
+                            <span class="plus"><i class="fa fa-angle-up"></i></span>
+                            <div class="cartBtn">
+                                <!-- <a href="step1.php" class="themeBtn">Bulk Product </a> -->
+                                {{--                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk--}}
+                                {{--                                Product--}}
+                                {{--                            </button>--}}
 
+                            </div>
+                            {{--                        @dd($product)--}}
+                            @if($product['status'] && $product['inventory_sources'][0]['pivot']['qty'] > 0)
+                                <button>Add to Cart</button>
+                            @else
+                                <h1 class="text-white">Out Of Stock</h1>
+                            @endif
+
+                            {{--                        <div class="cartBtn">--}}
+                            {{--                            <a href="{{route('shop.step1')}}" class="themeBtn">Add to Cart</a>--}}
+                            {{--                        </div>--}}
                         </div>
-                        <div class="cartBtn">
-                            <a href="{{route('shop.step1')}}" class="themeBtn">Add to Cart</a>
-                        </div>
-                    </div>
+                    </form>
 
                     <div class="row">
                         <div class="col-md-12">
@@ -179,4 +191,36 @@
         </div>
     </div>
 
+
+    <script>
+        // Get the input field and plus/minus buttons
+        var input = document.querySelector('input[name="quantity"]');
+        var minusBtn = document.querySelector('.minus');
+        var plusBtn = document.querySelector('.plus');
+        var cartBtn = document.querySelector('.cartBtn');
+
+        // Add event listener for the minus button
+        minusBtn.addEventListener('click', function () {
+            var currentValue = parseInt(input.value);
+
+            if (currentValue > 1) {
+                input.value = currentValue - 1;
+            }
+        });
+
+        // Add event listener for the plus button
+        plusBtn.addEventListener('click', function () {
+            var currentValue = parseInt(input.value);
+            input.value = currentValue + 1;
+        });
+
+        // Add event listener for the cart button
+        cartBtn.addEventListener('click', function () {
+            var quantity = parseInt(input.value);
+            // Perform the necessary action when the cart button is clicked
+            // For example, you can add the product with the selected quantity to the cart
+        });
+    </script>
+
 @endsection
+

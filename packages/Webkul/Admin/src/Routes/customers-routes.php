@@ -110,6 +110,20 @@ Route::group(['middleware' => ['web', 'admin', 'admin_locale'], 'prefix' => conf
     Route::post('reviews/massupdate', [ReviewController::class, 'massUpdate'])->defaults('_config', [
         'redirect' => 'admin.customer.review.index',
     ])->name('admin.customer.review.massupdate');
+    // RATING SECTION ENDS------------
+    Route::get('/customer-reviews/datatables',[ReviewController::class, 'customerDatatables'])->name('admin.customer.reviews.datatables');//JSON REQUEST
+    Route::get('/customer-reviews',[ReviewController::class, 'customerReviews'])->name('admin.customer.reviews');
+    Route::get('/customer-reviews/delete/{id}',[ReviewController::class, 'customerDestroy'])->name('admin.customer.reviews.delete');
+    Route::get('/customer-reviews/show/{id}',[ReviewController::class, 'customerShow'])->name('admin.customer.reviews.show');
+
+    // RATING SECTION ENDS------------
+//
+//    Route::get('/ratings/datatables', 'Admin\RatingController@datatables')->name('admin-rating-datatables'); //JSON REQUEST
+//    Route::get('/customer-reviews', 'Admin\RatingController@index')->name('admin-rating-index');
+//    Route::delete('/ratings/delete/{id}', 'Admin\RatingController@destroy')->name('admin-rating-delete');
+//    Route::get('/ratings/show/{id}', 'Admin\RatingController@show')->name('admin-rating-show');
+
+
 
     /**
      * Customer groups routes.

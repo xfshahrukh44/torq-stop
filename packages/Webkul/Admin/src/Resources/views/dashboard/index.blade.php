@@ -5,7 +5,7 @@
 @stop
 
 @section('content-wrapper')
-
+{{--@dd('here')--}}
     <div class="content full-page dashboard">
         <div class="page-header">
             <div class="page-title">
@@ -138,236 +138,247 @@
                     </div>
                 </div>
 
-            </div>
-
-            <div class="graph-stats">
-
-                <div class="left-card-container graph">
-                    <div class="card" style="overflow: hidden;">
-                        <div class="card-title" style="margin-bottom: 30px;">
-                            {{ __('admin::app.dashboard.sales') }}
-                        </div>
-
-                        <div class="card-info" style="height: 100%;">
-
-                            <canvas id="myChart" style="width: 100%; height: 87%"></canvas>
-
-                        </div>
+                <div class="dashboard-card d-flex justify-content-center">
+                    <div class="title">
+                        <a href="{{ route('admin.customer.reviews') }}">
+                            <span>{{ __('Customer Reviews') }}</span>
+                        </a>
                     </div>
                 </div>
-
-                <div class="right-card-container category">
-                    <div class="card">
-                        <div class="card-title">
-                            {{ __('admin::app.dashboard.top-performing-categories') }}
-                        </div>
-
-                        <div class="card-info {{ !count($statistics['top_selling_categories']) ? 'center' : '' }}">
-                            <ul>
-
-                                @foreach ($statistics['top_selling_categories'] as $item)
-
-                                    <li>
-                                        <a href="{{ route('admin.catalog.categories.edit', $item->category_id) }}">
-                                            <div class="description">
-                                                <div class="name">
-                                                    {{ $item->name }}
-                                                </div>
-
-                                                <div class="info">
-                                                    {{ __('admin::app.dashboard.product-count', ['count' => $item->total_products]) }}
-                                                    &nbsp;.&nbsp;
-                                                    {{ __('admin::app.dashboard.sale-count', ['count' => $item->total_qty_invoiced]) }}
-                                                </div>
-                                            </div>
-
-                                            <span class="icon angle-right-icon"></span>
-                                        </a>
-                                    </li>
-
-                                @endforeach
-
-                            </ul>
-
-                            @if (! count($statistics['top_selling_categories']))
-
-                                <div class="no-result-found">
-
-                                    <i class="icon no-result-icon"></i>
-                                    <p>{{ __('admin::app.common.no-result-found') }}</p>
-
-                                </div>
-
-                            @endif
-                        </div>
-                    </div>
-                </div>
+{{--                <li>--}}
+{{--                    <a href=""><span>{{ __('Product Reviews') }}</span></a>--}}
+{{--                </li>--}}
 
             </div>
 
-            <div class="sale-stock">
-                <div class="card">
-                    <div class="card-title">
-                        {{ __('admin::app.dashboard.top-selling-products') }}
-                    </div>
+{{--            <div class="graph-stats">--}}
 
-                    <div class="card-info {{ !count($statistics['top_selling_products']) ? 'center' : '' }}">
-                        <ul>
+{{--                <div class="left-card-container graph">--}}
+{{--                    <div class="card" style="overflow: hidden;">--}}
+{{--                        <div class="card-title" style="margin-bottom: 30px;">--}}
+{{--                            {{ __('admin::app.dashboard.sales') }}--}}
+{{--                        </div>--}}
 
-                            @foreach ($statistics['top_selling_products'] as $item)
+{{--                        <div class="card-info" style="height: 100%;">--}}
 
-                                <li>
-                                    <a href="{{ route('admin.catalog.products.edit', $item->product_id) }}">
-                                        <div class="product image">
-                                            <?php $productBaseImage = productimage()->getProductBaseImage($item->product); ?>
+{{--                            <canvas id="myChart" style="width: 100%; height: 87%"></canvas>--}}
 
-                                            <img class="item-image" src="{{ $productBaseImage['small_image_url'] ?? asset('vendor/webkul/ui/assets/images/product/small-product-placeholder.webp') }}" />
-                                        </div>
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                                        <div class="description do-not-cross-arrow">
-                                            <div class="name ellipsis">
-                                                @if (isset($item->name))
-                                                    {{ $item->name }}
-                                                @endif
-                                            </div>
+{{--                <div class="right-card-container category">--}}
+{{--                    <div class="card">--}}
+{{--                        <div class="card-title">--}}
+{{--                            {{ __('admin::app.dashboard.top-performing-categories') }}--}}
+{{--                        </div>--}}
 
-                                            <div class="info">
-                                                {{ __('admin::app.dashboard.sale-count', ['count' => $item->total_qty_invoiced]) }}
-                                            </div>
-                                        </div>
+{{--                        <div class="card-info {{ !count($statistics['top_selling_categories']) ? 'center' : '' }}">--}}
+{{--                            <ul>--}}
 
-                                        <span class="icon angle-right-icon"></span>
-                                    </a>
-                                </li>
+{{--                                @foreach ($statistics['top_selling_categories'] as $item)--}}
 
-                            @endforeach
+{{--                                    <li>--}}
+{{--                                        <a href="{{ route('admin.catalog.categories.edit', $item->category_id) }}">--}}
+{{--                                            <div class="description">--}}
+{{--                                                <div class="name">--}}
+{{--                                                    {{ $item->name }}--}}
+{{--                                                </div>--}}
 
-                        </ul>
+{{--                                                <div class="info">--}}
+{{--                                                    {{ __('admin::app.dashboard.product-count', ['count' => $item->total_products]) }}--}}
+{{--                                                    &nbsp;.&nbsp;--}}
+{{--                                                    {{ __('admin::app.dashboard.sale-count', ['count' => $item->total_qty_invoiced]) }}--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
 
-                        @if (! count($statistics['top_selling_products']))
+{{--                                            <span class="icon angle-right-icon"></span>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
 
-                            <div class="no-result-found">
+{{--                                @endforeach--}}
 
-                                <i class="icon no-result-icon"></i>
-                                <p>{{ __('admin::app.common.no-result-found') }}</p>
+{{--                            </ul>--}}
 
-                            </div>
+{{--                            @if (! count($statistics['top_selling_categories']))--}}
 
-                        @endif
-                    </div>
-                </div>
+{{--                                <div class="no-result-found">--}}
 
-                <div class="card">
-                    <div class="card-title">
-                        {{ __('admin::app.dashboard.customer-with-most-sales') }}
-                    </div>
+{{--                                    <i class="icon no-result-icon"></i>--}}
+{{--                                    <p>{{ __('admin::app.common.no-result-found') }}</p>--}}
 
-                    <div class="card-info {{ !count($statistics['customer_with_most_sales']) ? 'center' : '' }}">
-                        <ul>
+{{--                                </div>--}}
 
-                            @foreach ($statistics['customer_with_most_sales'] as $item)
+{{--                            @endif--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                                <li>
-                                    @if ($item->customer_id)
-                                        <a href="{{ route('admin.customer.edit', $item->customer_id) }}">
-                                    @endif
+{{--            </div>--}}
 
-                                        <div class="image">
-                                            <span class="icon profile-pic-icon"></span>
-                                        </div>
+{{--            <div class="sale-stock">--}}
+{{--                <div class="card">--}}
+{{--                    <div class="card-title">--}}
+{{--                        {{ __('admin::app.dashboard.top-selling-products') }}--}}
+{{--                    </div>--}}
 
-                                        <div class="description do-not-cross-arrow">
-                                            <div class="name ellipsis">
-                                                {{ $item->customer_full_name }}
-                                            </div>
+{{--                    <div class="card-info {{ !count($statistics['top_selling_products']) ? 'center' : '' }}">--}}
+{{--                        <ul>--}}
 
-                                            <div class="info">
-                                                {{ __('admin::app.dashboard.order-count', ['count' => $item->total_orders]) }}
-                                                    &nbsp;.&nbsp;
-                                                {{ __('admin::app.dashboard.revenue', [
-                                                    'total' => core()->formatBasePrice($item->total_base_grand_total)
-                                                    ])
-                                                }}
-                                            </div>
-                                        </div>
+{{--                            @foreach ($statistics['top_selling_products'] as $item)--}}
 
-                                        <span class="icon angle-right-icon"></span>
+{{--                                <li>--}}
+{{--                                    <a href="{{ route('admin.catalog.products.edit', $item->product_id) }}">--}}
+{{--                                        <div class="product image">--}}
+{{--                                            <?php $productBaseImage = productimage()->getProductBaseImage($item->product); ?>--}}
 
-                                    @if ($item->customer_id)
-                                        </a>
-                                    @endif
-                                </li>
+{{--                                            <img class="item-image" src="{{ $productBaseImage['small_image_url'] ?? asset('vendor/webkul/ui/assets/images/product/small-product-placeholder.webp') }}" />--}}
+{{--                                        </div>--}}
 
-                            @endforeach
+{{--                                        <div class="description do-not-cross-arrow">--}}
+{{--                                            <div class="name ellipsis">--}}
+{{--                                                @if (isset($item->name))--}}
+{{--                                                    {{ $item->name }}--}}
+{{--                                                @endif--}}
+{{--                                            </div>--}}
 
-                        </ul>
+{{--                                            <div class="info">--}}
+{{--                                                {{ __('admin::app.dashboard.sale-count', ['count' => $item->total_qty_invoiced]) }}--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                        @if (! count($statistics['customer_with_most_sales']))
+{{--                                        <span class="icon angle-right-icon"></span>--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
 
-                            <div class="no-result-found">
+{{--                            @endforeach--}}
 
-                                <i class="icon no-result-icon"></i>
-                                <p>{{ __('admin::app.common.no-result-found') }}</p>
+{{--                        </ul>--}}
 
-                            </div>
+{{--                        @if (! count($statistics['top_selling_products']))--}}
 
-                        @endif
-                    </div>
+{{--                            <div class="no-result-found">--}}
 
-                </div>
+{{--                                <i class="icon no-result-icon"></i>--}}
+{{--                                <p>{{ __('admin::app.common.no-result-found') }}</p>--}}
 
-                <div class="card">
-                    <div class="card-title">
-                        {{ __('admin::app.dashboard.stock-threshold') }}
-                    </div>
+{{--                            </div>--}}
 
-                    <div class="card-info {{ !count($statistics['stock_threshold']) ? 'center' : '' }}">
-                        <ul>
+{{--                        @endif--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                            @foreach ($statistics['stock_threshold'] as $item)
+{{--                <div class="card">--}}
+{{--                    <div class="card-title">--}}
+{{--                        {{ __('admin::app.dashboard.customer-with-most-sales') }}--}}
+{{--                    </div>--}}
 
-                                <li>
-                                    <a href="{{ route('admin.catalog.products.edit', $item->product_id) }}">
-                                        <div class="image">
-                                            <?php $productBaseImage = productimage()->getProductBaseImage($item->product); ?>
+{{--                    <div class="card-info {{ !count($statistics['customer_with_most_sales']) ? 'center' : '' }}">--}}
+{{--                        <ul>--}}
 
-                                            <img class="item-image" src="{{ $productBaseImage['small_image_url'] }}" />
-                                        </div>
+{{--                            @foreach ($statistics['customer_with_most_sales'] as $item)--}}
 
-                                        <div class="description do-not-cross-arrow">
-                                            <div class="name ellipsis">
-                                                @if (isset($item->product->name))
-                                                    {{ $item->product->name }}
-                                                @endif
-                                            </div>
+{{--                                <li>--}}
+{{--                                    @if ($item->customer_id)--}}
+{{--                                        <a href="{{ route('admin.customer.edit', $item->customer_id) }}">--}}
+{{--                                    @endif--}}
 
-                                            <div class="info">
-                                                {{ __('admin::app.dashboard.qty-left', ['qty' => $item->total_qty]) }}
-                                            </div>
-                                        </div>
+{{--                                        <div class="image">--}}
+{{--                                            <span class="icon profile-pic-icon"></span>--}}
+{{--                                        </div>--}}
 
-                                        <span class="icon angle-right-icon"></span>
-                                    </a>
-                                </li>
+{{--                                        <div class="description do-not-cross-arrow">--}}
+{{--                                            <div class="name ellipsis">--}}
+{{--                                                {{ $item->customer_full_name }}--}}
+{{--                                            </div>--}}
 
-                            @endforeach
+{{--                                            <div class="info">--}}
+{{--                                                {{ __('admin::app.dashboard.order-count', ['count' => $item->total_orders]) }}--}}
+{{--                                                    &nbsp;.&nbsp;--}}
+{{--                                                {{ __('admin::app.dashboard.revenue', [--}}
+{{--                                                    'total' => core()->formatBasePrice($item->total_base_grand_total)--}}
+{{--                                                    ])--}}
+{{--                                                }}--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                        </ul>
+{{--                                        <span class="icon angle-right-icon"></span>--}}
 
-                        @if (! count($statistics['stock_threshold']))
+{{--                                    @if ($item->customer_id)--}}
+{{--                                        </a>--}}
+{{--                                    @endif--}}
+{{--                                </li>--}}
 
-                            <div class="no-result-found">
+{{--                            @endforeach--}}
 
-                                <i class="icon no-result-icon"></i>
-                                <p>{{ __('admin::app.common.no-result-found') }}</p>
+{{--                        </ul>--}}
 
-                            </div>
+{{--                        @if (! count($statistics['customer_with_most_sales']))--}}
 
-                        @endif
-                    </div>
+{{--                            <div class="no-result-found">--}}
 
-                </div>
-            </div>
+{{--                                <i class="icon no-result-icon"></i>--}}
+{{--                                <p>{{ __('admin::app.common.no-result-found') }}</p>--}}
+
+{{--                            </div>--}}
+
+{{--                        @endif--}}
+{{--                    </div>--}}
+
+{{--                </div>--}}
+
+{{--                <div class="card">--}}
+{{--                    <div class="card-title">--}}
+{{--                        {{ __('admin::app.dashboard.stock-threshold') }}--}}
+{{--                    </div>--}}
+
+{{--                    <div class="card-info {{ !count($statistics['stock_threshold']) ? 'center' : '' }}">--}}
+{{--                        <ul>--}}
+
+{{--                            @foreach ($statistics['stock_threshold'] as $item)--}}
+
+{{--                                <li>--}}
+{{--                                    <a href="{{ route('admin.catalog.products.edit', $item->product_id) }}">--}}
+{{--                                        <div class="image">--}}
+{{--                                            <?php $productBaseImage = productimage()->getProductBaseImage($item->product); ?>--}}
+
+{{--                                            <img class="item-image" src="{{ $productBaseImage['small_image_url'] }}" />--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="description do-not-cross-arrow">--}}
+{{--                                            <div class="name ellipsis">--}}
+{{--                                                @if (isset($item->product->name))--}}
+{{--                                                    {{ $item->product->name }}--}}
+{{--                                                @endif--}}
+{{--                                            </div>--}}
+
+{{--                                            <div class="info">--}}
+{{--                                                {{ __('admin::app.dashboard.qty-left', ['qty' => $item->total_qty]) }}--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <span class="icon angle-right-icon"></span>--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+
+{{--                            @endforeach--}}
+
+{{--                        </ul>--}}
+
+{{--                        @if (! count($statistics['stock_threshold']))--}}
+
+{{--                            <div class="no-result-found">--}}
+
+{{--                                <i class="icon no-result-icon"></i>--}}
+{{--                                <p>{{ __('admin::app.common.no-result-found') }}</p>--}}
+
+{{--                            </div>--}}
+
+{{--                        @endif--}}
+{{--                    </div>--}}
+
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 
