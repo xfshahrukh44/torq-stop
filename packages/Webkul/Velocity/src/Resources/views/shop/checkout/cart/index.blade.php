@@ -45,16 +45,19 @@
                             {{--                            @dd($item)--}}
                             <strong class="price">${{ $item->price }}</strong>
                         </div>
-                        <div class="col-md-2 col-sm-3">
-                            <div class="proCounter">
-                                <span class="minus action-btn {{ $item->quantity > 1 ? 'rmvQty' : null }}"
-                                      data-id="{{ $item->id }}"
-                                      data-qty="{{ $item->quantity }}">-</span>
-                                <input type="text" value="{{ $item->quantity }}"/>
-                                <span class="plus addQty action-btn" data-id="{{ $item->product_id }}"
-                                      data-qty="{{ $item->quantity }}">+</span>
-                            </div>
-                        </div>
+
+{{--                        <--Commented to live the project but have to fix this-->--}}
+
+{{--                        <div class="col-md-2 col-sm-3">--}}
+{{--                            <div class="proCounter">--}}
+{{--                                <span class="minus action-btn {{ $item->quantity > 1 ? 'rmvQty' : null }}"--}}
+{{--                                      data-id="{{ $item->id }}"--}}
+{{--                                      data-qty="{{ $item->quantity }}">-</span>--}}
+{{--                                <input type="text" value="{{ $item->quantity }}"/>--}}
+{{--                                <span class="plus addQty action-btn" data-id="{{ $item->product_id }}"--}}
+{{--                                      data-qty="{{ $item->quantity }}">+</span>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <div class="col-sm-1">
                             <a href="{{ route('shop.checkout.cart.remove', $item->id) }}" class="delete action-btn"
                                onclick="removeLink('{{ __('shop::app.checkout.cart.cart-remove-action') }}')">
@@ -63,6 +66,7 @@
                         </div>
                     </div>
                 @endforeach
+{{--            @dd('here')--}}
                 <div class="row">
                     <div class="col-lg-12">
                         {{--                        <a href="{{ route('shop.checkout.onepage.index') }}" class="themeBtn action-btn proc-to-pay text-center">proceed to pay</a>--}}
