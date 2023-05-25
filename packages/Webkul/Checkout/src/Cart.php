@@ -276,6 +276,7 @@ class Cart
      */
     public function updateItems($data)
     {
+
         foreach ($data['qty'] as $itemId => $quantity) {
             $item = $this->cartItemRepository->findOneByField('id', $itemId);
 
