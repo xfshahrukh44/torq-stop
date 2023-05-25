@@ -48,16 +48,18 @@
 
 {{--                        <--Commented to live the project but have to fix this-->--}}
 
-{{--                        <div class="col-md-2 col-sm-3">--}}
-{{--                            <div class="proCounter">--}}
-{{--                                <span class="minus action-btn {{ $item->quantity > 1 ? 'rmvQty' : null }}"--}}
-{{--                                      data-id="{{ $item->id }}"--}}
-{{--                                      data-qty="{{ $item->quantity }}">-</span>--}}
-{{--                                <input type="text" value="{{ $item->quantity }}"/>--}}
-{{--                                <span class="plus addQty action-btn" data-id="{{ $item->product_id }}"--}}
-{{--                                      data-qty="{{ $item->quantity }}">+</span>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+
+                        <div class="col-md-2 col-sm-3">
+                            <div class="proCounter">
+                                <span class="minus action-btn {{ $item->quantity > 1 ? 'rmvQty' : "" }}"
+                                      data-id="{{ $item->id }}"
+                                      data-qty="{{ $item->quantity }}">-</span>
+                                <input type="text" value="{{ $item->quantity }}"/>
+                                <span class="plus addQty action-btn" data-id="{{ $item->id }}"
+                                      data-qty="{{ $item->quantity }}">+</span>
+                            </div>
+                        </div>
+
                         <div class="col-sm-1">
                             <a href="{{ route('shop.checkout.cart.remove', $item->id) }}" class="delete action-btn"
                                onclick="removeLink('{{ __('shop::app.checkout.cart.cart-remove-action') }}')">
@@ -77,11 +79,11 @@
                     <input type="hidden" name="product_id">
                     <input type="hidden" name="quantity" value="1">
                 </form>
-                <form id="remove-to-cart" action="{{ route('shop.checkout.cart.update') }}" method="POST">
+                <form id="update-to-cart" action="{{ route('shop.checkout.cart.update') }}" method="POST">
                     @csrf
-                    <input type="hidden" name="rmvQty" value="1">
+{{--                    <input type="hidden" name="rmvQty" value="1">--}}
                     <input type="hidden" name="item_id">
-                    <input type="hidden" name="quantity" value="1">
+                    <input type="hidden" class="cart-qty" name="qty" value="1">
                 </form>
             @else
                 <div class="row cartItemCard">

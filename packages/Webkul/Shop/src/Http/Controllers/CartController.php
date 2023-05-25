@@ -133,6 +133,8 @@ class CartController extends Controller
     public function updateBeforeCheckout()
     {
         try {
+
+
             $result = Cart::updateItems(request()->all());
 
             if ($result) {
