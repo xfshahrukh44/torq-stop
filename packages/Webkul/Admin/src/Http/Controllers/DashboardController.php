@@ -4,8 +4,10 @@ namespace Webkul\Admin\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use Webkul\Customer\Models\Customer;
 use Webkul\Customer\Repositories\CustomerRepository;
 use Webkul\Product\Repositories\ProductInventoryRepository;
+use Webkul\Sales\Models\Order;
 use Webkul\Sales\Repositories\InvoiceRepository;
 use Webkul\Sales\Repositories\OrderItemRepository;
 use Webkul\Sales\Repositories\OrderRepository;
@@ -122,6 +124,9 @@ class DashboardController extends Controller
     {
         //redirect to catalog (for now)
 //        return redirect()->route('admin.catalog.products.index');
+//        $customersCount = Customer::count();
+//        $orderCount = Order::count();
+//        $totalSale = Order::sum('base_grand_total_invoiced');
 
         $this->setStartEndDate();
 
@@ -129,11 +134,14 @@ class DashboardController extends Controller
             /**
              * These are the stats with percentage change.
              */
-            'total_customers'          => [
+//            'totalCustomers' => $customersCount,
+            'total_customers'
+            => [
                 'previous' => $previous = $this->getCustomersBetweenDates($this->lastStartDate, $this->lastEndDate),
                 'current'  => $current = $this->getCustomersBetweenDates($this->startDate, $this->endDate),
                 'progress' => $this->getPercentageChange($previous, $current),
             ],
+//            'totalOrders' => $orderCount,
             'total_orders'             =>  [
                 'previous' => $previous = $this->previousOrders()->count(),
                 'current'  => $current = $this->currentOrders()->count(),

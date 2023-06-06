@@ -3,7 +3,7 @@
 @section('title', 'Product Detail')
 
 @section('content')
-    {{--@dd('here')--}}
+{{--    @dd('here')--}}
     <div class="main-slider innerbaner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -73,37 +73,39 @@
                     <div class="prodctdetailContent">
                         <h2>{{$product['name']}}
                         </h2>
-                        {{--                        <span>${{round($product['price'], 2)}} – ${{round($product['price'], 3)}}--}}
-                        </span>
+{{--                                                <span>${{round($product['price'], 2)}} – ${{round($product['price'], 3)}}--}}
+{{--                        </span>--}}
                         <p>{!! $product['description'] !!}</p>
                     </div>
                     {{--                     @dd($product['inventory_sources'][0]['pivot']['qty']);--}}
-                    <form action="{{ route('cart.add', $product['id']) }}" method="POST">
-                        @csrf
-                        <input type="hidden" name="product_id" value="{{ $product['id'] }}">
-                        <div class="proCounter count mr-4">
-                            <span class="minus"><i class="fa fa-angle-down"></i></span>
-                            <input type="text" name="quantity" value="1">
-                            <span class="plus"><i class="fa fa-angle-up"></i></span>
-                            <div class="cartBtn">
-                                <!-- <a href="step1.php" class="themeBtn">Bulk Product </a> -->
-                                {{--                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk--}}
-                                {{--                                Product--}}
-                                {{--                            </button>--}}
 
-                            </div>
-                            {{--                        @dd($product)--}}
-                            @if($product['status'] && $product['inventory_sources'][0]['pivot']['qty'] > 0)
-                                <button>Add to Cart</button>
-                            @else
-                                <h1 class="text-white">Out Of Stock</h1>
-                            @endif
+                    <a href="{{route('shop.checkout.cart.index',$product['id'])}}"><button>Add to Cart</button></a>
+{{--                    <form action="{{ route('cart.add', $product['id']) }}" method="POST">--}}
+{{--                        @csrf--}}
+{{--                        <input type="hidden" name="product_id" value="{{ $product['id'] }}">--}}
+{{--                        <div class="proCounter count mr-4">--}}
+{{--                            <span class="minus"><i class="fa fa-angle-down"></i></span>--}}
+{{--                            <input type="text" name="quantity" value="1">--}}
+{{--                            <span class="plus"><i class="fa fa-angle-up"></i></span>--}}
+{{--                            <div class="cartBtn">--}}
+{{--                                <!-- <a href="step1.php" class="themeBtn">Bulk Product </a> -->--}}
+{{--                                --}}{{--                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk--}}
+{{--                                --}}{{--                                Product--}}
+{{--                                --}}{{--                            </button>--}}
 
-                            {{--                        <div class="cartBtn">--}}
-                            {{--                            <a href="{{route('shop.step1')}}" class="themeBtn">Add to Cart</a>--}}
-                            {{--                        </div>--}}
-                        </div>
-                    </form>
+{{--                            </div>--}}
+{{--                            --}}{{--                        @dd($product)--}}
+{{--                            @if($product['status'] && $product['inventory_sources'][0]['pivot']['qty'] > 0)--}}
+{{--                                <button>Add to Cart</button>--}}
+{{--                            @else--}}
+{{--                                <h1 class="text-white">Out Of Stock</h1>--}}
+{{--                            @endif--}}
+
+{{--                            --}}{{--                        <div class="cartBtn">--}}
+{{--                            --}}{{--                            <a href="{{route('shop.step1')}}" class="themeBtn">Add to Cart</a>--}}
+{{--                            --}}{{--                        </div>--}}
+{{--                        </div>--}}
+{{--                    </form>--}}
 
                     <div class="row">
                         <div class="col-md-12">
@@ -111,12 +113,16 @@
                                 <tr class="text-center">
                                     <th colspan="2">Details</th>
                                 </tr>
+{{--                                @dd($product['product_category_fields'])--}}
                                 @foreach($product['product_category_fields'] as $product_category_field)
-                                    <tr>
-                                        <th>{{$product_category_field['field_name']}}</th>
-                                        <td>{{$product_category_field['field_value']}}</td>
-                                    </tr>
+                                    @if ($product_category_field['field_name'] !== 'year')
+                                        <tr>
+                                            <th>{{$product_category_field['field_name']}}</th>
+                                            <td>{{$product_category_field['field_value']}}</td>
+                                        </tr>
+                                    @endif
                                 @endforeach
+
                             </table>
                         </div>
                     </div>
@@ -133,18 +139,18 @@
     </section>
 
 
-    <section class="signupSec">
-        <img src="{{asset('themes/default/assets/images/truck.png')}}" class="img-fluid truck" alt="">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <h2>Sign Up For <br>
-                        Our Newsletter</h2>
-                    <a href="" class="themeBtns"><span>Shop Now</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="signupSec">--}}
+{{--        <img src="{{asset('themes/default/assets/images/truck.png')}}" class="img-fluid truck" alt="">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row justify-content-center">--}}
+{{--                <div class="col-md-12 text-center">--}}
+{{--                    <h2>Sign Up For <br>--}}
+{{--                        Our Newsletter</h2>--}}
+{{--                    <a href="" class="themeBtns"><span>Shop Now</span></a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
