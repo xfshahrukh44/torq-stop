@@ -79,33 +79,34 @@
                     </div>
                     {{--                     @dd($product['inventory_sources'][0]['pivot']['qty']);--}}
 
-                    <a href="{{route('shop.checkout.cart.index',$product['id'])}}"><button>Add to Cart</button></a>
-{{--                    <form action="{{ route('cart.add', $product['id']) }}" method="POST">--}}
-{{--                        @csrf--}}
-{{--                        <input type="hidden" name="product_id" value="{{ $product['id'] }}">--}}
-{{--                        <div class="proCounter count mr-4">--}}
+{{--                    <a href="{{route('shop.checkout.cart.index',$product['id'])}}"><button>Add to Cart</button></a>--}}
+                    <form action="{{ route('cart.add', $product['id']) }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $product['id'] }}">
+                        <input type="hidden" name="quantity" value="1">
+                        <div class="proCounter count mr-4">
 {{--                            <span class="minus"><i class="fa fa-angle-down"></i></span>--}}
 {{--                            <input type="text" name="quantity" value="1">--}}
 {{--                            <span class="plus"><i class="fa fa-angle-up"></i></span>--}}
-{{--                            <div class="cartBtn">--}}
-{{--                                <!-- <a href="step1.php" class="themeBtn">Bulk Product </a> -->--}}
-{{--                                --}}{{--                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk--}}
-{{--                                --}}{{--                                Product--}}
-{{--                                --}}{{--                            </button>--}}
+                            <div class="cartBtn">
+                                <!-- <a href="step1.php" class="themeBtn">Bulk Product </a> -->
+{{--                                                            <button type="button" class="themeBtn" data-toggle="modal" data-target="#exampleModal">Bulk--}}
+{{--                                                                Product--}}
+{{--                                                            </button>--}}
 
-{{--                            </div>--}}
-{{--                            --}}{{--                        @dd($product)--}}
+                            </div>
+{{--                                                    @dd($product)--}}
 {{--                            @if($product['status'] && $product['inventory_sources'][0]['pivot']['qty'] > 0)--}}
-{{--                                <button>Add to Cart</button>--}}
+                                <button>Add to Cart</button>
 {{--                            @else--}}
 {{--                                <h1 class="text-white">Out Of Stock</h1>--}}
 {{--                            @endif--}}
 
-{{--                            --}}{{--                        <div class="cartBtn">--}}
-{{--                            --}}{{--                            <a href="{{route('shop.step1')}}" class="themeBtn">Add to Cart</a>--}}
-{{--                            --}}{{--                        </div>--}}
-{{--                        </div>--}}
-{{--                    </form>--}}
+{{--                                                    <div class="cartBtn">--}}
+{{--                                                        <a href="{{route('shop.step1')}}" class="themeBtn">Add to Cart</a>--}}
+{{--                                                    </div>--}}
+                        </div>
+                    </form>
 
                     <div class="row">
                         <div class="col-md-12">
