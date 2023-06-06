@@ -145,7 +145,6 @@
                             <label for="box-2">Ship to the same address mentioned above</label>
                         </div>
                     </div>
-
                     <div class="col-md-6 mx-auto">
                         <div class="row order-summery no-gutters">
                             <div class="col-md-12 title my-5 text-center">

@@ -3,6 +3,8 @@
 namespace Webkul\Shop\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Hash;
 use Stripe\Stripe;
@@ -10,6 +12,8 @@ use Webkul\Checkout\Facades\Cart;
 use Webkul\Checkout\Http\Requests\CustomerAddressForm;
 use Webkul\Customer\Repositories\CustomerRepository;
 use Webkul\Payment\Facades\Payment;
+use Webkul\Sales\Models\Order;
+use Webkul\Sales\Models\OrderItem;
 use Webkul\Sales\Repositories\OrderRepository;
 use Webkul\Shipping\Facades\Shipping;
 use Webkul\Shop\Http\Controllers\Controller;
@@ -56,52 +60,57 @@ class OnepageController extends Controller
      */
     public function index()
     {
-//        Event::dispatch('checkout.load.index');
-//
+        Event::dispatch('checkout.load.index');
+
 //        if (! auth()->guard('customer')->check() && ! core()->getConfigData('catalog.products.guest-checkout.allow-guest-checkout')) {
 //            return redirect()->route('customer.session.index');
 //        }
-//
+
 //        if (auth()->guard('customer')->check() && auth()->guard('customer')->user()->is_suspended) {
 //            session()->flash('warning', trans('shop::app.checkout.cart.suspended-account-message'));
 //
 //            return redirect()->route('shop.checkout.cart.index');
 //        }
-//
-//        if (Cart::hasError()) {
-//            return redirect()->route('shop.checkout.cart.index');
-//        }
-//
-//        $cart = Cart::getCart();
-//
+
+        if (Cart::hasError()) {
+            return redirect()->route('shop.checkout.cart.index');
+        }
+
+        $cart = Cart::getCart();
+
 //        if (
 //            (! auth()->guard('customer')->check() && $cart->hasDownloadableItems())
 //            || (! auth()->guard('customer')->check() && ! $cart->hasGuestCheckoutItems())
 //        ) {
 //            return redirect()->route('customer.session.index');
 //        }
-//
-//        $minimumOrderAmount = (float) core()->getConfigData('sales.orderSettings.minimum-order.minimum_order_amount') ?? 0;
-//
-//        if (! $cart->checkMinimumOrder()) {
-//            session()->flash('warning', trans('shop::app.checkout.cart.minimum-order-message', ['amount' => core()->currency($minimumOrderAmount)]));
-//
-//            return redirect()->back();
-//        }
-//
-//        Cart::collectTotals();
-//
-//        return view($this->_config['view'], compact('cart'));
 
-        //new approach
-        $cart = Cart::getCart();
+        $minimumOrderAmount = (float) core()->getConfigData('sales.orderSettings.minimum-order.minimum_order_amount') ?? 0;
+
+        if (! $cart->checkMinimumOrder()) {
+            session()->flash('warning', trans('shop::app.checkout.cart.minimum-order-message', ['amount' => core()->currency($minimumOrderAmount)]));
+
+            return redirect()->back();
+        }
+
         Cart::collectTotals();
         $shippingRate = Shipping::collectRates();
         $shippingMethods = [];
         if($shippingRate) {
             $shippingMethods = $shippingRate['shippingMethods']['free']['rates'][0];
         }
-        return view($this->_config['view'], compact('cart', 'shippingMethods'));
+
+        return view($this->_config['view'], compact('cart','shippingMethods'));
+
+//        //new approach
+//        $cart = Cart::getCart();
+//        Cart::collectTotals();
+//        $shippingRate = Shipping::collectRates();
+//        $shippingMethods = [];
+//        if($shippingRate) {
+//            $shippingMethods = $shippingRate['shippingMethods']['free']['rates'][0];
+//        }
+//        return view($this->_config['view'], compact('cart', 'shippingMethods'));
     }
 
     /**
@@ -426,10 +435,28 @@ class OnepageController extends Controller
 //        if (!Cart::saveCustomerAddress($data)) {
 //            return redirect()->back()->with(['error' => 'Something went wrong while saving the address.']);
 //        }
-
+//
 //        if (!Cart::saveShippingMethod($request->shipping_method)) {
 //            return redirect()->back()->with(['error' => 'Something went wrong while saving the shipping method.']);
 //        }
+        $cart = Cart::getCart();
+        $order = new Order();
+        $order->customer_email = $request->email; // Assign the email to the customer_email property
+
+// Populate other order fields
+        $order->customer_id = Auth::id();
+        $order->customer_first_name =  $request->first_name;
+        $order->customer_last_name = $request->last_name;
+        $order->total_qty_ordered = $cart->items_qty;
+        $order->sub_total = $cart->sub_total;
+        $order->grand_total = $cart->grand_total;
+        $order->base_grand_total_invoiced = $cart->grand_total;
+        $order->cart_id = $cart->id;
+
+        // Generate the increment_id dynamically
+        $lastOrderId = DB::table('orders')->max('id'); // Get the last inserted order's ID
+        $order->increment_id = 'ORD-' . str_pad($lastOrderId + 1, 5, '0', STR_PAD_LEFT);
+        $order->save();
 
         if (!Cart::savePaymentMethod($data)) {
             return redirect()->back()->with(['error' => 'Something went wrong while saving the payment.']);
@@ -457,8 +484,6 @@ class OnepageController extends Controller
             if ($request->has('paypal')) {
                 return redirect(route('shop.checkout.success'));
             }
-
-
 
             return redirect($this->redirectLink());
             //$order = $this->orderRepository->create(Cart::prepareDataForOrder($data));
@@ -501,6 +526,15 @@ class OnepageController extends Controller
             'success_url' => route('shop.checkout.success'),
             'cancel_url' => route('shop.checkout.cancel'),
         ]);
+
+        foreach ($cart->items as $cartItem) {
+            $orderItem = new OrderItem();
+            $orderItem->product_id = $cartItem->product_id;
+            $orderItem->qty_ordered = $cartItem->quantity;
+            // Set other order item fields as needed
+            $orderItem->save();
+        }
+
         Cart::deActivateCart();
         return $checkoutSession->url;
     }
