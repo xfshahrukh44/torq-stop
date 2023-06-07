@@ -375,4 +375,9 @@ class Order extends Model implements OrderContract
     {
         return OrderFactory::new ();
     }
+
+    public function getOrderIncrementIdAttribute()
+    {
+        return 'ORD-' . str_pad($this->id, 5, '0', STR_PAD_LEFT);
+    }
 }

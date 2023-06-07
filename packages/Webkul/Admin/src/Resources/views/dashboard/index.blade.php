@@ -19,7 +19,6 @@
 
             <date-mobile-filter></date-mobile-filter>
         </div>
-
         <div class="page-content">
 
             <div class="dashboard-stats">
@@ -128,15 +127,15 @@
                     </div>
                 </div>
 
-                <div class="dashboard-card">
-                    <div class="title">
-                        {{ __('admin::app.dashboard.total-unpaid-invoices') }}
-                    </div>
+{{--                <div class="dashboard-card">--}}
+{{--                    <div class="title">--}}
+{{--                        {{ __('admin::app.dashboard.total-unpaid-invoices') }}--}}
+{{--                    </div>--}}
 
-                    <div class="data">
-                        {{ core()->formatBasePrice($statistics['total_unpaid_invoices']) }}
-                    </div>
-                </div>
+{{--                    <div class="data">--}}
+{{--                        {{ core()->formatBasePrice($statistics['total_unpaid_invoices']) }}--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
                 <div class="dashboard-card d-flex justify-content-center">
                     <div class="title">
