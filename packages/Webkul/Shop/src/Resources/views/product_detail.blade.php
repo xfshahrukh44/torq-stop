@@ -116,13 +116,14 @@
                                 </tr>
 {{--                                @dd($product['product_category_fields'])--}}
                                 @foreach($product['product_category_fields'] as $product_category_field)
-                                    @if ($product_category_field['field_name'] !== 'year')
+                                    @if ($product_category_field['field_name'] !== 'year' && $product_category_field['field_name'] !== 'line' && $product_category_field['field_name'] !== 'vendor_pin')
                                         <tr>
                                             <th>{{$product_category_field['field_name']}}</th>
                                             <td>{{$product_category_field['field_value']}}</td>
                                         </tr>
                                     @endif
                                 @endforeach
+
 
                             </table>
                         </div>
