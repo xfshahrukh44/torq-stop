@@ -15,7 +15,6 @@
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="fa fa-bars"></span>
                     </button>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
@@ -42,7 +41,12 @@
                         </ul>
                         <div class="forminline">
                             <a href=""><i class="fas fa-shopping-cart"></i><span>0</span></a>
+                            @if(Auth::user())
+
+                            <a href="{{route('customer.profile.index')}}">Dashboard</a>
+                            @else
                             <a href="{{route('shop.my-account')}}"><i class="fas fa-user"></i></a>
+                        @endif
                         </div>
                     </div>
                 </nav>
