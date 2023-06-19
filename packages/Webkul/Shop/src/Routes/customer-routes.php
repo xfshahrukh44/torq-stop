@@ -213,6 +213,10 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
                     ])->name('customer.review.deleteall');
                 });
             });
+            // Add the fallback route at the end of the routes
+            Route::fallback(function () {
+                abort(404);
+            });
         });
     });
 });
