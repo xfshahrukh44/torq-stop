@@ -70,11 +70,8 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index($any)
+    public function index()
     {
-//        if ($any) {
-//            abort(404);
-//        }
         $customer = $this->customerRepository->find(auth()->guard('customer')->user()->id);
         return view($this->_config['view'], compact('customer'));
     }
