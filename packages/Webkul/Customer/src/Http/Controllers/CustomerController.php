@@ -73,7 +73,6 @@ class CustomerController extends Controller
     public function index()
     {
         $customer = $this->customerRepository->find(auth()->guard('customer')->user()->id);
-
         return view($this->_config['view'], compact('customer'));
     }
 
@@ -225,8 +224,9 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function reviews()
+    public function reviews($any)
     {
+        dd($any);
         $reviews = $this->productReviewRepository->getCustomerReview();
 
         return view($this->_config['view'], compact('reviews'));

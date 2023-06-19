@@ -118,7 +118,7 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
                     /**
                      * Profile.
                      */
-                    Route::get('profile', [CustomerController::class, 'index'])->defaults('_config', [
+                    Route::get('profile/', [CustomerController::class, 'index'])->defaults('_config', [
                         'view' => 'shop::customers.account.profile.index',
                     ])->name('customer.profile.index');
 
@@ -212,6 +212,10 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
                         'redirect' => 'customer.reviews.index',
                     ])->name('customer.review.deleteall');
                 });
+            });
+            // Add the fallback route at the end of the routes
+            Route::fallback(function () {
+                abort(404);
             });
         });
     });

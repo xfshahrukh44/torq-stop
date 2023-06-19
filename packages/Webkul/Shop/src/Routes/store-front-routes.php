@@ -126,4 +126,8 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     Route::get('products/get-filter-attributes/{categoryId?}', [ProductController::class, 'getFilterAttributes'])->name('admin.catalog.products.get-filter-attributes');
 
     Route::get('products/get-category-product-maximum-price/{categoryId?}', [ProductController::class, 'getCategoryProductMaximumPrice'])->name('admin.catalog.products.get-category-product-maximum-price');
+    // Add the fallback route at the end of the routes
+    Route::fallback(function () {
+        abort(404);
+    });
 });
