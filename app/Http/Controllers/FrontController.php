@@ -26,7 +26,7 @@ class FrontController extends Controller
 //            $email = (Settings::find(1))->email;
             $email = 'donorrell996@gmail.com';
 
-            send_mail('no-reply@torqstop.com', $email, 'Customer Contact', $message);
+            send_mail('admin@opcparts.com', $email, 'Customer Contact', $message);
 
             return redirect()->route('shop.home.index')->with('success', 'Email sent successfully!');
         } catch (\Exception $exception) {
